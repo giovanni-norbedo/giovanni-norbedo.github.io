@@ -51,6 +51,7 @@ body {
 #face {
     margin: 0 20px;
     width: 200px;
+    height: 200px;
     border-radius: 50%;
     border: var(--pink) 5px solid;
     animation: border 1.5s linear infinite;
@@ -269,7 +270,7 @@ h2 {
 
 .prev {
     width: 400px;
-    height: auto;
+    height: 400px;
 }
 
 /* LIGHT THEME */
