@@ -73,7 +73,7 @@ body {
 }
 
 /* TEXT */
-#content>p {
+p {
     font-size: 17px;
     line-height: 1.7;
     padding: 0 10px;
