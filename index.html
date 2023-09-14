@@ -23,99 +23,18 @@
 </head>
 
 <body>
-    <div id="neon"></div>
-
-    <div id="navbar">
-        <div id="bar">
-            <div id="name">
-                <p>Giovanni Norbedo</p>
-            </div>
-            <div id="actions">
-                <div><a id="about" href="/index.html">About</a></div>
-                <div><a id="projects" href="/projects.html">Projects</a></div>
-            </div>
-        </div>
-    </div> <!-- navbar -->
-
     <div id="main">
 
         <div id="face-box">
-            <div class="decoration">&ltri;</div>
-            <img id="face" src="img/bitmoji.png" alt="photo of myself">
-            <div class="decoration">&rtri;</div>
+            <img id="face" src="img/myself.jpeg" alt="photo of myself">
         </div> <!-- face-box -->
 
-        <div id="content">
-            <h1># About</h1>
-                <p>
-                    My name is Giovanni Norbedo and I live in Trieste, Italy. 
-                    <br>
-                    I am a student at the Liceo Scientifico Guglielmo Oberdan in Trieste. 
-                    I will be studying Informatics at the University of Venice next year.
-                    <br><br>
-                    Technology has always been a passion of mine, and I've been programming since I was ten years old. 
-                    I have developed several web and mobile applications.
-                    I have been learning ASM and C to gain a better understanding of low-level programming. 
-                    My recent interests include statistics, machine learning, data analysis and visualization.
-                </p>
-            <h1># Interests - Skills</h1>
-                <p>
-                    As a curious person, I like to explore new horizons and try out the latest tools.
-                    Aside from technology, I am a member of a basketball team.
-                    I also enjoy playing chess, Valorant, and NBA2K.
-                    <br>
-                    I produce techno music with LMMS and a myriad of plug-ins.
-                    EDM, DnB, and electronica are some of my favorite genres. 
-                    I like reading and drinking coffee in coffee shops.
-                    <br><br>
-                    I am open to internships and employment opportunities.
-                </p>
-                <h2>## Languages</h2>
-                    <p>Italian Native Speaker</p>
-                    <p>English B2 First Certificate</p> <!-- Next year: English C1 Advanced -->
-                <h2>## Soft Skills</h2>
-                    <div class="c2">
-                        <p>Willingness to learn</p>
-                        <p>Flexibility</p>
-                        <p>Curiosity</p>
-                        <p>Creativity</p>
-                        <p>&ldquo;Out of the Box&rdquo; Thinking</p>
-                        <p>Problem Solving</p>
-                        <p>Positivity</p>
-                        <p>Teamwork</p>
-                    </div>
-                <h2>## Hard Skills</h2>
-                    <div class="c2">
-                        <p>ASM - C - C++</p>
-                        <p>Python</p>
-                        <p>Flask - Django - DRF</p>
-                        <p>API management &amp; auth</p>
-                        <!-- <p>Celery - Redis</p> -->
-                        <p>Dart - Flutter</p>
-                        <p>HTML - CSS</p>
-                        <p>Bootstrap - TailwindCSS</p>
-                        <p>Javascript - Typescript</p>
-                        <p>Node.js - React.js - Vue.js</p>
-                        <p>Next.js - Nextra</p>
-                        <p>Supabase - Appsmith</p>
-                        <p>Vercel - Netlify</p>
-                        <p>Data Structures &amp; Algorithms</p>
-                        <p>Data Analysis &amp; Visualization</p>
-                        <p>Statistics - Machine Learning</p>
-                        <p>Database - SQL - ORMs</p>
-                        <p>PostgreSQL - MySQL - SQLite</p>
-                        <p>Cloud Computing</p>
-                        <p>Debian - Ubuntu - Windows</p>
-                        <p>Terminal Usage - Bash Scripting</p>
-                        <p>Git - GitHub</p>
-                        <p>Nginx - gunicorn</p>
-                        <p>Docker - VirtualBox</p>
-                        <p>CORS CSP OWASP</p>
-                    </div>
-        </div> <!-- content -->
-
-        <div id="footer">
-            <div id="foot">
+        <div id="title">
+            <h1>Giovanni Norbedo</h1>
+            <p class="tt">Artificial Intelligence & Data science Student</p>
+            <p class="tt">Full-Stack developer</p>
+            <p class="tt">Trieste, Italy</p>
+            <div id="links">
                 <div>
                     <a id="github" href="https://github.com/giovanni-norbedo" target="_blank">
                         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -157,18 +76,19 @@
                     </a>
                 </div>
             </div>
-        </div> <!-- footer -->
+        </div>
+
+        <div id="content">
+            <p>Hi! I'm Giovanni Norbedo. I'm a student of Artificial Intelligence and Data Analytics at the University of Trieste.</p>
+            <br>
+            <p>Technology has always fascinated me, which is why I began coding at the age of ten and have since created numerous web (Django, DRF, React) and mobile (Flutter) applications. I'm also passionate about penetration testing and regularly engage in activities like Hack The Box and Capture The Flag challenges.</p>
+            <br>
+            <p>I am pursuing a 3-year program with a total of 180 university credits. My studies encompass mathematics, computer science, and artificial intelligence, covering subjects like programming (C, Python, R, SQL, DSA), mathematics, statistics, and AI ethics. In my final year, I delve deeper into machine learning and complex systems.</p>
+            <br>
+            <p>As a curious person, I like to explore new horizons and try out the latest tools. In my free time, I enjoy reading, drinking coffee, making techno music, playing basketball and chess.</p>
+        </div> <!-- content -->
 
     </div> <!-- main -->
-    
-    <script async>
-        // neon bar listener
-        window.addEventListener("scroll", () => {
-            let scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-            let scrollPercentRounded = scrollPercent * 100;
-            document.documentElement.style.setProperty('--progress', scrollPercentRounded + "%");
-        });
-    </script>
 </body>
 
 </html>
