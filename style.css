@@ -73,6 +73,9 @@ body {
     max-width: 840px;
     text-align: justify;
     padding: 20px;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* TEXT */
