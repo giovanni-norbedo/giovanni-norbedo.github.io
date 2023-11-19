@@ -1,0 +1,2811 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#analisi-matematica-1"
+id="toc-analisi-matematica-1">Analisi Matematica 1</a>
+<ul>
+<li><a href="#logica" id="toc-logica">Logica</a>
+<ul>
+<li><a href="#proposizioni" id="toc-proposizioni">Proposizioni</a></li>
+<li><a href="#connettivi-logici" id="toc-connettivi-logici">Connettivi
+logici</a></li>
+<li><a href="#negazione---not" id="toc-negazione---not">Negazione -
+NOT</a></li>
+<li><a href="#congiunzione---and"
+id="toc-congiunzione---and">Congiunzione - AND</a></li>
+<li><a href="#disgiunzione---or" id="toc-disgiunzione---or">Disgiunzione
+- OR</a></li>
+<li><a href="#implicazione-materiale"
+id="toc-implicazione-materiale">Implicazione (materiale)</a></li>
+<li><a href="#doppia-implicazione" id="toc-doppia-implicazione">Doppia
+implicazione</a></li>
+<li><a href="#tautologia" id="toc-tautologia">Tautologia</a></li>
+<li><a href="#legge-di-de-morgan" id="toc-legge-di-de-morgan">Legge di
+De Morgan</a></li>
+<li><a href="#predicati" id="toc-predicati">Predicati</a></li>
+<li><a href="#quantificatori"
+id="toc-quantificatori">Quantificatori</a></li>
+</ul></li>
+<li><a href="#insiemistica" id="toc-insiemistica">Insiemistica</a>
+<ul>
+<li><a href="#cosè-un-insieme" id="toc-cosè-un-insieme">Cos’è un
+insieme</a></li>
+<li><a href="#operazioni-con-gli-insiemi"
+id="toc-operazioni-con-gli-insiemi">Operazioni con gli insiemi</a></li>
+<li><a href="#insieme-vuoto" id="toc-insieme-vuoto">Insieme
+vuoto</a></li>
+<li><a href="#insieme-delle-parti" id="toc-insieme-delle-parti">Insieme
+delle parti</a></li>
+<li><a href="#coppie-ordinate-e-prodotto-cartesiano"
+id="toc-coppie-ordinate-e-prodotto-cartesiano">Coppie ordinate e
+prodotto cartesiano</a></li>
+</ul></li>
+<li><a href="#relazioni" id="toc-relazioni">Relazioni</a>
+<ul>
+<li><a href="#relazione-dra-due-insiemi"
+id="toc-relazione-dra-due-insiemi">Relazione dra due insiemi</a></li>
+<li><a href="#proprietà-delle-relazioni"
+id="toc-proprietà-delle-relazioni">Proprietà delle relazioni</a></li>
+<li><a href="#relazione-dordine" id="toc-relazione-dordine">Relazione
+d’ordine</a></li>
+<li><a href="#relazione-di-equivalenza"
+id="toc-relazione-di-equivalenza">Relazione di equivalenza</a></li>
+<li><a href="#classe-di-equivalenza"
+id="toc-classe-di-equivalenza">Classe di equivalenza</a></li>
+</ul></li>
+<li><a href="#funzioni" id="toc-funzioni">Funzioni</a>
+<ul>
+<li><a href="#funzione" id="toc-funzione">Funzione</a></li>
+<li><a href="#dominio-e-codominio" id="toc-dominio-e-codominio">Dominio
+e codominio</a></li>
+<li><a href="#insieme-immagine" id="toc-insieme-immagine">Insieme
+immagine</a></li>
+<li><a href="#funzione-suriettiva" id="toc-funzione-suriettiva">Funzione
+suriettiva</a></li>
+<li><a href="#funzione-composta" id="toc-funzione-composta">Funzione
+composta</a></li>
+<li><a href="#funzione-inversa" id="toc-funzione-inversa">Funzione
+inversa</a></li>
+</ul></li>
+<li><a href="#i-numeri-naturali" id="toc-i-numeri-naturali">I numeri
+naturali</a>
+<ul>
+<li><a href="#assiomi-di-giuseppe-peano"
+id="toc-assiomi-di-giuseppe-peano">Assiomi di Giuseppe Peano</a></li>
+<li><a href="#successioni" id="toc-successioni">Successioni</a></li>
+<li><a href="#sommatoria" id="toc-sommatoria">Sommatoria</a></li>
+<li><a href="#produttoria" id="toc-produttoria">Produttoria</a></li>
+</ul></li>
+<li><a href="#calcolo-combinatorio"
+id="toc-calcolo-combinatorio">Calcolo combinatorio</a>
+<ul>
+<li><a href="#il-coefficiente-binomiale"
+id="toc-il-coefficiente-binomiale">Il coefficiente binomiale</a></li>
+<li><a href="#triangolo-di-tartaglia"
+id="toc-triangolo-di-tartaglia">Triangolo di Tartaglia</a></li>
+<li><a href="#teorema-del-binomio-di-newton"
+id="toc-teorema-del-binomio-di-newton">Teorema del binomio di
+Newton</a></li>
+</ul></li>
+<li><a href="#i-numeri-reali" id="toc-i-numeri-reali">I numeri reali</a>
+<ul>
+<li><a href="#introduzione-assiomatica-di-mathbbr"
+id="toc-introduzione-assiomatica-di-mathbbr">Introduzione assiomatica di
+<span class="math inline">\(\mathbb{R}\)</span></a></li>
+<li><a href="#assioma-di-dedekind" id="toc-assioma-di-dedekind">Assioma
+di Dedekind</a></li>
+</ul></li>
+<li><a href="#intervalli" id="toc-intervalli">Intervalli</a>
+<ul>
+<li><a href="#insiemi-limitati" id="toc-insiemi-limitati">Insiemi
+limitati</a></li>
+<li><a href="#maggioranti-minoranti-massimi-e-minimi"
+id="toc-maggioranti-minoranti-massimi-e-minimi">Maggioranti, minoranti,
+massimi e minimi</a></li>
+<li><a href="#estremo-superiore-ed-estremo-inferiore"
+id="toc-estremo-superiore-ed-estremo-inferiore">Estremo superiore ed
+estremo inferiore</a></li>
+<li><a href="#teorema-dellesistenza-dellestremo-superiore"
+id="toc-teorema-dellesistenza-dellestremo-superiore">Teorema
+dell’esistenza dell’estremo superiore</a></li>
+<li><a href="#teorema-le-proprietà-dellestremo-superiore"
+id="toc-teorema-le-proprietà-dellestremo-superiore">Teorema le proprietà
+dell’estremo superiore</a></li>
+<li><a href="#conseguenze-dellesistenza-dellestremo-superiore"
+id="toc-conseguenze-dellesistenza-dellestremo-superiore">Conseguenze
+dell’esistenza dell’estremo superiore</a></li>
+</ul></li>
+<li><a href="#disuguaglianza-triangolare"
+id="toc-disuguaglianza-triangolare">Disuguaglianza triangolare</a></li>
+<li><a href="#funzioni-potenza-e-radice"
+id="toc-funzioni-potenza-e-radice">Funzioni potenza e radice</a></li>
+<li><a href="#funzione-valore-assoluto"
+id="toc-funzione-valore-assoluto">Funzione valore assoluto</a></li>
+<li><a href="#funzioni-trigonometriche"
+id="toc-funzioni-trigonometriche">Funzioni trigonometriche</a></li>
+<li><a href="#i-numeri-complessi" id="toc-i-numeri-complessi">I numeri
+complessi</a>
+<ul>
+<li><a href="#teorema-fondamentale-dellalgebra"
+id="toc-teorema-fondamentale-dellalgebra">Teorema fondamentale
+dell’algebra</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="analisi-matematica-1">Analisi Matematica 1</h1>
+<h2 id="logica">Logica</h2>
+<h3 id="proposizioni">Proposizioni</h3>
+<p><span class="math inline">\(p,\ q,\ r,\ \dots\)</span></p>
+<p>Una proposizione è una parte del discorso a cui si può assegnare un
+valore di verità o di falsità <span class="math inline">\((V,
+F)\)</span>.</p>
+<h4 id="esempio">Esempio</h4>
+<p><span class="math inline">\(p:\)</span> Giorgio è più alto di 1,80m.
+<span class="math inline">\(\rightarrow V\)</span><br />
+<span class="math inline">\(q:\)</span> Roma è la capitale della
+Francia. <span class="math inline">\(\rightarrow F\)</span></p>
+<hr />
+<h3 id="connettivi-logici">Connettivi logici</h3>
+<p>I connettivi logici servono a costruire nuove proposizioni dalle
+proposizioni di partenza.</p>
+<ul>
+<li>Connettivi UNARI
+<ul>
+<li>Negazione</li>
+</ul></li>
+<li>Connettivi BINARI
+<ul>
+<li>Congiunzione</li>
+<li>Disgiunzione</li>
+<li>Implicazione</li>
+<li>Doppia implicazione</li>
+</ul></li>
+</ul>
+<h3 id="negazione---not">Negazione - NOT</h3>
+<p><span class="math inline">\(\neg p\)</span><br />
+“non p”</p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\neg
+p\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>V</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<h3 id="congiunzione---and">Congiunzione - AND</h3>
+<p><span class="math inline">\(p \wedge q\)</span><br />
+“p e q”</p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(p\)</span></th>
+<th><span class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p \wedge
+q\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>V</td>
+<td>V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td>V</td>
+<td>F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>V</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td style="text-align: center;">F</td>
+</tr>
+</tbody>
+</table>
+<h3 id="disgiunzione---or">Disgiunzione - OR</h3>
+<p><span class="math inline">\(p \vee q\)</span><br />
+“p oppure q”</p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(p\)</span></th>
+<th><span class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p \vee
+q\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>V</td>
+<td>V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td>V</td>
+<td>F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td style="text-align: center;">F</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>La disgiunzione non esclusiva <span
+class="math inline">\((XOR)\)</span> si indica con <span
+class="math inline">\(\veebar\)</span> e la sua <strong>tabella di
+verità</strong> è: | <span class="math inline">\(p\)</span> | <span
+class="math inline">\(q\)</span> | <span class="math inline">\(p \veebar
+q\)</span> | | — | — | :————-: | | V | V | F | | V | F | V | | F | V | V
+| | F | F | F |</p>
+<p><span class="math inline">\(vel \rightarrow\)</span> disgiunzione
+inclusiva<br />
+<span class="math inline">\(aut \rightarrow\)</span> disgiunzione
+esclusiva</p>
+</blockquote>
+<h3 id="implicazione-materiale">Implicazione (materiale)</h3>
+<p><span class="math inline">\(p \Rightarrow q\)</span><br />
+<strong>“p implica q”</strong> oppure <strong>“se p allora
+q”</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(p\)</span></th>
+<th><span class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p
+\Rightarrow q\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>V</td>
+<td>V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td>V</td>
+<td>F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<h4 id="esempio-1">Esempio</h4>
+<p><span class="math inline">\(p :\)</span> piove.<br />
+<span class="math inline">\(q :\)</span> prendo l’ombrello.<br />
+<span class="math inline">\(p \Rightarrow q :\)</span> se piove allora
+prendo l’ombrello.</p>
+<p>Voglio negarlo, quindi</p>
+<p><span class="math inline">\(\neg(p \Rightarrow q) :\)</span> non è
+vero che se piove allora prendo l’ombrello.</p>
+<p><em>Equivale a dire</em>: “piove e non prendo l’ombrello.”</p>
+<p>Quindi</p>
+<p><span class="math inline">\(\neg(p \Rightarrow q) = p \wedge \neg
+q\)</span></p>
+<p>Poiché, se è vero che</p>
+<p><span class="math inline">\(\neg (\neg p) = p\)</span></p>
+<p>allora</p>
+<p><span class="math inline">\(\neg \Big(\neg(p \Rightarrow q)\Big) =
+\neg (p \wedge \neg q) =\)</span></p>
+<p>per De Morgan (vedi più avanti)</p>
+<p><span class="math inline">\(=\neg p \vee \neg (\neg q) = \neg p \vee
+q\)</span></p>
+<p>trovando infine che</p>
+<p><span class="math inline">\(\neg (\neg p \vee q) = p \wedge \neg
+q\)</span></p>
+<h3 id="doppia-implicazione">Doppia implicazione</h3>
+<p><span class="math inline">\(p \Leftrightarrow q\)</span><br />
+<strong>“p è equivalente a q”</strong> oppure <strong>“p se e solo se
+q”</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(p\)</span></th>
+<th><span class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p
+\Leftrightarrow q\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>V</td>
+<td>V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td>V</td>
+<td>F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>V</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<p>Inoltre</p>
+<p><span class="math inline">\(p \Leftrightarrow q = (p \Rightarrow q)
+\wedge (q \Rightarrow p)\)</span></p>
+<table>
+<colgroup>
+<col style="width: 3%" />
+<col style="width: 3%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(p\)</span></th>
+<th><span class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p
+\Rightarrow q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(q
+\Rightarrow p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((p
+\Rightarrow q) \wedge (q \Rightarrow p)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>V</td>
+<td>V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;"><strong>V</strong></td>
+</tr>
+<tr class="even">
+<td>V</td>
+<td>F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;"><strong>F</strong></td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>F</strong></td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;"><strong>V</strong></td>
+</tr>
+</tbody>
+</table>
+<h4 id="esempio-2">Esempio</h4>
+<p><span class="math inline">\(p : \text{in un triangolo, 2 lati sono
+uguali.}\)</span><br />
+<span class="math inline">\(q : \text{in un triangolo, 2 angoli sono
+uguali.}\)</span><br />
+<span class="math inline">\(p \Leftrightarrow q\)</span></p>
+<hr />
+<h3 id="tautologia">Tautologia</h3>
+<p>Una tautologia è una proposizione (composta) che è sempre vera.</p>
+<h4 id="tertium-non-datur">tertium non datur</h4>
+<p><span class="math inline">\(p \vee \neg p\)</span></p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\neg
+p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p \vee \neg
+p\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td>V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<h4 id="non-contradditio">non contradditio</h4>
+<p><span class="math inline">\(\neg(p \wedge \neg p)\)</span></p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\neg
+p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p \wedge
+\neg p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\neg(p
+\wedge \neg p)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td>V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<h4 id="modus-ponens">modus ponens</h4>
+<p><span class="math inline">\((p \wedge (p \Rightarrow q)) \Rightarrow
+p\)</span></p>
+<table>
+<colgroup>
+<col style="width: 3%" />
+<col style="width: 3%" />
+<col style="width: 17%" />
+<col style="width: 29%" />
+<col style="width: 46%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(p\)</span></th>
+<th><span class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p
+\Rightarrow q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p \wedge (p
+\Rightarrow q)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((p \wedge (p
+\Rightarrow q)) \Rightarrow p\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>V</td>
+<td>V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td>V</td>
+<td>F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<h4 id="modus-tollens">modus tollens</h4>
+<p><span class="math inline">\((\neg q \wedge (p \Rightarrow q))
+\Rightarrow \neg p\)</span></p>
+<table>
+<colgroup>
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 13%" />
+<col style="width: 26%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(p\)</span></th>
+<th><span class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\neg
+p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\neg
+q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p
+\Rightarrow q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\neg q
+\wedge (p \Rightarrow q)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\((\neg q
+\wedge (p \Rightarrow q)) \Rightarrow \neg p\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>V</td>
+<td>V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td>V</td>
+<td>F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<h4 id="reductio-ad-absurdum">reductio ad absurdum</h4>
+<p><span class="math inline">\(\Big((p \wedge \neg q) \Rightarrow (r
+\wedge \neg r)\Big) \Leftrightarrow (p \Rightarrow q)\)</span></p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 43%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(p\)</span></th>
+<th><span class="math inline">\(q\)</span></th>
+<th><span class="math inline">\(r\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\neg
+q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\neg
+r\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p \wedge
+\neg q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(r \wedge
+\neg r\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\Big((p
+\wedge \neg q) \Rightarrow (r \wedge \neg r)\Big)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p
+\Rightarrow q\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>V</td>
+<td>V</td>
+<td>V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>V</strong></td>
+<td style="text-align: center;"><strong>V</strong></td>
+</tr>
+<tr class="even">
+<td>V</td>
+<td>V</td>
+<td>F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>V</strong></td>
+<td style="text-align: center;"><strong>V</strong></td>
+</tr>
+<tr class="odd">
+<td>V</td>
+<td>F</td>
+<td>V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>F</strong></td>
+<td style="text-align: center;"><strong>F</strong></td>
+</tr>
+<tr class="even">
+<td>V</td>
+<td>F</td>
+<td>F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>F</strong></td>
+<td style="text-align: center;"><strong>F</strong></td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>V</td>
+<td>V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>V</strong></td>
+<td style="text-align: center;"><strong>V</strong></td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>V</td>
+<td>F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>V</strong></td>
+<td style="text-align: center;"><strong>V</strong></td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>F</td>
+<td>V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>V</strong></td>
+<td style="text-align: center;"><strong>V</strong></td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td>F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>V</strong></td>
+<td style="text-align: center;"><strong>V</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="legge-di-de-morgan">Legge di De Morgan</h3>
+<p><span class="math inline">\(\neg (p \wedge q) = \neg p \vee \neg
+q\)</span><br />
+<span class="math inline">\(\neg (p \vee q) = \neg p \wedge \neg
+q\)</span></p>
+<table>
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 16%" />
+<col style="width: 26%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(p\)</span></th>
+<th><span class="math inline">\(q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(p \wedge
+q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\neg (p
+\wedge q)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\neg
+p\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\neg
+q\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\neg p \vee
+\neg q\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>V</td>
+<td>V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;"><strong>F</strong></td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>F</strong></td>
+</tr>
+<tr class="even">
+<td>V</td>
+<td>F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>V</strong></td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;"><strong>V</strong></td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>V</strong></td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>V</strong></td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>V</strong></td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;"><strong>V</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="predicati">Predicati</h3>
+<p>“parte del nostro discorso che contende una o più variabili”</p>
+<ul>
+<li>UNARIO (1 variabile): <span
+class="math inline">\(\mathcal{P}(x)\)</span></li>
+<li>BINARIO (2 variabili): <span
+class="math inline">\(\mathcal{Q}(x,y)\)</span></li>
+<li>TERZIARIO (3 variabili): <span
+class="math inline">\(\mathcal{S}(x,y,z)\)</span></li>
+<li><span class="math inline">\(\dots\)</span></li>
+</ul>
+<h4 id="esempi">Esempi</h4>
+<p><span class="math inline">\(\mathcal{P}(x) : \text{lo studente x è
+più alto di 1,7m.}\)</span><br />
+è un <em>predicato</em></p>
+<p><span class="math inline">\(\mathcal{P}(Pietro) = \text{Pietro è più
+alto di 1,7m.}\)</span><br />
+è una <em>proposizione</em></p>
+<p><span class="math inline">\(\mathcal{Q}(x,y) : \text{lo studente x è
+amico dello studente y.}\)</span><br />
+è un <em>predicato</em></p>
+<p><span class="math inline">\(\mathcal{Q}(Pietro,Giorgio) : \text{lo
+studente Pietro è amico dello studente Giorgio.}\)</span><br />
+è una <em>proposizione</em></p>
+<p><span class="math inline">\(\mathcal{S}(x,y,z) :
+\text{nell&#39;ospedale x, il medico y, ha sbagliato la diagnosi
+z.}\)</span></p>
+<p><strong>Osservazione</strong>: un modo per trasformare predicati in
+proposizioni è utilizzare i <strong>quantificatori</strong>.</p>
+<hr />
+<h3 id="quantificatori">Quantificatori</h3>
+<p><span class="math inline">\(\forall\)</span><br />
+“per ogni”<br />
+Quantificatore Universale</p>
+<p><span class="math inline">\(\exists\)</span> “esiste” Quantificatore
+Esistenziale</p>
+<h4 id="esempi-1">Esempi</h4>
+<p><span class="math inline">\(\forall x, \mathcal{P}(x)\)</span> è una
+proposizione<br />
+significa “ogni studente è più alto di 1,7m.”</p>
+<p><span class="math inline">\(\exists x, \mathcal{P}(x)\)</span> è una
+proposizione<br />
+significa “esiste uno studente più alto di 1,7m.”</p>
+<p><span class="math inline">\(\Big(\forall x, \mathcal{Q}(x,y)\Big) =
+\mathcal{R}(y)\)</span><br />
+significa “tutti gli studenti sono amici dello studente y.”</p>
+<p><strong>Idea</strong>: la variabile <span
+class="math inline">\(x\)</span> non è più presente.</p>
+<p><span class="math inline">\(\exists y : \Big(\forall x,
+\mathcal{Q}(x,y)\Big)\)</span><br />
+significa “esiste uno studente amico di tutti gli studenti.”</p>
+<p><span class="math inline">\(\forall x, \exists y :
+\mathcal{Q}(x,y)\)</span><br />
+significa “ogni studente ha almeno un amico.”</p>
+<p>Voglio tradurre formalmente la frase “in ogni ospedale, esiste almeno
+un medico che ha sbagliato tutte le diagnosi.”</p>
+<p>Quindi scrivo</p>
+<p><span class="math inline">\(\forall x, \exists y : \forall z,
+\mathcal{S}(x,y,z)\)</span></p>
+<h4 id="negazione-di-proposizioni-con-i-quantificatori">Negazione di
+proposizioni con i quantificatori</h4>
+<p><strong>Osservazione</strong>: come posso fare la negazione di una
+frase con i quantificatori.</p>
+<p><strong>Importante</strong><br />
+Per negare una proposizione con i quantificatori, occorre sostituire il
+<em>quantificatore esistenziale</em> con il <em>quantificatore
+universale</em> e viceversa, quindi la negazione si distribuisce
+all’interno, quindi:</p>
+<ul>
+<li><span class="math inline">\(\neg \Big(\exists x :
+\mathcal{P}(x)\Big)\)</span> diventa <span class="math inline">\(\forall
+x, \neg \Big(\mathcal{P}(x)\Big)\)</span><br />
+</li>
+<li><span class="math inline">\(\neg \Big(\forall x,
+\mathcal{P}(x)\Big)\)</span> diventa <span class="math inline">\(\exists
+x: \neg \Big(\mathcal{P}(x)\Big)\)</span></li>
+</ul>
+<p>Per esempio, prendiamo</p>
+<p><span class="math inline">\(\forall x, \mathcal{P}(x)\)</span><br />
+“ogni studente è più alto di 1,7m.”</p>
+<p>dobbiamo negarla, perciò “non è vero che …”</p>
+<p><strong>ATTENZIONE!</strong><br />
+<strong>NON è vero che</strong><br />
+<span class="math inline">\(\neg \Big(\forall x, \mathcal{P}(x)\Big)
+\neq \forall x, \neg \mathcal{P}(x)\)</span><br />
+poiché sarebbe “ogni studente non è più alto di 1,7m.”</p>
+<h4 id="esempi-2">Esempi</h4>
+<p><span class="math inline">\(\neg \Big(\forall x, \mathcal{P}(x)\Big)
+= \exists x : \neg \mathcal{P}(x)\)</span><br />
+“esiste almeno uno studente che non è più alto di 1,7m.”</p>
+<p>Similmente</p>
+<p><span class="math inline">\(\neg \Big(\exists y : \mathcal{T}(y)\Big)
+= \forall y, \neg \mathcal{T}(y)\)</span></p>
+<p>Riprendiamo <span class="math inline">\(\mathcal{Q}(x,y)\)</span> e
+neghiamolo</p>
+<p><span class="math inline">\(\neg \Big(\exists x : \forall x,
+\mathcal{Q}(x,y)\Big)\)</span><br />
+“<em>non è vero che</em> esiste uno studente che è amico di tutti gli
+studenti.”</p>
+<p><span class="math inline">\(\neg \Big(\exists x :
+\mathcal{Q}(x,y)\Big) = \forall y, \neg \Big(\forall x,
+\mathcal{Q}(x,y)\Big) = \forall y, \exists x :\neg
+\mathcal{Q}\)</span><br />
+“ogni studente <em>non è amico</em> di almeno uno studente.”</p>
+<p>Similmente</p>
+<p><span class="math inline">\(\neg \Big(\forall x, \exists y : \forall
+z, \mathcal{S}(x,y,z)\Big)\)</span><br />
+“<em>non è vero che</em> in ogni ospedale, esiste almeno un medico che
+ha sbagliato tutte le diagnosi”</p>
+<p><span class="math inline">\(= \exists x : \forall y, \exists z : \neg
+\mathcal{S}(x,y,z)\)</span><br />
+“esiste un ospedale in cui ogni medico ha determinato almeno una
+diagnosi.”</p>
+<h4 id="esempio-con-la-definizione-di-limite">Esempio con la definizione
+di limite</h4>
+<p><span class="math inline">\(\lim\limits_{x \to x_o} f(x) =
+l\)</span><br />
+<span class="math inline">\(x_0, l \in \mathbb{R}\)</span></p>
+<p><span class="math inline">\(\forall \varepsilon &gt; 0, \exists
+\delta &gt; 0 : \forall x \in \mathbb{E},\)</span><br />
+<span class="math inline">\(0 &lt; |x-x_0| &lt; \delta \Rightarrow
+|f(x)-l| &lt; \varepsilon\)</span></p>
+<p>Modificando correttamente i quantificatori, la sua negazione è</p>
+<p><span class="math inline">\(\exists \varepsilon &gt; 0 : \forall
+\delta &gt; 0, \exists x \in \mathbb{E} :\)</span><br />
+<span class="math inline">\(\neg (0 &lt; |x-x_0| &lt; \delta \Rightarrow
+|f(x)-l| &lt; \varepsilon)\)</span></p>
+<p>Poiché prima abbiamo visto che</p>
+<p><span class="math inline">\(\neg(p \Rightarrow q) = p \wedge \neg
+q\)</span></p>
+<p>allora la negazione diventa</p>
+<p><span class="math inline">\(\exists \varepsilon &gt; 0 : \forall
+\delta &gt; 0, \exists x \in \mathbb{E} :\)</span><br />
+<span class="math inline">\(0 &lt; |x-x_0| &lt; \delta \wedge |f(x)-l|
+\geq \varepsilon\)</span></p>
+<hr />
+<h2 id="insiemistica">Insiemistica</h2>
+<h3 id="cosè-un-insieme">Cos’è un insieme</h3>
+<p><strong>Insieme</strong> (nozione primitiva) : aggregazione,
+famiglia, groppo (di solito con qualche caratteristica comune) di
+<strong>elementi</strong>.</p>
+<p><strong>Attenzione</strong><br />
+Gli insiemi sono caratterizzati dai soli elementi.<br />
+Due insiemi sono uguali se hanno gli stessi elementi.</p>
+<p>L’ordine non conta: <span class="math inline">\(A = \{a,b,c\} =
+\{c,a,b\}\)</span></p>
+<p>Per esempio, l’elemento <span class="math inline">\(a\)</span>
+appartiene all’insieme <span class="math inline">\(A\)</span> diventa
+<span class="math inline">\(a \in A\)</span>:</p>
+<ul>
+<li>allora <span class="math inline">\(A=B \Leftrightarrow (\forall a,\
+a \in A \Rightarrow a \in B) \wedge (\forall b,\ b \in B \Rightarrow b
+\in A)\)</span><br />
+</li>
+<li>se vale solo <span class="math inline">\(\forall a,\ a \in A
+\Rightarrow a \in B\)</span>, deduco <span class="math inline">\(A
+\subseteq B\)</span> (si dice “A contenuto in B” oppure “A è
+sottoinsieme di B”)</li>
+<li>quindi se <span class="math inline">\(A=B \Leftrightarrow A
+\subseteq B \wedge B \subseteq A\)</span></li>
+</ul>
+<p>Si possono rappresentare con i <strong>diagrammi di
+Eulero-Venn</strong>.</p>
+<p><strong>Osservazione</strong>: Per rappresentare un insieme:</p>
+<ul>
+<li>elencare gli elementi (<strong>Forma estensiva</strong>)</li>
+<li>fisso un insieme “universo” (<strong>Ambiente</strong>) e poi
+caratterizzo gli elementi con una proprietà (<strong>Forma
+intensiva</strong>)</li>
+</ul>
+<h4 id="esempio-3">Esempio</h4>
+<p><span class="math inline">\(A =\{n \in \mathbb{N} : n\ pari \} =
+\{0,2,4,6 \dots\}\)</span></p>
+<hr />
+<h3 id="operazioni-con-gli-insiemi">Operazioni con gli insiemi</h3>
+<h4 id="insieme-complementare-o-insieme-complemento">Insieme
+complementare (o insieme complemento)</h4>
+<p><span class="math inline">\(U\)</span> è l’insieme universo<br />
+<span class="math inline">\(A\)</span> è l’insieme</p>
+<p><span class="math inline">\(\mathscr{C}_U A = \{x \in U : x \notin
+U\} = \{x \in U : \neg (x \in U)\}\)</span></p>
+<blockquote>
+<p>L’insieme complemento si può scrivere anche <span
+class="math inline">\(\overline{A}\)</span>.</p>
+</blockquote>
+<h4 id="intersezione">Intersezione</h4>
+<p><span class="math inline">\(A \cap B = \{x \in U : x \in A \wedge x
+\in B\}\)</span></p>
+<h4 id="unione">Unione</h4>
+<p><span class="math inline">\(A \cup B = \{x \in U : x \in A \vee x \in
+B\}\)</span></p>
+<h4 id="qualche-proprietà">Qualche proprietà</h4>
+<p><span class="math inline">\(A \cap B = B \cap A\)</span><br />
+<span class="math inline">\(A \cup B = B \cup A\)</span></p>
+<p><span class="math inline">\((A \cap B) \cap C = A \cap (B \cap
+C)\)</span><br />
+<span class="math inline">\((A \cup B) \cup C = A \cup (B \cup
+C)\)</span></p>
+<p><span class="math inline">\(A \cap (B \cup C) = (A \cap B) \cup (A
+\cap C)\)</span><br />
+<span class="math inline">\(A \cup (B \cap C) = (A \cup B) \cap (A \cup
+C)\)</span></p>
+<hr />
+<h3 id="insieme-vuoto">Insieme vuoto</h3>
+<p>Esiste un insieme (speciale) che è senza elementi, chiamato
+<em>insieme vuoto</em>, indicato con <span
+class="math inline">\(\emptyset\)</span> (<strong>unico</strong> e <span
+class="math inline">\(\forall A, \emptyset \subseteq A\)</span>).</p>
+<hr />
+<h3 id="insieme-delle-parti">Insieme delle parti</h3>
+<p><span class="math inline">\(\mathcal{P}(A)\)</span> è l’insieme dei
+sottoinsiemi di A</p>
+<h4 id="esempio-4">Esempio</h4>
+<p>Sia</p>
+<p><span class="math inline">\(A = \{a,b,c\}\)</span></p>
+<p>allora</p>
+<p><span class="math inline">\(\mathcal{P}(A) = \{\emptyset, \{a\},
+\{b\}, \{c\}, \{a,b\}, \{b,c\}, \{a,c\}, \{a,b,c\}\}\)</span></p>
+<p>Tutti i sottoinsiemi si dicono <strong>propri</strong>, tranne
+l’insieme <span class="math inline">\(\{a,b,c\}\)</span>, detto
+<strong>improprio</strong>.</p>
+<h4 id="il-numero-di-elementi-di-mathcalpa-è-2n">Il numero di elementi
+di <span class="math inline">\(\mathcal{P}(A)\)</span> è <span
+class="math inline">\(2^n\)</span></h4>
+<p><span class="math inline">\(|\mathcal{P}(A)| = 2^n\)</span></p>
+<p>con</p>
+<p><span class="math inline">\(|A| =\)</span> numero di elementi in
+<span class="math inline">\(A\)</span></p>
+<p>Per esempio, se prendiamo l’insieme <span class="math inline">\(A =
+\{a,b,c,d,e,f\}\)</span>,<br />
+possiamo rappresentare il sottoinsieme <span class="math inline">\(S =
+\{a,d,e\}\)</span> così:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">a</th>
+<th style="text-align: center;">b</th>
+<th style="text-align: center;">c</th>
+<th style="text-align: center;">d</th>
+<th style="text-align: center;">e</th>
+<th style="text-align: center;">f</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<p>Dove inserisco <span class="math inline">\(1\)</span> se l’elemento è
+presente o <span class="math inline">\(0\)</span> se è assente.</p>
+<p>Un altro esempio è<br />
+<span class="math inline">\(\emptyset = \{\}\)</span> corrisponde a
+<span class="math inline">\((0,0,0,0,0,0)\)</span></p>
+<p>In questo modo, vediamo che tutte le possibilità sono rappresentabili
+da un numero binario di lunghezza <span
+class="math inline">\(|A|\)</span>, quindi <span
+class="math inline">\(2^n\)</span> in decimale.</p>
+<hr />
+<h3 id="coppie-ordinate-e-prodotto-cartesiano">Coppie ordinate e
+prodotto cartesiano</h3>
+<p>Una <em>coppia ordinata</em> è un aggregato con due elementi in cui
+si distingue il primo elemento e il secondo elemento.</p>
+<p><span class="math inline">\((a,b) \neq \{a,b\}\)</span></p>
+<p><span class="math inline">\(\{a,b\} = \{b,a\}\)</span></p>
+<p><span class="math inline">\((a,b) = (a&#39;,b&#39;) \Leftrightarrow
+a=a&#39;, b=b&#39;\)</span></p>
+<p><span class="math inline">\((a,b) \neq (b,a)\)</span><br />
+a meno che <span class="math inline">\(a=b\)</span></p>
+<p><strong>Definizione</strong>:<br />
+Siano <span class="math inline">\(A,B\)</span> insiemi,<br />
+<span class="math inline">\(A \times B = \{(a,b) : a \in A, b\in B
+\}\)</span><br />
+è detto insieme <em>prodotto cartesiano di <span
+class="math inline">\(A\)</span> e <span
+class="math inline">\(B\)</span></em>.</p>
+<p>Anche il <em>piano cartesiano</em> è un prodotto cartesiano</p>
+<p><span class="math inline">\(\Pi = \{(a,b) : a \in \mathbb{R}, b \in
+\mathbb{R}\}\)</span></p>
+<p>in questo caso <span class="math inline">\(A=B=\mathbb{R}\)</span>,
+quindi</p>
+<p><span class="math inline">\(\mathbb{R} \times \mathbb{R} =
+\mathbb{R}^2\)</span></p>
+<figure>
+<img src="../img/grafico_piano_cartesiano_come_prodotto_cartesiano.png"
+alt="grafico piano cartesiano come prodotto cartesiano" />
+<figcaption aria-hidden="true">grafico piano cartesiano come prodotto
+cartesiano</figcaption>
+</figure>
+<p>Similmente</p>
+<p><span class="math inline">\(A \times B \times C = \{(a,b,c) : a \in
+A, b \in B, c \in C\}\)</span></p>
+<p><span class="math inline">\(\mathbb{R}^3 = \{(x,y,a) : x,y,z \in
+\mathbb{R}\}\)</span><br />
+nello spazio a tre dimensioni</p>
+<p><span class="math inline">\(\mathbb{R}^n = \{(x_1,x_2,x_3, \dots,
+x_n) : x_1,x_2,x_3, \dots, x_n \in \mathbb{R}\}\)</span><br />
+n-upla, tupla ordinata (vettore)</p>
+<p><span class="math inline">\(A =
+\{a_1,a_2,a_3,a_4,a_5\}\)</span><br />
+<span class="math inline">\(B = \{b_1,b_2,b_3,b_4\}\)</span></p>
+<p><span class="math inline">\(A \times B = \{(a_i,b_j) : i =
+(1,2,3,4,5),\ j = (1,2,3,4)\}\)</span></p>
+<figure>
+<img src="../img/esempio_prodotto_cartesiano_tra_A_e_B.png"
+alt="esempio prodotto cartesiano tra A e B" />
+<figcaption aria-hidden="true">esempio prodotto cartesiano tra A e
+B</figcaption>
+</figure>
+<p><strong>Osservazione</strong>:<br />
+numeri divisibili per <span class="math inline">\(3 = \{n \in \mathbb{N}
+: \exists k \in \mathbb{N} : (n = 3k)\} = \{n \in \mathbb{N} :
+\mathcal{P}(n)\}\)</span><br />
+con <span class="math inline">\(\mathcal{P}(n) = \exists k \in
+\mathbb{N} : (n = 3k)\)</span><br />
+la variabile <span class="math inline">\(k\)</span>, preceduta dal
+quantificatore esistenziale, è <strong>muta</strong>.</p>
+<p>I predicati binari sono quelli giusti per i prodotti cartesiani.</p>
+<p>Indicando in <span class="math inline">\(A \times B\)</span>
+l’insieme delle coppie che soddisfano <span
+class="math inline">\(\mathcal{P}(x,y) \rightarrow\)</span>
+<em>predicato binario</em></p>
+<h4 id="esempio-5">Esempio</h4>
+<p><span class="math inline">\(A = \{\)</span>ragazzi in quest’aula<span
+class="math inline">\(\}\)</span><br />
+<span class="math inline">\(B = \{\)</span>ragazze in quest’aula<span
+class="math inline">\(\}\)</span></p>
+<p><span class="math inline">\(\mathcal{P}(x) :\)</span> <span
+class="math inline">\(x\)</span> è amico di <span
+class="math inline">\(y\)</span><br />
+<em>Relazione</em> di “amicizia” tra due insiemi</p>
+<figure>
+<img src="../img/relazione_di_amicizia.png"
+alt="relazione di amicizia" />
+<figcaption aria-hidden="true">relazione di amicizia</figcaption>
+</figure>
+<hr />
+<h2 id="relazioni">Relazioni</h2>
+<h3 id="relazione-dra-due-insiemi">Relazione dra due insiemi</h3>
+<p><strong>Definizione</strong>:<br />
+<em>Relazione</em> tra <span class="math inline">\(A\)</span> e <span
+class="math inline">\(B =\)</span> predicato <span
+class="math inline">\(\mathcal{P}(x)\)</span> a valori in <span
+class="math inline">\(A \times B\)</span>.<br />
+(se <span class="math inline">\(A=B\)</span>, parliamo di relazione su
+<span class="math inline">\(A\)</span>)</p>
+<h4 id="esempio-6">Esempio</h4>
+<p><span class="math inline">\(A = \mathbb{N} \setminus \{0\} = \{1,2,3,
+\dots\}\)</span></p>
+<p>Decidiamo che <span class="math inline">\(n | m\)</span> significa “n
+divide m”, introducendo la relazione “<span
+class="math inline">\(|\)</span> divide”.</p>
+<p>Per esempio, 3 divide 12, ma 3 non divide 5, poiché <span
+class="math inline">\(\nexists k \in \mathbb{Z} : 3k=5\)</span>.</p>
+<h4 id="grafico-della-relazione">Grafico della relazione</h4>
+<figure>
+<img src="../img/grafico_relazione_divide.png"
+alt="grafico relazione divide" />
+<figcaption aria-hidden="true">grafico relazione divide</figcaption>
+</figure>
+<h4 id="esempio-7">Esempio</h4>
+<p><span class="math inline">\(A = \mathbb{Z} =
+\{\dots,-3,-2,-1,0,1,2,3,\dots\}\)</span><br />
+<span class="math inline">\(m = 3\)</span> (è il modulo in base 3)</p>
+<p><span class="math inline">\(x\)</span> è in relazione con <span
+class="math inline">\(y\)</span><br />
+se <span class="math inline">\(\exists k \in \mathbb{Z} :
+x-y=3k\)</span></p>
+<p>cioè 2 numeri sono in relazione se la loro differenza è un multiplo
+di 3.</p>
+<p>Si chiama <strong>congruenza modulo 3</strong>, indicata con <span
+class="math inline">\(m \equiv_3 n\)</span>.</p>
+<figure>
+<img src="../img/grafico_relazione_congruenza_modulo_3.png"
+alt="grafico relazione congruenza modulo 3" />
+<figcaption aria-hidden="true">grafico relazione congruenza modulo
+3</figcaption>
+</figure>
+<hr />
+<h3 id="proprietà-delle-relazioni">Proprietà delle relazioni</h3>
+<p><strong>Definizione</strong>:<br />
+Sia <span class="math inline">\(A\)</span> un insieme, sia <span
+class="math inline">\(\rho\)</span> una relazione su <span
+class="math inline">\(A\)</span>,<br />
+allora <span class="math inline">\(x \rho y\)</span></p>
+<ul>
+<li>si dice <strong>riflessiva</strong> se <span
+class="math inline">\(\forall x \in A, x \rho x\)</span></li>
+<li>si dice <strong>simmetrica</strong> se <span
+class="math inline">\(\forall x,y \in A, x \rho y \Rightarrow y \rho
+x\)</span></li>
+<li>si dice <strong>transitiva</strong> se <span
+class="math inline">\(\forall x,y,z \in A, x \rho y \wedge y \rho z
+\Rightarrow x \rho z\)</span></li>
+</ul>
+<h4 id="esempio-8">Esempio</h4>
+<p>La relazione divide è transitiva:</p>
+<p><span class="math inline">\(x|y \wedge y|z \xRightarrow{?}
+x|z\)</span></p>
+<p><span class="math inline">\(x|y \Leftrightarrow \exists k_1 : y = k_1
+\cdot x\)</span><br />
+<span class="math inline">\(y|z \Leftrightarrow \exists k_2 : z = k_2
+\cdot y = k_2 \cdot (k_1 \cdot x) =\)</span></p>
+<p><span class="math inline">\(x|z\)</span> quindi è vero perché, se
+<span class="math inline">\(k_3 = k_1 \cdot k_2\)</span> allora <span
+class="math inline">\(z = k_3 \cdot x\)</span>.</p>
+<p><span class="math inline">\(\square\)</span></p>
+<p>La relazione congruenza modulo m è transitiva:</p>
+<p><span class="math inline">\(x,y,z \in \mathbb{Z}\)</span></p>
+<p><span class="math inline">\(x \equiv_m y \wedge y \equiv_m z
+\xRightarrow{?} x \equiv_m z\)</span></p>
+<p><span class="math inline">\(\exists k_1 \in \mathbb{Z} : x-y= k_1
+\cdot m\)</span><br />
+<span class="math inline">\(\exists k_2 \in \mathbb{Z} : y-z= k_2 \cdot
+m\)</span></p>
+<p><span class="math inline">\(x \equiv_m z\)</span> quindi è vero
+perché, se <span class="math inline">\(k_3 = k_1 \cdot
+k_2\)</span>,<br />
+allora <span class="math inline">\(x-z = k_1 \cdot m + k_2 \cdot m =
+(k_1 + k_2)m = k_3 \cdot m\)</span>.</p>
+<p><span class="math inline">\(\square\)</span></p>
+<p><strong>Definizione</strong>:<br />
+<span class="math inline">\(A\)</span> insieme, <span
+class="math inline">\(\rho\)</span> relazione</p>
+<p><span class="math inline">\(\rho\)</span> si dice
+<strong>antisimmetrica</strong> se</p>
+<p><span class="math inline">\(\forall x,y \in A, x \rho y \wedge y \rho
+x \Rightarrow x=y\)</span></p>
+<h4 id="esempio-9">Esempio</h4>
+<p>La relazione divide è antisimmetrica se e solo se</p>
+<p><span class="math inline">\(\forall x,y \in \mathbb{N} \setminus
+\{0\}, x | y \wedge y | x \Rightarrow x=y\)</span></p>
+<p>Dimostriamolo partendo da</p>
+<p><span class="math inline">\(x|y \Leftrightarrow \exists k_1 : y = k_1
+\cdot x\)</span><br />
+<span class="math inline">\(y|x \Leftrightarrow \exists k_2 : x = k_2
+\cdot y \Leftrightarrow \exists k_2 : y = \frac{x}{k_2}\)</span></p>
+<p>quindi</p>
+<p><span class="math inline">\(k_1 \cdot x = \frac{x}{k_2}\)</span></p>
+<p>che equivale a</p>
+<p><span class="math inline">\(k_1 \cdot k_2 \cdot x - x =
+0\)</span></p>
+<p>quindi</p>
+<p><span class="math inline">\((k_1 \cdot k_2 - 1) \cdot x =
+0\)</span></p>
+<p>per la legge dell’annullamento del prodotto</p>
+<p>o <span class="math inline">\(k_1 \cdot k_2 - 1 = 0\)</span> o <span
+class="math inline">\(x = 0\)</span></p>
+<p>ma poiché <span class="math inline">\(x \in \mathbb{N} \setminus
+\{0\}\)</span></p>
+<p>allora</p>
+<p><span class="math inline">\(k_1 \cdot k_2 = 1\)</span></p>
+<p>poiché <span class="math inline">\(k_1, k_2 \in \mathbb{N}\)</span>,
+allora</p>
+<p><span class="math inline">\(k = k_1 = k_2 = 1\)</span></p>
+<p>e se l’unica soluzione è <span class="math inline">\(k =
++1\)</span></p>
+<p>allora <span class="math inline">\(x=y\)</span>.</p>
+<p><span class="math inline">\(\square\)</span></p>
+<hr />
+<h3 id="relazione-dordine">Relazione d’ordine</h3>
+<p><strong>Definizione</strong>:<br />
+<span class="math inline">\(A\)</span> insieme, <span
+class="math inline">\(\rho\)</span> relazione<br />
+se <span class="math inline">\(\rho\)</span> è riflessiva,
+antisimmetrica e transitiva<br />
+<span class="math inline">\(\rho\)</span> si dice <em>relazione
+d’ordine</em> o <em>ordinamento</em>.<br />
+Con <span class="math inline">\((A, \rho)\)</span> <strong>insieme
+ordinato</strong>.</p>
+<p>Per esempio <span class="math inline">\(\mathbb{R}\)</span> con la
+relazione <span class="math inline">\(\geq\)</span>.</p>
+<hr />
+<h3 id="relazione-di-equivalenza">Relazione di equivalenza</h3>
+<p><strong>Definizione</strong>:<br />
+<span class="math inline">\(A\)</span> insieme, <span
+class="math inline">\(\rho\)</span> relazione<br />
+se <span class="math inline">\(\rho\)</span> è riflessiva, simmetrica e
+transitiva<br />
+<span class="math inline">\(\rho\)</span> si dice <em>relazione di
+equivalenza</em>.</p>
+<hr />
+<h3 id="classe-di-equivalenza">Classe di equivalenza</h3>
+<p><span class="math inline">\(A\)</span> insieme, <span
+class="math inline">\(\rho\)</span> relazione di equivalenza<br />
+chiamo <span class="math inline">\([a]_\rho = \{b \in A : a \rho
+b\}\)</span><br />
+cioè tutti gli elementi in relazione con <span
+class="math inline">\(a\)</span>.</p>
+<h4 id="esempio-10">Esempio</h4>
+<p><span class="math inline">\([0]_{\equiv_3} = \{ \dots, -9, -6, -3,
++0, +3, +6, +9, \dots \}\)</span></p>
+<p><span class="math inline">\([1]_{\equiv_3} = \{\dots, -5, -2, +1, +3,
++7, +10, +13, \dots\}\)</span></p>
+<p><span class="math inline">\([2]_{\equiv_3} = \{\dots, -7, -4, -1, +2,
++5, +8, +11, \dots\}\)</span></p>
+<p>Poi si ripetono</p>
+<p><span class="math inline">\([0]_{\equiv 3} =\)</span></p>
+<p><span class="math inline">\(= [3]_{\equiv 3} =\)</span></p>
+<p><span class="math inline">\(= [6]_{\equiv 3} = \dots\)</span></p>
+<p>L’insieme delle classi di equivalenza di dice<br />
+<strong>insieme quoziente rispetto all’equivalenza</strong>.</p>
+<p>Si indica con</p>
+<p><span class="math inline">\(^{A}/_{\rho}\)</span></p>
+<p>per esempio</p>
+<p><span class="math inline">\(^{\mathbb{Z}}/_{\equiv_3} =\)</span></p>
+<p>{ <span class="math inline">\([0]_{\equiv 3},\)</span></p>
+<p><span class="math inline">\([1]_{\equiv 3},\)</span></p>
+<p><span class="math inline">\([2]_{\equiv 3}\)</span> }</p>
+<blockquote>
+<p>Formattato male (verticalmente e senza pendici), perché GitHub non
+riesce a fare il rendering di due underscore. Prima o poi spero di
+risolvere.</p>
+</blockquote>
+<hr />
+<h2 id="funzioni">Funzioni</h2>
+<h3 id="funzione">Funzione</h3>
+<p><strong>Definizione</strong>:<br />
+Siano <span class="math inline">\(A, B\)</span> insiemi</p>
+<p><span class="math inline">\(f\)</span> una “legge”<br />
+che ad ogni valore di <span class="math inline">\(A\)</span> associa uno
+e un solo valore di <span class="math inline">\(B\)</span>, cioè se
+<span class="math inline">\(x \in A\)</span> esiste uno e uno solo <span
+class="math inline">\(y\)</span> in <span
+class="math inline">\(B\)</span> tale che <span
+class="math inline">\(y\)</span> è associato a <span
+class="math inline">\(x\)</span> (scrivo <span
+class="math inline">\(f(x) = y\)</span>).</p>
+<p>La terna <span class="math inline">\((A,B,f)\)</span> la chiamo
+<strong>funzione</strong>.</p>
+<hr />
+<h3 id="dominio-e-codominio">Dominio e codominio</h3>
+<p><strong>Definizione</strong>:<br />
+<span class="math inline">\(A\)</span> si dice <strong>dominio</strong>
+della funzione.<br />
+<span class="math inline">\(B\)</span> si dice
+<strong>codominio</strong> della funzione.<br />
+<span class="math inline">\(f\)</span> è una regola che ad ogni <span
+class="math inline">\(x\)</span> del dominio associa uno e uno solo
+elemento <span class="math inline">\(y\)</span> del codominio.</p>
+<h4 id="esempio-11">Esempio</h4>
+<p><span class="math inline">\(A =\)</span> {persone in
+quest’aula}<br />
+<span class="math inline">\(B =\)</span> {comuni italiani}</p>
+<p><span class="math inline">\(x \mapsto\)</span> comune di
+residenza</p>
+<p>!!! IMMAGINE comuni di residenza</p>
+<p><strong>Osservazione</strong><br />
+Tutto l’anno studieremo funzioni</p>
+<p><span class="math inline">\(f = A \rightarrow B\)</span> con <span
+class="math inline">\(A, B \subseteq \mathbb{R}\)</span></p>
+<p>che tradizionalmente si dicono “<em>funzioni reali di variabile
+reale</em>”.</p>
+<p><strong>Osservazione</strong><br />
+!!! IMMAGINE non è una funzione</p>
+<hr />
+<h3 id="insieme-immagine">Insieme immagine</h3>
+<p><strong>Definizione</strong><br />
+Sia <span class="math inline">\(f : A \rightarrow B\)</span> una
+funzione,<br />
+se <span class="math inline">\(x \in A\)</span>, il valore <span
+class="math inline">\(f(x) \in B\)</span><br />
+lo chiamo <strong>valore immaginario di x</strong>.</p>
+<p><strong>Definizione</strong> L’insieme delle immagini si chiama<br />
+<strong>insieme immagine</strong> o <em>immagine
+dell’insieme</em>,<br />
+indicato da <span class="math inline">\(f(A)\)</span>.</p>
+<blockquote>
+<p>Esempio con <span class="math inline">\(f(n) = 2n\)</span></p>
+</blockquote>
+<p><strong>Osservazione</strong><br />
+<em>Sempre</em> <span class="math inline">\(f(A) \subseteq
+B\)</span></p>
+<p><strong>Definizione</strong><br />
+Sia <span class="math inline">\(f : A \rightarrow B\)</span> una
+funzione,<br />
+sia <span class="math inline">\(A&#39; \subseteq A\)</span>,<br />
+<span class="math inline">\(f(A&#39;) = \{ f(x) : x \in A&#39;
+\}\)</span></p>
+<p>!!! IMMAGINE insiemi A e A’</p>
+<blockquote>
+<p>Esempio con l’immagine della funzione <span class="math inline">\(x^2
++ 3\)</span></p>
+</blockquote>
+<hr />
+<h3 id="funzione-suriettiva">Funzione suriettiva</h3>
+<p><strong>Definizione</strong><br />
+Se <span class="math inline">\(f(A) = B\)</span><br />
+<span class="math inline">\(f\)</span> si dice
+<strong>suriettiva</strong> (o surgettiva).</p>
+<hr />
+<h3 id="funzione-composta">Funzione composta</h3>
+<p><strong>Definizione</strong><br />
+Sono<br />
+<span class="math inline">\(f : A \rightarrow B\)</span><br />
+<span class="math inline">\(g : B \rightarrow C\)</span></p>
+<p>Diciamo <strong>funzione composta</strong><br />
+<span class="math inline">\(g \circ f : A \rightarrow C\)</span><br />
+“g dopo f”,<br />
+quindi <span class="math inline">\(x \rightarrow
+g\Big(f(x)\Big)\)</span>.</p>
+<blockquote>
+<p>Esempio con <span class="math inline">\(x^2\)</span> e <span
+class="math inline">\(y + 2\)</span></p>
+</blockquote>
+<hr />
+<h3 id="funzione-inversa">Funzione inversa</h3>
+<p><strong>Definizione</strong><br />
+Sia <span class="math inline">\(f : A \rightarrow B\)</span>,<br />
+supponiamo che esista una funzione<br />
+<span class="math inline">\(g : B \rightarrow A\)</span> tale che:</p>
+<ul>
+<li><span class="math inline">\(g \circ f =\)</span> identità su A<br />
+</li>
+<li><span class="math inline">\(f \circ g =\)</span> identità su B</li>
+</ul>
+<p><span class="math inline">\(g\)</span> si dice <strong>funzione
+inversa</strong> di <span class="math inline">\(f\)</span>.</p>
+<p><span class="math inline">\(g = f^{-1}\)</span></p>
+<p>!!! IMMAGINE funzione inversa con A e B</p>
+<blockquote>
+<p>Identità:<br />
+<span class="math inline">\(A \rightarrow A\)</span><br />
+<span class="math inline">\(x \mapsto x\)</span></p>
+</blockquote>
+<p><strong>Teorema</strong><br />
+Sia <span class="math inline">\(f : A \rightarrow B\)</span>,<br />
+<span class="math inline">\(f\)</span> ha inversa se e solo se<br />
+<span class="math inline">\(f\)</span> è <em>iniettiva</em> e
+<em>suriettiva</em>, quindi <strong>biettiva</strong>.</p>
+<hr />
+<h2 id="i-numeri-naturali">I numeri naturali</h2>
+<p><span class="math inline">\(\mathbb{N} = \{ 0, 1, 2, 3, \cdots
+\}\)</span></p>
+<blockquote>
+<p>Sono quelli che servono per contare (con lo zero).</p>
+</blockquote>
+<hr />
+<p>Su <span class="math inline">\(\mathbb{N}\)</span> è definita
+un’operazione di <strong>somma</strong> o
+<strong>addizione</strong>,<br />
+è una funzione</p>
+<p><span class="math inline">\(+ : \mathbb{N} \times \mathbb{N}
+\rightarrow \mathbb{N}\)</span><br />
+<span class="math inline">\((n, m) \mapsto k = n + m\)</span></p>
+<p>Questa è un’operazione:</p>
+<ul>
+<li>associativa
+<ul>
+<li><span class="math inline">\(\forall n,m,k\)</span> vale che <span
+class="math inline">\(n+(m+k) = (n+m)+k\)</span></li>
+</ul></li>
+<li><span class="math inline">\(\exists\)</span> neutro
+<ul>
+<li><span class="math inline">\(\exists 0 \in \mathbb{N} : \forall m,\
+0+m = m+0 = m\)</span></li>
+</ul></li>
+<li>commutativa
+<ul>
+<li><span class="math inline">\(\forall n,m\)</span> vale che <span
+class="math inline">\(n+m = m+n\)</span></li>
+</ul></li>
+</ul>
+<hr />
+<p>Su <span class="math inline">\(\mathbb{N}\)</span> è definita anche
+un’operazione di <strong>prodotto</strong> o
+<strong>moltiplicazione</strong>,<br />
+è una funzione</p>
+<p><span class="math inline">\(\cdot : \mathbb{N} \times \mathbb{N}
+\rightarrow \mathbb{N}\)</span><br />
+<span class="math inline">\((n, m) \mapsto k = n \cdot m\)</span></p>
+<p>Questa è un’operazione:</p>
+<ul>
+<li>associativa
+<ul>
+<li><span class="math inline">\(\forall n,m,k\)</span> vale che <span
+class="math inline">\(n \cdot (m \cdot k) = (n \cdot m) \cdot
+k\)</span></li>
+</ul></li>
+<li><span class="math inline">\(\exists\)</span> neutro
+<ul>
+<li><span class="math inline">\(\exists 1 \in \mathbb{N} : \forall n,\ 1
+\cdot n = n \cdot 1 = n\)</span></li>
+</ul></li>
+<li>commutativa
+<ul>
+<li><span class="math inline">\(\forall n,m\)</span> vale che <span
+class="math inline">\(n \cdot m = m \cdot n\)</span></li>
+</ul></li>
+</ul>
+<hr />
+<p>Vale una proprietà che lega la somma la prodotto, la
+<strong>distributiva</strong>,</p>
+<p><span class="math inline">\(\forall m,n,k\)</span> vale che <span
+class="math inline">\(n \cdot (m + k) = (n \cdot m) + (n \cdot
+k)\)</span></p>
+<hr />
+<p>Su <span class="math inline">\(\mathbb{N}\)</span> è definita anche
+una <strong>relazione d’ordine totale</strong>,<br />
+cioè che <span class="math inline">\(\forall x,y \in A,\ x \rho y \vee y
+\rho x\)</span></p>
+<p><span class="math inline">\(\geq\)</span> “maggiore o uguale”</p>
+<p>che è compatibile con le operazioni:</p>
+<p><span class="math inline">\(\forall n,m,k \in
+\mathbb{N},\)</span><br />
+<span class="math inline">\(n \geq m \Rightarrow n + k \geq m +
+k\)</span></p>
+<p><span class="math inline">\(\forall n,m,k \in
+\mathbb{N},\)</span><br />
+<span class="math inline">\(n \geq m \Rightarrow n \cdot k \geq m \cdot
+k\)</span></p>
+<hr />
+<p>Abbiamo un insieme con operazioni e relazioni</p>
+<p><span class="math inline">\((\mathbb{N}, +, \cdot, \geq)\)</span></p>
+<p>esso è un insieme con una “<strong>struttura algebrica</strong>”.</p>
+<hr />
+<p><strong>Osservazione</strong><br />
+Possiamo determinare degli <strong>assiomi</strong> (“prime proprietà
+che non vengono dimostrate ma assunte a priori”) su <span
+class="math inline">\(\mathbb{N}\)</span> in modo che tutte le altre
+proprietà siano deducibili da questi?</p>
+<h3 id="assiomi-di-giuseppe-peano">Assiomi di Giuseppe Peano</h3>
+<p>Esiste un insieme che chiamo <span
+class="math inline">\(\mathbb{N}\)</span></p>
+<ul>
+<li>Esiste un elemento di questo insieme che chiamo <span
+class="math inline">\(0\)</span> (zero), cioè <span
+class="math inline">\(0 \in \mathbb{N}\)</span></li>
+<li>Esiste una funzione <span class="math inline">\(\sigma : \mathbb{N}
+\rightarrow \mathbb{N}\)</span> che chiamo “successivo” che gode delle
+seguenti proprietà:
+<ul>
+<li><span class="math inline">\(\sigma\)</span> è iniettiva</li>
+<li><span class="math inline">\(\sigma(n) \neq 0\)</span> (zero non è il
+successivo di nessun numero)</li>
+<li><strong>principio di induzione</strong>
+<ul>
+<li>sia <span class="math inline">\(\mathcal{S} \subseteq
+\mathbb{N}\)</span>, supponiamo che
+<ul>
+<li><span class="math inline">\(0 \in \mathbb{N}\)</span></li>
+<li><span class="math inline">\(\forall n,\ n \in \mathcal{S}
+\Rightarrow \sigma(n) \in \mathcal{S}\)</span></li>
+</ul></li>
+<li>Allora <span class="math inline">\(\mathcal{S} =
+\mathbb{N}\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<p><strong>Idea fondamentale</strong><br />
+<span class="math inline">\(\sigma(0) = 1\)</span><br />
+<span class="math inline">\(\sigma(n) = n + 1\)</span><br />
+se parto da <span class="math inline">\(0\)</span> e sommo <span
+class="math inline">\(1\)</span>, trovo tutti i numeri.</p>
+<p><strong>Osservazione</strong><br />
+Il principio di induzione posso verificarlo anche per i numeri <span
+class="math inline">\(n&gt;n_0, n_0 \in \mathbb{N}, n_0 \geq 0\)</span>,
+verificando <span class="math inline">\(P(n_0)\)</span> e poi <span
+class="math inline">\(\forall n \geq n_0, P(n) \Rightarrow
+P(n+1)\)</span>.</p>
+<blockquote>
+<p>Esempio <span class="math inline">\(0+1+2+\dots+n =
+\frac{n(n+1)}{2}\)</span></p>
+<p>Esempio <span class="math inline">\(0+1+4+\dots+n^2 =
+\frac{n(n+1)(2n+1)}{6}\)</span></p>
+<p>Esempio <span class="math inline">\(0+1+4+\dots+n^2 =
+\frac{n(n+1)(2n+1)}{6}\)</span></p>
+<p>Esempio con le rette nel piano</p>
+</blockquote>
+<h4 id="diseguaglianza-di-bernulli">Diseguaglianza di Bernulli</h4>
+<p>Sia <span class="math inline">\(a&gt;-1, a \in
+\mathbb{R}\)</span></p>
+<p>Allora <span class="math inline">\(\forall n \in \mathbb{N}\)</span>
+vale</p>
+<p><span class="math inline">\((1+a)^n \geq 1 + na\)</span></p>
+<h4 id="diseguaglianza-di-bernulli-migliorata">Diseguaglianza di
+Bernulli migliorata</h4>
+<p>Sia <span class="math inline">\(a&gt;0, a \in \mathbb{R}\)</span></p>
+<p>Allora <span class="math inline">\(\forall n \in \mathbb{N}, n \geq
+1\)</span> vale</p>
+<p><span class="math inline">\((1+a)^n \geq 1 + na +
+\frac{n(n-1)}{2}a^2\)</span></p>
+<h3 id="successioni">Successioni</h3>
+<p><strong>Definizione</strong><br />
+Sia <span class="math inline">\(A\)</span> un insieme,<br />
+sia <span class="math inline">\(f : \mathbb{N} \rightarrow
+A\)</span>,<br />
+quindi saranno determinati</p>
+<p><span class="math inline">\(f(0) = a_0\)</span><br />
+<span class="math inline">\(f(1) = a_1\)</span><br />
+<span class="math inline">\(f(2) = a_2\)</span><br />
+<span class="math inline">\(\vdots\)</span><br />
+<span class="math inline">\(f(n) = a_n\)</span></p>
+<p>questa <span class="math inline">\(f\)</span> si chiama
+(tradizionalmente)<br />
+<strong>successione a valori in <span
+class="math inline">\(A\)</span></strong></p>
+<p>la rappresento con <span class="math inline">\((a_n)_n\)</span></p>
+<h3 id="sommatoria">Sommatoria</h3>
+<p><strong>Osservazione</strong><br />
+Ora usiamo l’induzione per introdurre in modo rigoroso il simbolo di
+<strong>sommatoria</strong>.</p>
+<p><span class="math inline">\(\displaystyle\sum_{i=0}^{n} a_i = a_0 +
+a_1 + a_2 + \dots + a_n\)</span></p>
+<p>Si ha che</p>
+<p><span class="math inline">\(s_0 = a_0\)</span><br />
+<span class="math inline">\(\forall n, s_{n+1} = s_n +
+a_{n+1}\)</span></p>
+<h3 id="produttoria">Produttoria</h3>
+<p>Analogamente</p>
+<p><span class="math inline">\(\displaystyle\prod_{i=1}^{n} a_i = a_0 +
+a_1 + a_2 + \dots + a_n\)</span></p>
+<p>Si ha che</p>
+<p><span class="math inline">\(p_0 = a_0\)</span><br />
+<span class="math inline">\(\forall n, p_{n+1} = p_n +
+a_{n+1}\)</span></p>
+<h2 id="calcolo-combinatorio">Calcolo combinatorio</h2>
+<p>Per contare il numero di elementi di insiemi a partire da altri
+insiemi.</p>
+<hr />
+<p>1- Se <span class="math inline">\(A\)</span> insieme di <span
+class="math inline">\(n\)</span> elementi e <span
+class="math inline">\(B\)</span> insieme di <span
+class="math inline">\(m\)</span> elementi, scriviamo</p>
+<p><span class="math inline">\(|A| = n,\ |B| = m\)</span></p>
+<p>allora</p>
+<p><span class="math inline">\(|A \times B| = n \cdot m\)</span></p>
+<hr />
+<p>2- <span class="math inline">\(|A| = n,\ |B| = m\)</span>, il numero
+delle funzioni da a <span class="math inline">\(A\)</span> a <span
+class="math inline">\(B\)</span></p>
+<p><span class="math inline">\(B^A =\)</span> {numero delle funzioni da
+a <span class="math inline">\(A\)</span> a <span
+class="math inline">\(B\)</span>}</p>
+<p><span class="math inline">\(|B^A| = |B|^{|A|} = m^n\)</span></p>
+<p>sono <strong>disposizioni con ripetizione</strong></p>
+<hr />
+<p>3- <span class="math inline">\(|A| = n,\ |B| = m\)</span> con <span
+class="math inline">\(m \geq n\)</span>,</p>
+<p><span class="math inline">\(D =\)</span> {funzioni iniettive da <span
+class="math inline">\(A\)</span> a $B}</p>
+<p><span class="math inline">\(|D| =
+m(m-1)(m-2)\dots(m-n+1)\)</span></p>
+<p>sono <strong>disposizioni di m oggetti a n a n</strong></p>
+<blockquote>
+<p>Ho usato <span class="math inline">\(D\)</span> invece di <span
+class="math inline">\(C\)</span></p>
+</blockquote>
+<hr />
+<p>4- <span class="math inline">\(|A| = |B| = n\)</span>, funzioni
+biettive tra <span class="math inline">\(A\)</span> e <span
+class="math inline">\(B\)</span></p>
+<p><span class="math inline">\(P =\)</span> {biezioni da <span
+class="math inline">\(A\)</span> in sé stesso}</p>
+<p><span class="math inline">\(|P| = n(n-1)(n-2)\dots(2)(1)(0!) =
+n!\)</span></p>
+<p>sono <strong>permutazioni di n oggetti</strong></p>
+<hr />
+<p>5- Sia <span class="math inline">\(|A| = n\)</span>, <span
+class="math inline">\(0 \leq k \leq n\)</span>,<br />
+il numero dei sottoinsiemi di <span class="math inline">\(A\)</span> con
+<span class="math inline">\(k\)</span> elementi</p>
+<p><span class="math inline">\(C_k^n = \binom{n}{k} =
+\frac{n!}{k!(n-k)!}\)</span> {numero dei sottoinsiemi di <span
+class="math inline">\(A\)</span> con <span
+class="math inline">\(k\)</span> elementi}</p>
+<p>sono <strong>combinazioni di n oggetti a k a k</strong></p>
+<hr />
+<p><strong>Osservazione</strong><br />
+<span class="math inline">\(D = C_k^n \cdot k!\)</span><br />
+sono le combinazioni di n oggetti a k a k ordinate, ognuna genera <span
+class="math inline">\(k!\)</span> disposizioni.</p>
+<h3 id="il-coefficiente-binomiale">Il coefficiente binomiale</h3>
+<p><span class="math inline">\(\binom{0}{0}=1\)</span></p>
+<p><span class="math inline">\(\binom{n}{0}=1\)</span></p>
+<p><span class="math inline">\(\binom{n}{n}=1\)</span></p>
+<p><span class="math inline">\(\binom{n}{k} =
+\binom{n}{n-k}\)</span></p>
+<blockquote>
+<p>Dimostrabile con gli insiemi o con la formula</p>
+</blockquote>
+<p>Per <span class="math inline">\(1 \leq k \leq n-1\)</span> <span
+class="math inline">\(\binom{n-1}{k-1} + \binom{n-1}{k} =
+\binom{n}{k}\)</span></p>
+<blockquote>
+<p>Dimostrabile con gli insiemi o con la formula</p>
+</blockquote>
+<h3 id="triangolo-di-tartaglia">Triangolo di Tartaglia</h3>
+<p><span class="math display">\[
+\begin{array}{cccccccccccccccc}
+    &amp;   &amp;   &amp;   &amp;   &amp;   &amp; 1
+&amp;   &amp;   &amp;   &amp;   &amp;   \\
+    &amp;   &amp;   &amp;   &amp;   &amp; 1 &amp;   &amp; 1
+&amp;   &amp;   &amp;   &amp;   \\
+    &amp;   &amp;   &amp;   &amp; 1 &amp;   &amp; 2 &amp;   &amp; 1
+&amp;   &amp;   &amp;   \\
+    &amp;   &amp;   &amp; 1 &amp;   &amp; 3 &amp;   &amp; 3
+&amp;   &amp; 1 &amp;   &amp;   \\
+    &amp;   &amp; 1 &amp;   &amp; 4 &amp;   &amp; 6 &amp;   &amp; 4
+&amp;   &amp; 1 &amp;   \\
+    &amp; 1 &amp;   &amp; 5 &amp;   &amp; 10&amp;   &amp;10&amp;   &amp;
+5 &amp;   &amp; 1 \\
+\end{array}
+\]</span></p>
+<p><span class="math display">\[
+\begin{array}{cccccccccccccccc}
+    &amp;   &amp;   &amp;   &amp;   &amp;   &amp; \binom{0}{0}
+&amp;   &amp;   &amp;   &amp;   &amp;   \\
+    &amp;   &amp;   &amp;   &amp;   &amp; \binom{1}{0} &amp;   &amp;
+\binom{1}{1} &amp;   &amp;   &amp;   &amp;   \\
+    &amp;   &amp;   &amp;   &amp; \binom{2}{0} &amp;   &amp;
+\binom{2}{1} &amp;   &amp; \binom{2}{2} &amp;   &amp;   &amp;   \\
+    &amp;   &amp;   &amp; \binom{3}{0} &amp;   &amp; \binom{3}{1}
+&amp;   &amp; \binom{3}{2} &amp;   &amp; \binom{3}{3} &amp;   &amp;   \\
+    &amp;   &amp; \binom{4}{0} &amp;   &amp; \binom{4}{1} &amp;   &amp;
+\binom{4}{2} &amp;   &amp; \binom{4}{3} &amp;   &amp; \binom{4}{4}
+&amp;   \\
+    &amp; \binom{5}{0} &amp;   &amp; \binom{5}{1} &amp;   &amp;
+\binom{5}{2} &amp;   &amp; \binom{5}{3} &amp;   &amp; \binom{5}{4}
+&amp;   &amp; \binom{5}{5} \\
+\end{array}
+\]</span></p>
+<h3 id="teorema-del-binomio-di-newton">Teorema del binomio di
+Newton</h3>
+<p>Siano <span class="math inline">\(a,b \in \mathbb{R}\)</span> (o
+<span class="math inline">\(\in \mathbb{C}\)</span>),<br />
+sia <span class="math inline">\(n \in \mathbb{N},\ n \geq 1\)</span></p>
+<p>allora <span class="math inline">\((a+b)^n =
+\displaystyle\sum_{j=o}^n \binom{n}{j} a^{n-j} b^j\)</span></p>
+<blockquote>
+<p>Dimostrabile con l’induzione</p>
+</blockquote>
+<p><strong>Osservazione</strong><br />
+<span class="math inline">\(\displaystyle\sum_{j=o}^n \binom{n}{j} =
+2^n\)</span><br />
+che sono tutti i sottoinsiemi possibili</p>
+<blockquote>
+<p>Dimostrabile con <span class="math inline">\((1 + 1)^n\)</span></p>
+</blockquote>
+<p><strong>Osservazione</strong><br />
+<span class="math inline">\(\displaystyle\sum_{j=o}^n (-1)^j
+\binom{n}{j} = 0\)</span><br />
+che sono tutti i sottoinsiemi possibili</p>
+<blockquote>
+<p>Dimostrabile con <span class="math inline">\((1 - 1)^n\)</span></p>
+</blockquote>
+<h2 id="i-numeri-reali">I numeri reali</h2>
+<p><strong>Osservazione</strong><br />
+A partire dai numeri naturali <span
+class="math inline">\(\mathbb{N}\)</span>, è possibile costruire i
+numeri interi</p>
+<p><span class="math inline">\(\mathbb{Z} = \{\dots, -2, -1, 0, 1, 2,
+\dots\}\)</span></p>
+<p>A partire dai numeri interi <span
+class="math inline">\(\mathbb{Z}\)</span>, è possibile costruire i
+numeri razionali</p>
+<p><span class="math inline">\(\mathbb{Q} = \{\frac{p}{q} con p \in
+\mathbb{Z}, q \in \mathbb{N}^+\}\)</span></p>
+<blockquote>
+<p>In <span class="math inline">\(\mathbb{Q}\)</span> ci sono delle
+classi di equivalenza, per esempio <span
+class="math inline">\(\frac{1}{2} = \frac{2}{4} = \frac{3}{6} =
+\frac{4}{8} = \frac{5}{10} = \dots\)</span></p>
+</blockquote>
+<blockquote>
+<p>I numeri razionali non vanno bene per misurare la lunghezza dei
+segmenti (come la diagonale del quadrato con lato unitario).</p>
+</blockquote>
+<p><strong>Teorema</strong><br />
+Non esistono <span class="math inline">\(k.m \in \mathbb{N}\)</span>
+tali che <span class="math inline">\((\frac{k}{m})^2 = 2\)</span>.</p>
+<p><strong>Dimostrazione</strong><br />
+Supponiamo, per assurdo, che esistano.<br />
+Non è restrittivo supporre che <span class="math inline">\(k\)</span> e
+<span class="math inline">\(m\)</span> non abbiano fattori in
+comune,<br />
+allora</p>
+<p><span class="math inline">\(\frac{k^2}{m^2} = 2 \Leftrightarrow k^2 =
+2m^2 \Leftrightarrow 2\)</span> divide <span
+class="math inline">\(k^2\)</span></p>
+<p>Se</p>
+<p><span class="math inline">\(k = p_1^{n_1} \cdot p_2^{n_2} \cdot
+p_3^{n_3} \cdot \dots p_l^{n_l}\)</span></p>
+<p>allora</p>
+<p><span class="math inline">\(k^2 = p_1^{2n_1} \cdot p_2^{2n_2} \cdot
+p_3^{2n_3} \cdot \dots p_l^{2n_l}\)</span></p>
+<p>allora <span class="math inline">\(2\)</span> divide <span
+class="math inline">\(k\)</span></p>
+<p>allora <span class="math inline">\(k = 2n\)</span></p>
+<p>allora</p>
+<p><span class="math inline">\(\frac{4n^2}{m^2} = 2 \Leftrightarrow 4n^2
+= 2m^2 \Leftrightarrow 2n^2 = m^2 \Leftrightarrow 2\)</span> divide
+<span class="math inline">\(m^2\)</span></p>
+<p>allora <span class="math inline">\(2\)</span> divide <span
+class="math inline">\(m\)</span></p>
+<p>quindi <span class="math inline">\(2\)</span> divide <span
+class="math inline">\(k\)</span> e <span
+class="math inline">\(2\)</span> divide <span
+class="math inline">\(m\)</span></p>
+<p>allora hanno un fattore in comune, quindi non sono primi fra loro,
+che è un <strong>assurdo</strong>.</p>
+<blockquote>
+<p>Quindi in <span class="math inline">\(\mathbb{Q}\)</span> non si può
+risolvere l’equazione <span class="math inline">\(x^2 = 2\)</span></p>
+</blockquote>
+<h3 id="introduzione-assiomatica-di-mathbbr">Introduzione assiomatica di
+<span class="math inline">\(\mathbb{R}\)</span></h3>
+<p>Esiste un insieme <span class="math inline">\(\mathbb{R}\)</span>
+tale che</p>
+<hr />
+<p><span class="math inline">\(A)\)</span> Su <span
+class="math inline">\(\mathbb{R}\)</span>, è definita un’operazione di
+<strong>somma</strong> o <strong>addizione</strong></p>
+<p><span class="math inline">\(+ : \mathbb{R} \times \mathbb{R} \to
+\mathbb{R}\)</span><br />
+<span class="math inline">\((x, y) \mapsto x + y\)</span></p>
+<p><span class="math inline">\(A_1)\)</span> La somma è
+<strong>associativa</strong></p>
+<p><span class="math inline">\(\forall x, y, z\)</span> vale che <span
+class="math inline">\(x + (y + z) = (x + y) + z\)</span></p>
+<p><span class="math inline">\(A_2)\)</span> Esiste l’<strong>elemento
+neutro</strong></p>
+<p><span class="math inline">\(\exists 0 \in \mathbb{R} : 0 + x = x + 0
+= x\)</span></p>
+<p><span class="math inline">\(A_3)\)</span> Esiste
+l’<strong>opposto</strong></p>
+<p><span class="math inline">\(\forall x \in \mathbb{R}, \exists x&#39;
+\in \mathbb{R} : x + x&#39; = x&#39; + x = 0\)</span></p>
+<p><span class="math inline">\(A_4)\)</span> La somma è
+<strong>commutativa</strong></p>
+<p><span class="math inline">\(\forall x, y\)</span> vale che <span
+class="math inline">\(x + y = y + x\)</span></p>
+<blockquote>
+<p><span class="math inline">\((\mathbb{R}, +)\)</span> è un
+<strong>gruppo abeliano</strong>.</p>
+</blockquote>
+<hr />
+<p><span class="math inline">\(M)\)</span> Su <span
+class="math inline">\(\mathbb{R}\)</span>, è definita un’operazione di
+<strong>prodotto</strong> o <strong>moltiplicazione</strong></p>
+<p><span class="math inline">\(\cdot : \mathbb{R} \times \mathbb{R} \to
+\mathbb{R}\)</span><br />
+<span class="math inline">\((x, y) \mapsto x \cdot y\)</span></p>
+<p><span class="math inline">\(M_1)\)</span> La moltiplicazione è
+<strong>associativa</strong></p>
+<p><span class="math inline">\(\forall x, y, z\)</span> vale che <span
+class="math inline">\(x \cdot (y \cdot z) = (x \cdot y) \cdot
+z\)</span></p>
+<p><span class="math inline">\(M_2)\)</span> Esiste l’<strong>elemento
+neutro</strong></p>
+<p><span class="math inline">\(\exists 1 \in \mathbb{R} : 1 \cdot x = x
+\cdot 1 = x\)</span></p>
+<p><span class="math inline">\(M_3)\)</span> Esiste
+l’<strong>opposto</strong></p>
+<p><span class="math inline">\(\forall x \in \mathbb{R}, \exists x&#39;
+\in \mathbb{R} : x \cdot x&#39; = x&#39; \cdot x = 1\)</span></p>
+<p><span class="math inline">\(M_4)\)</span> La moltiplicazione è
+<strong>commutativa</strong></p>
+<p><span class="math inline">\(\forall x, y\)</span> vale che <span
+class="math inline">\(x \cdot y = y \cdot x\)</span></p>
+<hr />
+<p><span class="math inline">\(D)\)</span> Esiste la proprietà
+<strong>distributiva</strong> che unisce la somma e la
+moltiplicazione</p>
+<hr />
+<p><span class="math inline">\(\forall x, y, z\)</span> vale che <span
+class="math inline">\(x \cdot (y + z) = (x \cdot y) + (x \cdot
+z)\)</span></p>
+<blockquote>
+<p><span class="math inline">\((\mathbb{R}, +, \cdot)\)</span> è un
+<strong>campo</strong>.</p>
+</blockquote>
+<hr />
+<p><span class="math inline">\(O)\)</span> Su <span
+class="math inline">\(\mathbb{R}\)</span>, è definito un
+<strong>ordinamento totale</strong> che chiamo <span
+class="math inline">\(\geq\)</span> “maggiore o uguale”</p>
+<p><span class="math inline">\(O_1)\)</span> <span
+class="math inline">\(\forall x, y, z \in \mathbb{R}\)</span> vale che
+<span class="math inline">\(x \geq y \Rightarrow x + z \geq y +
+z\)</span></p>
+<p><span class="math inline">\(O_2)\)</span> <span
+class="math inline">\(\forall x, y, z \in \mathbb{R}\)</span> vale che
+<span class="math inline">\(x \geq y \wedge z \geq 0 \Rightarrow x \cdot
+z \geq y \cdot z\)</span></p>
+<hr />
+<h3 id="assioma-di-dedekind">Assioma di Dedekind</h3>
+<p><span class="math inline">\(S)\)</span> Siamo <span
+class="math inline">\(A\)</span> e <span
+class="math inline">\(B\)</span> sottoinsiemi di <span
+class="math inline">\(\mathbb{R}\)</span> con <span
+class="math inline">\(A \neq \emptyset\)</span> e <span
+class="math inline">\(B \neq \emptyset\)</span>.</p>
+<p>Supponiamo che <span class="math inline">\(\forall a \in A, \forall b
+\in B, a \leq b\)</span></p>
+<p>allora</p>
+<p><span class="math inline">\(\exists \xi \in \mathbb{R} : \forall a
+\in A, \forall b \in B\)</span></p>
+<p><span class="math inline">\(a \leq \xi \leq b\)</span></p>
+<hr />
+<p>Dagli assiomi posso derivare le <em>normali</em> proprietà:</p>
+<ul>
+<li><p><span class="math inline">\(\forall x \in \mathbb{R}, x \cdot 0 =
+0 \wedge \forall x,y \in \mathbb{R}, x \cdot y = 0 \Rightarrow x = 0
+\vee y = 0\)</span></p></li>
+<li><p><span class="math inline">\((-a) \cdot (-b) =
+ab\)</span></p></li>
+<li><p><span class="math inline">\((-a) \cdot b = - ab\)</span></p></li>
+<li><p><span class="math inline">\(1 &gt; 0\)</span> e <span
+class="math inline">\(\forall a \in \mathbb{R}, a^2 \geq
+0\)</span></p></li>
+</ul>
+<h4 id="le-regole-dei-segni">Le regole dei segni</h4>
+<ul>
+<li><span class="math inline">\(a &gt; 0, b &gt; 0 \Rightarrow ab &gt;
+0\)</span><br />
+</li>
+<li><span class="math inline">\(a &lt; 0, b &lt; 0 \Leftrightarrow ab
+&gt; 0\)</span><br />
+</li>
+<li><span class="math inline">\(a &gt; 0, b &lt; 0 \Leftrightarrow ab
+&lt; 0\)</span><br />
+</li>
+<li><span class="math inline">\(a &lt; 0, b &gt; 0 \Leftrightarrow ab
+&lt; 0\)</span></li>
+</ul>
+<hr />
+<h2 id="intervalli">Intervalli</h2>
+<p>Siano <span class="math inline">\(a, b \in \mathbb{R}\)</span> con
+<span class="math inline">\(a &lt; b\)</span>,</p>
+<p>sono <strong>intervalli limitati</strong>:</p>
+<p><span class="math inline">\([a, b] = \{x \in \mathbb{R} : a \leq x
+\leq b\}\)</span><br />
+<span class="math inline">\(]a, b] = \{x \in \mathbb{R} : x &lt; a \leq
+b\}\)</span><br />
+<span class="math inline">\([a, b[ = \{x \in \mathbb{R} : a \leq x &lt;
+b\}\)</span><br />
+<span class="math inline">\(]a, b[ = \{x \in \mathbb{R} : a &lt; x &lt;
+b\}\)</span></p>
+<p>Sia <span class="math inline">\(a \in \mathbb{R}\)</span>,</p>
+<p>sono <strong>intervalli illimitati</strong>:</p>
+<p><span class="math inline">\(]-\infty, a] = \{x \in \mathbb{R} : x
+\leq a\}\)</span><br />
+<span class="math inline">\(]-\infty, a[ = \{x \in \mathbb{R} : a &lt;
+x\}\)</span><br />
+<span class="math inline">\([a, +\infty[ = \{x \in \mathbb{R} : a \geq
+x\}\)</span><br />
+<span class="math inline">\(]a, +\infty[ = \{x \in \mathbb{R} : a &gt;
+x\}\)</span></p>
+<blockquote>
+<p>Sono illimitati inferiormente e limitati superiormente.</p>
+</blockquote>
+<p><strong>Osservazione</strong><br />
+<span class="math inline">\(\mathbb{R} = ]-\infty, +\infty[\)</span></p>
+<p><strong>Osservazione</strong><br />
+Può essere comodo pensare che anche <span
+class="math inline">\(\{a\}\)</span> (cioè un insieme di un solo punto)
+è un intervallo “degenere”.</p>
+<p><strong>Osservazione</strong><br />
+<span class="math inline">\(-\infty\)</span> e <span
+class="math inline">\(+\infty\)</span> non sono numeri reali, ma
+soltanto simboli.</p>
+<blockquote>
+<p>Scriviamo <span class="math inline">\(\tilde{\mathbb{R}} = \mathbb{R}
+\cup \{-\infty, +\infty\}\)</span>, chiamata “<strong>retta
+estesa</strong>”.</p>
+</blockquote>
+<h3 id="insiemi-limitati">Insiemi limitati</h3>
+<p>Sia <span class="math inline">\(a \in \mathbb{R}\)</span>,<br />
+<span class="math inline">\(A\)</span> si dice (insieme) limitato
+superiormente se</p>
+<p><span class="math inline">\(\exists M \in \mathbb{R} : \forall a \in
+A, a \leq M\)</span></p>
+<p><strong>Definizione</strong><br />
+<span class="math inline">\(A \subset \mathbb{R}\)</span> si dice
+limitato se è limitato superiormente ed inferiormente.</p>
+<p><strong>Osservazione</strong><br />
+<span class="math inline">\(A\)</span> è limitato <span
+class="math inline">\(\Leftrightarrow \exists R &gt; 0 : A \subset [-R,
++R]\)</span></p>
+<p><strong>Osservazione</strong><br />
+Sul piano definisco un <strong>insieme limitato</strong> se riesco a
+metterlo in una circonferenza di raggio <span
+class="math inline">\(R\)</span>.</p>
+<p><strong>Osservazione</strong><br />
+¿ Cosa significa che <span class="math inline">\(A\)</span> non sia
+superiormente limitato?<br />
+(senza usare la negazione)</p>
+<p><span class="math inline">\(\neg (\exists M \in \mathbb{R} : \forall
+a \in A, a \leq M)\)</span></p>
+<p><span class="math inline">\(\forall M \in \mathbb{R} : \exists a \in
+A : a &gt; M\)</span></p>
+<h3 id="maggioranti-minoranti-massimi-e-minimi">Maggioranti, minoranti,
+massimi e minimi</h3>
+<p><strong>Definizione</strong><br />
+Sia <span class="math inline">\(A \subseteq \mathbb{R}\)</span>, sia
+<span class="math inline">\(M \in \mathbb{R}\)</span>,<br />
+se <span class="math inline">\(\forall a \in A, a \leq M\)</span> allora
+<span class="math inline">\(M\)</span> si dice
+<strong>maggiorante</strong> di <span
+class="math inline">\(A\)</span>.</p>
+<p><strong>Osservazione</strong><br />
+Se <span class="math inline">\(A\)</span> ha un maggiorante, allora ne
+ha infiniti.</p>
+<p><strong>Definizione</strong><br />
+Sia <span class="math inline">\(A \subseteq \mathbb{R}\)</span>, sia
+<span class="math inline">\(m \in \mathbb{R}\)</span>,<br />
+se <span class="math inline">\(\forall a \in A, a \geq m\)</span> allora
+<span class="math inline">\(m\)</span> si dice
+<strong>minorante</strong> di <span
+class="math inline">\(A\)</span>.</p>
+<p><strong>Osservazione</strong><br />
+Se <span class="math inline">\(A\)</span> ha un minorante, allora ne ha
+infiniti.</p>
+<p><strong>Definizione</strong><br />
+Sia <span class="math inline">\(A \subseteq \mathbb{R}\)</span>, sia
+<span class="math inline">\(\mu \in \mathbb{R}\)</span>,<br />
+se <span class="math inline">\(\mu\)</span> maggiorante di <span
+class="math inline">\(A\)</span> e <span class="math inline">\(\mu \in
+A\)</span> allora <span class="math inline">\(\mu\)</span> si dice
+<strong>massimo</strong> di <span class="math inline">\(A\)</span>.</p>
+<p><span class="math display">\[
+\left\{
+  \begin{array}{l}
+    \mu \in A \\
+    \forall a \in A, a \leq \mu
+  \end{array}
+\right.
+\]</span></p>
+<p><strong>Definizione</strong><br />
+Sia <span class="math inline">\(A \subseteq \mathbb{R}\)</span>, sia
+<span class="math inline">\(\nu \in \mathbb{R}\)</span>,<br />
+se <span class="math inline">\(\nu\)</span> minorante di <span
+class="math inline">\(A\)</span> e <span class="math inline">\(\nu \in
+A\)</span> allora <span class="math inline">\(\nu\)</span> si dice
+<strong>minimo</strong> di <span class="math inline">\(A\)</span>.</p>
+<p><span class="math display">\[
+\left\{
+  \begin{array}{l}
+    \nu \in A \\
+    \forall a \in A, a \geq \nu
+  \end{array}
+\right.
+\]</span></p>
+<h3 id="estremo-superiore-ed-estremo-inferiore">Estremo superiore ed
+estremo inferiore</h3>
+<p><strong>Definizione</strong><br />
+Sia <span class="math inline">\(A\)</span> superiormente limitato,<br />
+chiamo <strong>estremo superiore</strong> di <span
+class="math inline">\(A\)</span> il minimo dei maggioranti di <span
+class="math inline">\(A\)</span>.</p>
+<p><strong>Definizione</strong><br />
+Sia <span class="math inline">\(A\)</span> inferiormente limitato,<br />
+chiamo <strong>estremo inferiore</strong> di <span
+class="math inline">\(A\)</span> il massimo dei minoranti di <span
+class="math inline">\(A\)</span>.</p>
+<p><strong>Osservazione</strong><br />
+Sia <span class="math inline">\(A\)</span> un insieme, supponiamo che
+<span class="math inline">\(\mu_1\)</span> e <span
+class="math inline">\(\mu_2\)</span> siano due massimi,<br />
+sia ha <span class="math inline">\(\mu_1 = \mu_2\)</span>, cioè il
+massimo, se esiste, è unico.</p>
+<p>infatti</p>
+<p><span class="math inline">\(\mu_1\)</span> è massimo <span
+class="math inline">\(\Rightarrow \mu_1\)</span> è maggiorante<br />
+<span class="math inline">\(\mu_2\)</span> è massimo <span
+class="math inline">\(\Rightarrow \mu_2 \in A\)</span><br />
+<span class="math inline">\(\Rightarrow \mu_2 \leq \mu_1\)</span></p>
+<p>e viceversa</p>
+<p><span class="math inline">\(\mu_1\)</span> è massimo <span
+class="math inline">\(\Rightarrow \mu_1 \in A\)</span><br />
+<span class="math inline">\(\mu_2\)</span> è massimo <span
+class="math inline">\(\Rightarrow \mu_2\)</span> è minorante<br />
+<span class="math inline">\(\Rightarrow \mu_1 \leq \mu_2\)</span></p>
+<p>perciò <span class="math inline">\(\mu_1 = \mu_2\)</span>, quindi il
+massimo è unico.</p>
+<h3 id="teorema-dellesistenza-dellestremo-superiore">Teorema
+dell’esistenza dell’estremo superiore</h3>
+<p>sia <span class="math inline">\(A \subseteq \mathbb{R}, A \neq
+\emptyset\)</span> e <span class="math inline">\(A\)</span>
+superiormente limitato,<br />
+allora <span class="math inline">\(\exists \xi \in \mathbb{R} :
+\xi\)</span> <strong>estremo superiore</strong> di <span
+class="math inline">\(A\)</span>.</p>
+<p><strong>Dimostrazione</strong><br />
+<span class="math inline">\(A \subseteq \mathbb{R}\)</span> e <span
+class="math inline">\(A \neq \emptyset\)</span> (per ipotesi)</p>
+<p>sia <span class="math inline">\(A^* =\)</span> <span
+class="math inline">\(\{\text{maggioranti di } A\}\)</span>,<br />
+allora <span class="math inline">\(A^* \neq \emptyset\)</span> (perché
+<span class="math inline">\(A\)</span> è superiormente limitato)<br />
+e <span class="math inline">\(\forall a \in A, \forall b \in A^*, a \leq
+b\)</span> (per definizione di maggiorante)</p>
+<p>Alla coppia <span class="math inline">\(A, A^*\)</span> posso
+applicare <span class="math inline">\(S)\)</span><br />
+quindi <span class="math inline">\(\exists \xi \in \mathbb{R} : \forall
+a \in A, \forall b \in A^*, a \leq \xi \leq b\)</span></p>
+<p>in particolare <span class="math inline">\(\forall a \in A, a \leq
+\xi \Rightarrow \xi\)</span> è maggiorante</p>
+<p>quindi <span class="math inline">\(\forall b \in A^*, \xi \leq
+b\)</span> e <span class="math inline">\(\xi \in A^* \Rightarrow
+\xi\)</span> è il minimo dei maggioranti</p>
+<p><span class="math inline">\(\square\)</span></p>
+<hr />
+<p><strong>Per esercizio</strong><br />
+Se <span class="math inline">\(A \subseteq \mathbb{R}, A \neq
+\emptyset\)</span> e <span class="math inline">\(A\)</span>
+inferiormente limitato,<br />
+allora <span class="math inline">\(\exists \eta \in \mathbb{R} :
+\eta\)</span> <strong>estremo inferiore</strong> di <span
+class="math inline">\(A\)</span>.</p>
+<p>Sia <span class="math inline">\(A_* =\)</span> <span
+class="math inline">\(\{\text{minoranti di } A\}\)</span>,<br />
+allora <span class="math inline">\(A_* \neq \emptyset\)</span> (per più
+<span class="math inline">\(A\)</span> è inferiormente limitato)<br />
+e <span class="math inline">\(\forall a \in A, \forall b \in A_*, a \geq
+b\)</span> (per definizione di minorante)</p>
+<p>Alla coppia <span class="math inline">\(A, A_*\)</span> posso
+applicare <span class="math inline">\(S)\)</span><br />
+quindi <span class="math inline">\(\exists \eta \in \mathbb{R} : \forall
+b \in A_*, \forall a \in A, b \leq \eta \leq a\)</span></p>
+<p>in particolare <span class="math inline">\(\forall a \in A, a \geq
+\eta \Rightarrow \eta\)</span> è minorante</p>
+<p>quindi <span class="math inline">\(\forall b \in A_*, \eta \geq
+b\)</span> e <span class="math inline">\(\eta \in A_* \Rightarrow
+\eta\)</span> è il massimo dei minoranti.</p>
+<p><span class="math inline">\(\square\)</span> ???</p>
+<h3 id="teorema-le-proprietà-dellestremo-superiore">Teorema le proprietà
+dell’estremo superiore</h3>
+<p>Sia <span class="math inline">\(A \subseteq \mathbb{R}, A \neq
+\emptyset\)</span><br />
+sia <span class="math inline">\(\alpha \in \mathbb{R}\)</span></p>
+<p><span class="math display">\[
+\alpha = supA \Leftrightarrow
+\left\{
+  \begin{array}{l}
+    1) &amp; \forall a \in A, a \leq \alpha \\
+    2) &amp; \forall \varepsilon &gt; 0, \exists \overline{a} \in A :
+\overline{a} &gt; \alpha - \varepsilon
+  \end{array}
+\right.
+\]</span></p>
+<p><strong>Dimostrazione</strong><br />
+Sia <span class="math inline">\(\alpha = supA\)</span>, cioè <span
+class="math inline">\(\alpha\)</span> è il minimo dei maggioranti,<br />
+ma allora <span class="math inline">\(\alpha\)</span> è un maggiorante,
+allora vale (1),<br />
+allora <span class="math inline">\(\forall \varepsilon &gt; 0, \alpha -
+\varepsilon\)</span> non è un maggiorante.</p>
+<p><span class="math inline">\(\square\)</span></p>
+<p><strong>Osservazione</strong><br />
+Se un insieme ha minimo (o massimo), il minimo è l’estremo inferiore (o
+il massimo è l’estremo superiore).</p>
+<h3 id="conseguenze-dellesistenza-dellestremo-superiore">Conseguenze
+dell’esistenza dell’estremo superiore</h3>
+<hr />
+<p><span class="math inline">\(1)\)</span> <span
+class="math inline">\(\mathbb{N}\)</span> <strong>è superiormente
+limitato</strong></p>
+<p><strong>Dimostrazione</strong><br />
+Per assurdo supponiamo che<br />
+<span class="math inline">\(\exists M \in \mathbb{R} : \forall n, n \leq
+M\)</span></p>
+<p>allora <span class="math inline">\(\mathbb{N}\)</span> è non vuoto e
+<span class="math inline">\(\mathbb{N}\)</span> è superiormente
+limitato<br />
+<span class="math inline">\(\Rightarrow \exists \xi \in \mathbb{R} : \xi
+= sup \mathbb{N}\)</span></p>
+<p>Applico la seconda proprietà del <span
+class="math inline">\(sup\)</span> con <span
+class="math inline">\(\varepsilon = 1\)</span></p>
+<p>Allora <span class="math inline">\(\exists \overline{n} \in
+\mathbb{R} : \overline{n} &gt; \xi - 1\)</span></p>
+<p>ma allora <span class="math inline">\(\overline{n} + 1 &gt; \xi = sup
+\mathbb{N}\)</span></p>
+<p>che è impossibile</p>
+<p><span class="math inline">\(\square\)</span></p>
+<hr />
+<p><span class="math inline">\(2)\)</span> <strong>Proprietà di
+Archimede</strong></p>
+<p>Siano <span class="math inline">\(\varepsilon, M \in \mathbb{R},
+\varepsilon &gt; 0, M &gt; 0\)</span><br />
+allora <span class="math inline">\(\exists \overline{n} \in \mathbb{R} :
+\overline{n} \cdot \varepsilon &gt; M\)</span></p>
+<p><strong>Dimostrazione</strong><br />
+Per assurdo <span class="math inline">\(\forall n \in \mathbb{N},
+\varepsilon \leq M\)</span><br />
+allora <span class="math inline">\(E = \{n \cdot \varepsilon : n \in
+\mathbb{N}\}\)</span> è superiormente limitato (e non vuoto)</p>
+<p>sia <span class="math inline">\(\xi \in \mathbb{R}, \xi = sup
+E\)</span></p>
+<p>Applico la seconda proprietà del <span
+class="math inline">\(sup\)</span> con <span
+class="math inline">\(\varepsilon\)</span> delle ipotesi<br />
+<span class="math inline">\(\exists \overline{n} \in \mathbb{N} :
+\overline{n} \cdot \varepsilon &gt; \xi - \varepsilon\)</span></p>
+<p>ma allora <span class="math inline">\((\overline{n} + 1) \cdot
+\varepsilon &gt; \xi = sup E\)</span></p>
+<p>che è impossibile</p>
+<p><span class="math inline">\(\square\)</span></p>
+<hr />
+<p><span class="math inline">\(3)\)</span> <span
+class="math inline">\(\frac{1}{n}\)</span> <strong>diventa “piccolo
+quanto si vuole”</strong></p>
+<p>Sia <span class="math inline">\(\varepsilon &gt; 0\)</span> allora
+<span class="math inline">\(\exists \overline{n} \in \mathbb{N} : 0 &lt;
+\frac{1}{n} &lt; \varepsilon\)</span></p>
+<p><strong>Dimostrazione</strong><br />
+Considero la proprietà di Archimede con <span
+class="math inline">\(\varepsilon\)</span> delle ipotesi e <span
+class="math inline">\(M = 1\)</span></p>
+<p>per Archimede<br />
+<span class="math inline">\(\exists \overline{n} \in \mathbb{N} :
+\varepsilon \overline{n} &gt; M = 1\)</span><br />
+cioè <span class="math inline">\(\varepsilon \overline{n} &gt;
+1\)</span><br />
+ma allora <span class="math inline">\(0 &lt; \frac{1}{n} &lt;
+\varepsilon\)</span></p>
+<p><span class="math inline">\(\square\)</span></p>
+<hr />
+<p><span class="math inline">\(4)\)</span> <strong>“Densità di <span
+class="math inline">\(\mathbb{Q}\)</span> in <span
+class="math inline">\(\mathbb{R}\)</span>”</strong></p>
+<p><strong>Teorema</strong><br />
+<span class="math inline">\(\mathbb{Q}\)</span> è denso in <span
+class="math inline">\(\mathbb{R}\)</span>, cioè</p>
+<p>siano <span class="math inline">\(a, b \in \mathbb{R}\)</span> con
+<span class="math inline">\(a &lt; b\)</span><br />
+allora <span class="math inline">\(\exists q \in \mathbb{Q} : a &lt; q
+&lt; b\)</span><br />
+con <span class="math inline">\(q = \frac{k}{n}, n \neq 0\)</span></p>
+<p><strong>Dimostrazione</strong><br />
+Se <span class="math inline">\(a &lt; 0 &lt; b\)</span> allora <span
+class="math inline">\(q = 0\)</span>.</p>
+<p>Se <span class="math inline">\(a &lt; b &lt; 0\)</span> allora posso
+cambiare il segno, quindi <span
+class="math inline">\(-\frac{k}{n}\)</span> va bene.</p>
+<p>Quindi l’unico caso da considerare è <span class="math inline">\(0
+\leq a &lt; b\)</span>.</p>
+<p>Chiamo <span class="math inline">\(\varepsilon = b - a\)</span></p>
+<p><span class="math inline">\(\exists n \in \mathbb{N} : 0 &lt;
+\frac{1}{n} &lt; b - a\)</span></p>
+<p>ora sommo <span class="math inline">\(\frac{1}{n}\)</span> “tante
+volte”</p>
+<p><span class="math inline">\(\exists k : \frac{k - 1}{n} \leq a \leq
+\frac{k}{n}\)</span></p>
+<p>Sono sicuro che <span class="math inline">\(a &lt; \frac{k}{n} &lt;
+b\)</span>?</p>
+<p>Sì, perché <span class="math inline">\(\frac{1}{n} &lt; b -
+a\)</span></p>
+<hr />
+<p><span class="math inline">\(5)\)</span> <strong>Intervalli chiusi,
+limitati, inscatolati e dimezzati</strong></p>
+<p><strong>Definizione</strong><br />
+Sia <span class="math inline">\((I_n)_n\)</span> una successione di
+intervalli</p>
+<p><span class="math inline">\((I_n)_n = I_0, I_1, \ldots,
+I_n\)</span></p>
+<p><span class="math inline">\(I_i = [a_i, b_i]\)</span></p>
+<p><strong>Definizione</strong><br />
+Gli intervalli si dicono inscatolati<br />
+se <span class="math inline">\(\forall n, I_{n+1} \subset
+I_n\)</span></p>
+<p><strong>Definizione</strong><br />
+La successione <span class="math inline">\((I_n)_n\)</span> si dice di
+intervalli chiusi, limitati, inscatolati e dimezzati se</p>
+<p><span class="math inline">\(\forall n, I_{n+1} \subset
+I_n\)</span></p>
+<p><span class="math inline">\(a_{n+1} = a_n, b_{n+1} = \frac{a_n +
+b_n}{2}\)</span> oppure <span class="math inline">\(a_{n+1} = \frac{a_n
++ b_n}{2}, b_{n+1} = b_n\)</span></p>
+<p><strong>Teorema di Cantor forma debole</strong><br />
+Sia <span class="math inline">\((I_n)_n\)</span> una successione di
+intervalli chiusi, limitati e inscatolati<br />
+allora l’intersezione di tutti gli intervalli è <strong>non</strong>
+vuota.</p>
+<p><span class="math inline">\(\bigcap\limits_n I_n \neq
+\emptyset\)</span></p>
+<p><strong>Teorema di Cantor forma forte</strong><br />
+Sia <span class="math inline">\((I_n)_n\)</span> una successione di
+intervalli chiusi, limitati, inscatolati e dimezzati<br />
+allora <span class="math inline">\(\bigcap\limits_n I_n \neq
+\emptyset\)</span> è un insieme con unico punto</p>
+<p><span class="math inline">\(\exists \xi \in \mathbb{R} :
+\bigcap\limits_n I_n = \{ \xi \}\)</span></p>
+<p><strong>Osservazione</strong><br />
+Se gli intervalli non sono chiusi, il teorema non vale.</p>
+<p><span class="math inline">\(I_0 = ]0, 1]\)</span><br />
+<span class="math inline">\(I_1 = [0, \frac{1}{2}]\)</span><br />
+<span class="math inline">\(\vdots\)</span><br />
+<span class="math inline">\(I_n = [0, \frac{1}{n}]\)</span></p>
+<p><span class="math inline">\(\bigcap\limits_n\ ]0, \frac{1}{n}] =
+\emptyset\)</span></p>
+<p>infatti se <span class="math inline">\(x \leq 0\)</span> allora <span
+class="math inline">\(x \notin\ ]0, \frac{1}{n}], \forall n\)</span></p>
+<p>se <span class="math inline">\(x &gt; 0\)</span> allora <span
+class="math inline">\(\exists \overline{n} : x &gt;
+\frac{1}{\overline{n} + 1} &gt; 0\)</span><br />
+allora <span class="math inline">\(x \notin\ ]0, \frac{1}{n +
+1}]\)</span></p>
+<p><strong>Osservazione</strong><br />
+Se gli <span class="math inline">\(I_n\)</span> sono chiusi e non
+inscatolati, di nuovo il teorema non vale.</p>
+<p><span class="math inline">\(\bigcap\limits_n\ ]n, +\infty[\ =
+\emptyset\)</span></p>
+<hr />
+<p><strong>Dimostrazione della forma debole del teorema di
+Cantor</strong><br />
+<span class="math inline">\(A = \{a_n : n \in \mathbb{N}\}\)</span>
+estremi sinistri<br />
+<span class="math inline">\(B = \{b_n : n \in \mathbb{N}\}\)</span>
+estremi destri</p>
+<p>ho che <span class="math inline">\(\forall n, \forall m, a_n \leq
+b_m\)</span></p>
+<p>infatti se <span class="math inline">\(n \leq m\)</span> allora <span
+class="math inline">\([a_n, b_n] \supseteq [a_m, b_m]\)</span><br />
+e quindi <span class="math inline">\(a_n \leq b_m\)</span></p>
+<p>e se <span class="math inline">\(m \leq n\)</span> allora <span
+class="math inline">\([a_n, b_n] \subseteq [a_m, b_m]\)</span><br />
+e quindi <span class="math inline">\(a_n \leq b_m\)</span></p>
+<p>chiamo <span class="math inline">\(\alpha = sup A\)</span> (c’è
+perché A è superiormente limitato)</p>
+<p>ho che <span class="math inline">\(\forall n, a_n \leq b_m
+\Rightarrow \alpha \leq b_m\)</span></p>
+<p><span class="math inline">\(b_m\)</span> è un maggiorante di <span
+class="math inline">\(A \Rightarrow b_m \geq\)</span> minimo dei
+maggioranti <span class="math inline">\(= sup A = \alpha\)</span></p>
+<p>ho scoperto che <span class="math inline">\(\forall m\)</span>, <span
+class="math inline">\(B\)</span> è inferiormente limitato (<span
+class="math inline">\(\alpha\)</span> è minorante)</p>
+<p>allora <span class="math inline">\(\beta = inf B\)</span> e ho che
+<span class="math inline">\(\beta \geq \alpha\)</span> (<span
+class="math inline">\(\beta\)</span> massimo dei minoranti)</p>
+<p>ho che <span class="math inline">\([\alpha, \beta] \subseteq [a_n,
+b_n], \forall n\)</span><br />
+allora <span class="math inline">\([\alpha, \beta] \supseteq
+\bigcap\limits_n I_n \Rightarrow \bigcap\limits_n I_n \neq
+\emptyset\)</span></p>
+<p><span class="math inline">\(\square\)</span></p>
+<p><strong>Osservazione</strong><br />
+“Male che vada” <span class="math inline">\(\alpha = \beta\)</span>.</p>
+<p><strong>Per esercizio</strong><br />
+Provare che <span class="math inline">\(\bigcap\limits_n I_n = [\alpha,
+\beta]\)</span> !!!</p>
+<hr />
+<p><strong>Dimostrazione della forma forte del teorema di
+Cantor</strong><br />
+Dalla forma debole ho che<br />
+<span class="math inline">\(\bigcap\limits_n I_n = [\alpha,
+\beta]\)</span></p>
+<p>con <span class="math inline">\(\alpha = sup A\)</span> e <span
+class="math inline">\(\beta = inf B\)</span></p>
+<p>so che <span class="math inline">\(b_n - a_n = \frac{b_{n-1} -
+a_{n-1}}{2} = \frac{b_{n-2} - a_{n-2}}{4} = \frac{b_{n-3} - a_{n-3}}{8}
+= \dots = \frac{b_0 - a_0}{2^n}\)</span></p>
+<p>per induzione so che <span class="math inline">\(n \leq
+2^n\)</span></p>
+<p>allora <span class="math inline">\(\frac{b_{0} - a_{0}}{2^n} \leq
+\frac{b_0 - a_0}{n}\)</span></p>
+<p>supponiamo che <span class="math inline">\(\alpha &lt; \beta\)</span>
+per assurdo;</p>
+<p>allora <span class="math inline">\(\forall n, b_n - a_n \geq \beta -
+\alpha\)</span></p>
+<p>ma <span class="math inline">\(\frac{b_n - a_n}{n} \geq b_n -
+a_n\)</span></p>
+<p>ossia <span class="math inline">\(\forall n, \frac{b_n - a_n}{n} \geq
+\beta - \alpha &gt; 0\)</span></p>
+<p>è possibile? No, per Archimede.</p>
+<p>Quindi <span class="math inline">\(\alpha = \beta\)</span></p>
+<p><span class="math inline">\(\square\)</span></p>
+<h2 id="disuguaglianza-triangolare">Disuguaglianza triangolare</h2>
+<p><span class="math inline">\(|x + y| \leq |x| + |y|\)</span></p>
+<h2 id="funzioni-potenza-e-radice">Funzioni potenza e radice</h2>
+<h2 id="funzione-valore-assoluto">Funzione valore assoluto</h2>
+<h2 id="funzioni-trigonometriche">Funzioni trigonometriche</h2>
+<h2 id="i-numeri-complessi">I numeri complessi</h2>
+<p>Considero <span class="math inline">\(\mathbb{R}^2 = \mathbb{R}
+\times \mathbb{R}\)</span> (piano cartesiano o vettori)</p>
+<p><span class="math inline">\(\mathbb{R}^2 = \{(a,b) : a \in
+\mathbb{R}, b \in \mathbb{R}\}\)</span></p>
+<p>Operazione di addizione su <span
+class="math inline">\(\mathbb{R}^2\)</span><br />
+<span class="math inline">\((a, b) + (c, d) = (a+c,\ b+d)\)</span></p>
+<p>Proprietà:</p>
+<ul>
+<li>associativa</li>
+<li><span class="math inline">\(\exists\)</span> neutro <span
+class="math inline">\((0, 0)\)</span></li>
+<li><span class="math inline">\(\exists\)</span> opposto <span
+class="math inline">\(-(a, b) = (-a, -b)\)</span></li>
+<li>commutativa</li>
+</ul>
+<p><span class="math inline">\((\mathbb{R}^2, +)\)</span> è un gruppo
+abeliano</p>
+<p>Operazione di moltiplicazione su <span
+class="math inline">\(\mathbb{R}^2\)</span><br />
+<span class="math inline">\((a, b) \cdot (c, d) = (a \cdot c - b \cdot
+d, a \cdot d + b \cdot c)\)</span></p>
+<p>Proprietà:</p>
+<ul>
+<li>associativa</li>
+<li><span class="math inline">\(\exists\)</span> neutro <span
+class="math inline">\((1, 0)\)</span></li>
+<li><span class="math inline">\(\exists\)</span> reciproco</li>
+<li>commutativa</li>
+</ul>
+<p>Esiste anche la proprietà distributiva</p>
+<p><span class="math inline">\((\mathbb{R}^2, +, \cdot)\)</span> è un
+campo</p>
+<p>lo chiamo campo dei numeri complessi <span
+class="math inline">\(\mathbb{C}\)</span>.</p>
+<p><strong>Osservazione</strong><br />
+Dentro a <span class="math inline">\(\mathbb{C} = \{(a, b) \in
+\mathbb{R}\ \text{con}\ +, \cdot\}\)</span></p>
+<p>Considero i numeri <span class="math inline">\((a, 0)\)</span></p>
+<p><span class="math inline">\((a, 0) + (b, 0) = (a+b, 0)\)</span><br />
+<span class="math inline">\((a, 0) \cdot (b, 0) = (a \cdot b,
+0)\)</span><br />
+<span class="math inline">\((a, 0) \cdot (c, d) = (a \cdot c, a \cdot
+d)\)</span></p>
+<p>Come i reali, <span class="math inline">\(a\)</span> è scalare.</p>
+<p><strong>Rappresentazione di complessi</strong><br />
+Chiamo<br />
+<span class="math inline">\(\textbf{1} = (1, 0)\)</span><br />
+<span class="math inline">\(i = (0, 1)\)</span></p>
+<p><span class="math inline">\(\textbf{1} + i = (1, 1)\)</span><br />
+<span class="math inline">\(\textbf{1} \cdot \textbf{1} = (1, 0) =
+1\)</span><br />
+<span class="math inline">\(i \cdot i = (-1, 0) = -1\)</span></p>
+<p><span class="math inline">\(x^2 = -1 \rightarrow x = (0, 1) =
+i\)</span></p>
+<p><span class="math inline">\((a, b) = (a, 1) \cdot (1, 0) + (b, 0)
+\cdot (1, 0) = a(1, 0) + b(0, 1) = a + ib\)</span></p>
+<p><span class="math inline">\(a\)</span> si dice parte reale<br />
+<span class="math inline">\(b\)</span> si dice parte complessa (o
+immaginaria)</p>
+<p><strong>Piano di Gauss</strong><br />
+Il piano di Gauss è un piano cartesiano <span
+class="math inline">\(\mathbb{R} \times \mathbb{R}\)</span>, dove
+rappresento sulle ascisse le parti reali e sulle ordinate le parti
+immaginarie.</p>
+<p>Per esempio: <span class="math inline">\(z = a + bi\)</span> ha
+coordinata reale <span class="math inline">\(a\)</span> e immaginaria
+<span class="math inline">\(b\)</span>.</p>
+<p><span class="math inline">\(a = Re(z)\)</span><br />
+<span class="math inline">\(b = Im(z)\)</span></p>
+<p><span class="math inline">\(z = Re(z) + i \cdot Im(z)\)</span><br />
+<span class="math inline">\(Re(z), Im(z) \in \mathbb{R}\)</span></p>
+<p><strong>Definizione</strong><br />
+Sia <span class="math inline">\(z = a + ib\)</span>, chiamo
+<strong>complesso coniugato</strong> di <span
+class="math inline">\(z\)</span>,<br />
+il numero complesso <span class="math inline">\(a - ib\)</span>.</p>
+<p>Chiamo coniugo la funzione</p>
+<p><span class="math inline">\(\overline{\square} : \mathbb{C}
+\longrightarrow \mathbb{C}\)</span><br />
+<span class="math inline">\(z \longmapsto \overline{z}\)</span></p>
+<p><span class="math inline">\(z_1, z_2 \in \mathbb{C}\)</span><br />
+<span class="math inline">\(\overline{z_1 + z_2} = \overline{z_1} +
+\overline{z_2}\)</span><br />
+<span class="math inline">\(\overline{z_1 \cdot z_2} = \overline{z_1}
+\cdot \overline{z_2}\)</span></p>
+<p><strong>Definizione</strong><br />
+Sia <span class="math inline">\(z = a + ib\)</span>, chiamo
+<strong>modulo</strong> di <span class="math inline">\(z\)</span>,<br />
+il numero reale <span class="math inline">\(|z| = \sqrt{a^2 +
+b^2}\)</span>.</p>
+<p>(è la distanza dall’origine)</p>
+<p><span class="math inline">\(| \square | : \mathbb{C} \longrightarrow
+[0, +\infty[\)</span><br />
+<span class="math inline">\(z \longmapsto |z|\)</span></p>
+<p><strong>Osservazione</strong><br />
+Se <span class="math inline">\(z \in \mathbb{R}\)</span></p>
+<p><span class="math inline">\(|z| = \sqrt{z^2}\)</span></p>
+<p>Il modulo di <span class="math inline">\(z\)</span> è uguale al
+valore assoluto di <span class="math inline">\(z\)</span> come numero
+reale.</p>
+<p><strong>Proprietà</strong><br />
+<span class="math inline">\(|z| \geq 0\)</span><br />
+<span class="math inline">\(|z| = 0 \Leftrightarrow z = 0\)</span><br />
+<span class="math inline">\(|z| \geq |Re(z)|,\ |z| \geq
+|Im(z)|\)</span><br />
+<span class="math inline">\(|\overline{z}| = |z|\)</span><br />
+<span class="math inline">\(|z_1 \cdot z_2| = |z_1| \cdot
+|z_2|\)</span><br />
+<span class="math inline">\(z \cdot \overline{z} = |z|^2\)</span><br />
+<span class="math inline">\(z^{-1} =
+\frac{\overline{z}}{|z|^2}\)</span></p>
+<p><strong>Diseguaglianza triangolare</strong><br />
+<span class="math inline">\(|z_1 + z_2| \leq |z_1| + |z_2|\)</span></p>
+<p><strong>Forma trigonometrica</strong><br />
+<span class="math inline">\(|z|\)</span> modulo<br />
+<span class="math inline">\(\alpha\)</span> argomento</p>
+<p><span class="math inline">\(a = |z| \cos \alpha\)</span><br />
+<span class="math inline">\(b = |z| \sin \alpha\)</span></p>
+<p><span class="math inline">\(z = a + ib = |z| (\cos \alpha + i \sin
+\alpha)\)</span></p>
+<p><span class="math inline">\([\alpha] = \{\alpha + 2k \pi, k \in
+\mathbb{Z}\}\)</span></p>
+<p><span class="math inline">\(1 \sim [1, 0]\)</span><br />
+<span class="math inline">\(i \sim [1, \frac{\pi}{2}]\)</span></p>
+<p><strong>Moltiplicazione</strong><br />
+<span class="math inline">\(z_1 \sim [\rho_1, \alpha_1]\)</span><br />
+<span class="math inline">\(z_1 = \rho_1 (\cos \alpha_1 + i \sin
+\alpha_1)\)</span></p>
+<p><span class="math inline">\(\mathbb{C} \setminus \{0\}
+\longrightarrow \ ]0, +\infty[ \times \{[\alpha]_{\equiv_{2\pi}}, \alpha
+\in \mathbb{R}\}\)</span><br />
+<span class="math inline">\(z \longmapsto (\rho, [\alpha])\)</span></p>
+<p><span class="math inline">\(z_1 \cdot z_2 = \rho_1 \cdot \rho_2 (\cos
+(\alpha_1 + \alpha_2) + i \sin (\alpha_1 + \alpha_2))\)</span></p>
+<p><strong>Formula di De Moivre</strong><br />
+Sia <span class="math inline">\(z = a + ib \sim (\rho,
+[\alpha])\)</span></p>
+<p>quindi <span class="math inline">\(z = \rho (\cos \alpha + i \sin
+\alpha)\)</span></p>
+<p>allora <span class="math inline">\(z^n = \rho^n (\cos (n \alpha) + i
+\sin (n \alpha))\)</span></p>
+<p><strong>Radici</strong><br />
+Trovare i numeri <span class="math inline">\(z \in \mathbb{C}\)</span>
+che soddisfano <span class="math inline">\(z^n = 1\)</span></p>
+<p>In <span class="math inline">\(\mathbb{R}\)</span>:<br />
+<span class="math inline">\(x^n = 1\)</span></p>
+<p>se sono in <span class="math inline">\([0, +\infty[\)</span>
+considero la potenza <span class="math inline">\(p_n\)</span>
+n-esima,<br />
+ha un’unica soluzione in <span class="math inline">\([0,
++\infty[\)</span>, che è <span class="math inline">\(x = 1\)</span></p>
+<p>se sono sui negativi,<br />
+per <span class="math inline">\(n\)</span> pari, soluzione <span
+class="math inline">\(x= -1\)</span><br />
+per <span class="math inline">\(n\)</span> dispari, soluzione <span
+class="math inline">\(x = 1\)</span></p>
+<p>quindi su <span class="math inline">\(\mathbb{R}\)</span>:</p>
+<ul>
+<li>soluzioni <span class="math inline">\(x = 1\)</span> e <span
+class="math inline">\(x = -1\)</span> se <span
+class="math inline">\(n\)</span> pari</li>
+<li>soluzione <span class="math inline">\(x = 1\)</span> se <span
+class="math inline">\(n\)</span> dispari</li>
+</ul>
+<p>In <span class="math inline">\(\mathbb{C}\)</span>:<br />
+<span class="math inline">\(z^n = 1\)</span></p>
+<p><span class="math inline">\(z \sim (\rho, [\alpha])\)</span><br />
+<span class="math inline">\(z^n \sim (\rho^n, [n \alpha])\)</span><br />
+<span class="math inline">\(1 \sim (1, [0])\)</span></p>
+<p><span class="math inline">\((\rho^n, [n \alpha]) = (1,
+[0])\)</span></p>
+<p>deve essere <span class="math inline">\(\rho^n = 1\)</span> con <span
+class="math inline">\(\rho \in \ ]0, +\infty[\)</span>,<br />
+ha una sola soluzione <span class="math inline">\(\rho = 1\)</span></p>
+<p>deve essere <span class="math inline">\([n \alpha] = 0\)</span><br />
+<span class="math inline">\(n \alpha = 0 + 2k \pi, k \in
+\mathbb{Z}\)</span><br />
+<span class="math inline">\(\alpha = \frac{2k \pi}{n}\)</span></p>
+<p>per <span class="math inline">\(k = 0\)</span> ottengo <span
+class="math inline">\(\alpha_1 = 0\)</span><br />
+per <span class="math inline">\(k = 1\)</span> ottengo <span
+class="math inline">\(\alpha_2 = \frac{2 \pi}{n}\)</span><br />
+per <span class="math inline">\(k = 2\)</span> ottengo <span
+class="math inline">\(\alpha_3 = \frac{4 \pi}{n}\)</span><br />
+<span class="math inline">\(\vdots\)</span><br />
+per <span class="math inline">\(k = n-1\)</span> ottengo <span
+class="math inline">\(\alpha_n = \frac{2(n-1) \pi}{n}\)</span><br />
+per <span class="math inline">\(k = n\)</span> ottengo <span
+class="math inline">\(\alpha_{n+1} = 2 \pi = 0\)</span><br />
+per <span class="math inline">\(k = n+1\)</span> ottengo <span
+class="math inline">\(\alpha_{n+2} = 2 \pi +\frac{2 \pi}{n} = \frac{2
+\pi}{n}\)</span></p>
+<p>quindi sono <span class="math inline">\(n\)</span> punti
+distinti.</p>
+<p>Le radici dell’unità sono:</p>
+<ul>
+<li><span class="math inline">\(z_0 = 1 (\cos 0 + i \sin 0) =
+1\)</span><br />
+</li>
+<li><span class="math inline">\(z_1 = 1 (\cos \frac{2 \pi}{n} + i \sin
+\frac{2 \pi}{n}) = \dots\)</span><br />
+</li>
+<li><span class="math inline">\(\vdots\)</span></li>
+<li><span class="math inline">\(z_n = 1 (\cos \frac{2(n+1) \pi}{n} + i
+\sin \frac{2(n+1) \pi}{n}) = \dots\)</span></li>
+</ul>
+<p><strong>Esempio</strong><br />
+<span class="math inline">\(z^5 = 1\)</span></p>
+<p><span class="math inline">\(z_1 = 1\)</span><br />
+<span class="math inline">\(z_2 = 1 (\cos (\frac{2 \pi}{5}) + i \sin
+(\frac{2 \pi}{5}))\)</span><br />
+<span class="math inline">\(z_3 = 1 (\cos (\frac{4 \pi}{5}) + i \sin
+(\frac{4 \pi}{5}))\)</span><br />
+<span class="math inline">\(z_4 = 1 (\cos (\frac{6 \pi}{5}) + i \sin
+(\frac{6 \pi}{5}))\)</span><br />
+<span class="math inline">\(z_5 = 1 (\cos (\frac{8 \pi}{5}) + i \sin
+(\frac{8 \pi}{5}))\)</span></p>
+<h3 id="teorema-fondamentale-dellalgebra">Teorema fondamentale
+dell’algebra</h3>
+<p><span class="math inline">\(a_1, a_2, \dots, a_n \in \mathbb{C}, a_n
+\neq 0\)</span></p>
+<p>considero l’equazione <span class="math inline">\(a_0 + a_1z_1 +
+a_2z_2 + \dots + a_nz_n = 0\)</span></p>
+<p>questa ha <span class="math inline">\(n\)</span> soluzioni in <span
+class="math inline">\(\mathbb{C}\)</span></p>
+<p><span class="math inline">\(a_0 + a_1z_1 + a_2z_2 + \dots + a_nz_n =
+a_n(z - z_1)(z - z_2)\dots(z - z_n)\)</span><br />
+con <span class="math inline">\(z_1, z_2, \dots, z_n \in
+\mathbb{C}\)</span></p>
+<p>(<strong>algebricamente chiuso</strong>)</p>
+</body>
+</html>
