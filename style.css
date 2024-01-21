@@ -1,7 +1,6 @@
 :root {
-    --main-color: #0e331c;
-    --light-color: #d1cdb5;
-    --secondary-color: #caab67;
+    --main-color: #000;
+    --light-color: #f8f8f2;
 }
 
 * {
@@ -9,6 +8,7 @@
     padding: 0;
     box-sizing: border-box;
     font-weight: bold;
+    font-family: monospace;
 }
 
 svg { width: 25px; height: 25px; }
@@ -23,19 +23,36 @@ svg path { fill: var(--light-color); }
 
 body {
     color: var(--light-color);
-    background-color: var(--main-color);
     font-family: 'Satoshi', sans-serif;
+    background-color: #282a36;
+    background-image: url('img/bg1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 a {
     color: var(--light-color);
 }
 
+#root {
+    width: 40%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: #282a36;
+    position: relative;
+    left: 30px;
+}
+
 #main {
     width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 /* FACE IMAGE */
@@ -60,10 +77,11 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #8be9fd;
 }
 
 .tt {
-    font-size: 14x;
+    font-size: 14px;
 }
 
 #links {
@@ -76,32 +94,34 @@ a {
 #content {
     max-width: 840px;
     padding: 20px;
-     display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+#content p {
+    text-align: center;
+}
+
 /* TEXT */
 p {
-    font-size: 16px;
-    line-height: 1.7;
-    text-align: center;
+    font-size: 14px;
+    line-height: 1.8;
 }
 
 h1 {
     margin-top: 20px;
-    color: var(--secondary-color);
-    text-shadow: 0 0 3px var(--pink);
+    color: #d7baff;
+    text-shadow: 0 0 10px #bd93f9;
     font-family: 'Tanker', serif;
     animation: blink 6s infinite alternate;
-    font-size: 45px;
+    font-size: 60px;
 }
 
 h2 {
-    margin-top: 60px;
-    margin-bottom: 15px;
-    color: var(--pink);
-    text-shadow: 0 0 8px var(--violet);
+    margin-bottom: 10px;
+    color: #50fa7b;
+    text-shadow: 0 0 8px #50fa7b;
     animation: blink 7s infinite alternate;
     font-size: 24px;
 }
@@ -113,4 +133,123 @@ h2 {
     43% { opacity: 1; }
     45% { opacity: 0.2; }
     46% { opacity: 1; }
+}
+
+#scroll-down-message {
+    position: absolute;
+    bottom: 2em;
+    left: calc(2em + 30px);
+    z-index: 3;
+    text-align: center;
+    background-color: rgba(255, 121, 198, 1);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+#scroll-down-message.hidden {
+    opacity: 0;
+}
+
+#projects {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #282a36;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#projects-title {
+    margin-bottom: 20px;
+}
+
+#projects.visible {
+    opacity: 1;
+}
+
+#projects-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-item {
+    width: 300px;
+    min-height: 200px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style-type: none;
+    margin: 20px;
+}
+
+li {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+
+@media only screen and (max-width: 1300px) {
+    /* Styles for screens up to 1300px wide */
+    body {
+        background-color: #282a36;
+        background-image: none;
+        min-height: 100vh;
+    }
+
+    #root {
+        width: 100%;
+        left: 0;
+    }
+
+    #content {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    
+
+    #projects {
+        width: 100%;
+        position: relative;
+        opacity: 1;
+        padding: 20px;
+    }
+
+    #projects-title {
+        margin-top: 0px;
+    }
+
+    .project-item {
+        width: 100%;
+        min-height: 300px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        padding: 20px;
+    }
+
+    #scroll-down-message {
+        display: none;
+    }
 }
