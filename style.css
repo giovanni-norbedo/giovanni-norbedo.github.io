@@ -164,15 +164,21 @@ h2 {
     z-index: 2;
     opacity: 0;
     transition: opacity 0.5s ease;
-
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 #projects-title {
     margin-bottom: 20px;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
 }
 
 #projects.visible {
@@ -181,16 +187,16 @@ h2 {
 
 #projects-content {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: row;
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translateY(-50%);
 }
 
 .project-item {
-    width: 300px;
-    min-height: 200px;
+    width: 400px;
     margin: 10px;
-    border: 1px solid #ccc;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -206,8 +212,30 @@ li {
     line-height: 1.4;
 }
 
+.project-item h2 {
+    animation: none;
+}
 
-@media only screen and (max-width: 1300px) {
+.separator h2 {
+    color: #d7baff;
+    text-shadow: 0 0 10px #bd93f9;
+}
+
+.closed {
+    
+}
+
+.closed h2 {
+    color: #33A0FF;
+}
+
+.open h2 {
+    color: #50fa7b;
+
+}
+
+
+@media screen and (max-width: 1300px), screen and (max-height: 700px) {
     /* Styles for screens up to 1300px wide */
     body {
         background-color: #282a36;
@@ -228,13 +256,27 @@ li {
         font-size: 40px;
     }
 
-    
-
     #projects {
         width: 100%;
-        position: relative;
+        position: static;
+        top: none;
+        left: none;
         opacity: 1;
         padding: 20px;
+    }
+
+    #projects-title {
+        position: static;
+        transform: none;
+    }
+
+    #projects-content {
+        flex-direction: column;
+        align-items: center;
+        top: 0;
+        left: 0;
+        transform: none;
+        position: static;
     }
 
     #projects-title {
@@ -243,9 +285,6 @@ li {
 
     .project-item {
         width: 100%;
-        min-height: 300px;
-        margin: 10px;
-        border: 1px solid #ccc;
         padding: 20px;
     }
 

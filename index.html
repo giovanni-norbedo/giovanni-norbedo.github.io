@@ -82,9 +82,6 @@
             <div id="content">
                 <p id="bio">First-year student in Artificial Intelligence and Data Analytics at the University of Trieste.  
                 Coding enthusiast since age 10, proficient in web (Django, DRF, React) and mobile (Flutter) app development.  
-                Active participant in penetration testing activities like Hack The Box and Capture The Flag challenges.</p>
-                <br><p>&nbsp;</p><br>
-                <p>Mathematics | Neuroscience | Philosophy | Reading | Chess | Music | Trip Hop | Vinyl Records | Linux | Coffee | Basketball</p>   
             </div> <!-- content -->
 
         </div> <!-- main -->
@@ -97,7 +94,14 @@
     <div id="projects">
         <h1 id="projects-title">--- Projects ---</h1>
         <div id="projects-content">
-            <div class="project-item">
+            <div class="project-item separator">
+                <h2>## Closed source</h2>
+                <p>
+                    I'm actively transforming my ideas into tangible, marketable solutions. Stay tuned as I work to realize these projects.
+                </p>
+            </div>
+
+            <div class="project-item closed">
                 <h2>HomeServer</h2>
                 <p>
                     HomeServer allows everyone to have a personal server.
@@ -125,7 +129,7 @@
                 </p>
             </div>
 
-            <div class="project-item">
+            <div class="project-item closed">
                 <h2>UniConnect</h2>
                 <p>
                     Your all-in-one solution for academic support. Buy and sell notes, get tutoring services, and connect with your university community.
@@ -141,7 +145,7 @@
                 </p>
             </div>
 
-            <div class="project-item">
+            <div class="project-item closed">
                 <h2>BlueSpot</h2>
                 <p>
                     BlueSpot is a unique app leveraging Bluetooth Low Energy to connect with nearby devices, helping people discover each other through live interactions.
@@ -152,33 +156,47 @@
                 <p>
                     Embrace the spontaneity of real-world connections with BlueSpot – where meeting new people is just a Bluetooth connection away.
                 </p>
-            </div>  
+            </div>
+
+            <div class="project-item separator">
+                <h2>## Open source</h2>
+                <p>
+                    Check out my open-source projects!
+                </p>
+            </div>
             
-            <div class="project-item">
+            <div class="project-item open">
                 <h2>terminal-mirror</h2>
                 <p>
                     terminal-mirror is a program written in Python that recreates the camera input in the terminal.
                 </p>
+            </div>
 
-                <br><p>&nbsp;</p><br>
-                
+            <div class="project-item open">
                 <h2>Schoolwork Project</h2>
                 <p>
                     Schoolwork Project is a web application that allows users to ask and answer questions, exchange notes, create maps, or write articles using a virtual currency.
                 </p>
+            </div>
 
-                <br><p>&nbsp;</p><br>
-
+            <div class="project-item open">
                 <h2>rainbow-javascript</h2>
                 <p>
                     A simple script written in Javascript for a smooth background transition.</h2>
                 </P>
-            </div>            
+            </div>
         </div>
     </div>
 
     <script>
-        if (window.innerWidth >= 1300) {
+        let project = document.getElementById('projects-content'),
+            project_style = window.getComputedStyle(project),
+            project_width = parseInt(project_style.getPropertyValue('width').slice(0, -2)) + 70;
+        
+        let project_left = 70;
+        let change = true;
+
+        if (window.innerWidth >= 1300 && window.innerHeight > 700) {
             let end = false;
 
             window.onwheel = e => {
@@ -190,41 +208,60 @@
 
                 let newLeft = parseInt(top.slice(0, -2));
 
+                let movingProjects = document.getElementById('projects-content');
+                
                 if(e.deltaY >= 0){
                     if (newLeft < window.innerWidth * 0.6 - 30) {
                         // Wheel Down
                         console.log('Down');
                         newLeft = newLeft + 15;
-
                         movingDiv.style.left = `${newLeft}px`;
                     } else {
                         console.log('Stop');
+
                         end = true;
                         document.getElementById('scroll-down-message').classList.add('hidden');
                         document.getElementById('projects').classList.add('visible');
+                        
+                        if (project_left > - project_width + window.innerWidth) {
+                            if (change === true) {
+                                setTimeout(() => {
+                                    change = false;
+                                }, 400);
+                            } else {
+                                project_left -= 20;
+                                console.log(project_left);
+                                document.getElementById('projects-content').style.left = `${project_left}px`;
+                            }
+                        }
                     }
                 } else {
                     if (end == true) {
-                        document.getElementById('projects').classList.remove('visible');2
-                        end = false;
+                        if (project_left < 70) {
+                            project_left += 20;
+                            console.log(project_left);
+                            document.getElementById('projects-content').style.left = `${project_left}px`;
+                        } else {
+                            document.getElementById('projects').classList.remove('visible');
+                            end = false;
+                            change = true;
+                        }   
                     } else if (newLeft > 30) {
                         // Wheel Up
                         console.log('Up');
                         newLeft = newLeft - 15;
-
                         movingDiv.style.left = `${newLeft}px`;
                     }
                 }
             }
 
+            window.addEventListener('resize', function () { 
+                "use strict";
+                window.location.reload(); 
+            });
         } else {
-
+            /* screen up to 1300px wide */
         }
-
-        window.addEventListener('resize', function () { 
-            "use strict";
-            window.location.reload(); 
-        });
     </script>
 </body>
 
