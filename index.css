@@ -1,4 +1,4 @@
-svg path { fill: #ddd }
+svg path { fill: #fff }
 
 #github svg:hover path { fill: #181717; }
 #protonmail svg:hover path { fill: #8B89CC; }
@@ -10,16 +10,17 @@ svg path { fill: #ddd }
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #8d3c3c;
 }
 
 h1 {
     font-family: "Paytone One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #2f83d8;
+    color: #fff;
 }
 
 p {
     font-family: monospace;
-    color: #193446;
+    color: #fff;
 }
