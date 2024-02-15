@@ -1,0 +1,25 @@
+svg path { fill: #ddd }
+
+#github svg:hover path { fill: #181717; }
+#protonmail svg:hover path { fill: #8B89CC; }
+#keybase svg:hover path { fill: #33A0FF; }
+#telegram svg:hover path { fill: #26A5E4; }
+#linkedin svg:hover path { fill: #0A66C2; }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "Paytone One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #2f83d8;
+}
+
+p {
+    font-family: monospace;
+    color: #193446;
+}
