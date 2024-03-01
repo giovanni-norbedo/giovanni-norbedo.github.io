@@ -1,26 +1,113 @@
-svg path { fill: #fff }
+:root {
+    --o-bg-color: #ecece0;
+    --0-main-color: #2a2930;
 
-#github svg:hover path { fill: #181717; }
-#protonmail svg:hover path { fill: #8B89CC; }
-#keybase svg:hover path { fill: #33A0FF; }
-#telegram svg:hover path { fill: #26A5E4; }
-#linkedin svg:hover path { fill: #0A66C2; }
+    --bg-color: #2a2930;
+    --main-color: #ecece0;
+}
+
+@font-face {
+    font-family: "Tabular-Regular";
+    src: url("../fonts/Tabular-Regular.woff2") format("woff2"),
+        url("../fonts/Tabular-Regular.woff") format("woff"),
+        url("../fonts/Tabular-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Neco-Black";
+    src: url("../fonts/Neco-Black.woff2") format("woff2"),
+        url("../fonts/Neco-Black.woff") format("woff"),
+        url("../fonts/Neco-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-display: swap;
+    font-style: normal;
+}
+
+#links {
+    background-color: var(--bg-color);
+    border-color: var(--main-color);
+}
+
+#contact {
+    background-color: var(--bg-color);
+    border-color: var(--main-color);
+}
+
+svg path {
+    fill: var(--main-color);
+}
+
+#github svg:hover path {
+    fill: #555555;
+}
+#protonmail svg:hover path {
+    fill: #8b89cc;
+}
+#telegram svg:hover path {
+    fill: #26a5e4;
+}
+#linkedin svg:hover path {
+    fill: #0a66c2;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #5a73a8;
 }
 
-h1 {
-    font-family: "Paytone One", sans-serif;
+#root {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.page {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.page:nth-of-type(even) {
+    color: var(--bg-color);
+
+    background-color: var(--main-color);
+    background-image: url("data:image/svg+xml,%3Csvg width='76' height='18' viewBox='0 0 76 18' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M32 18c-2.43-1.824-4-4.73-4-8 0-4.418-3.582-8-8-8H0V0h20c5.523 0 10 4.477 10 10 0 4.418 3.582 8 8 8h20c4.418 0 8-3.582 8-8 0-5.523 4.477-10 10-10v2c-4.418 0-8 3.582-8 8 0 3.27-1.57 6.176-4 8H32zM64 0c-1.67 1.256-3.748 2-6 2H38c-2.252 0-4.33-.744-6-2h32z' fill='%239C92AC' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.page:nth-of-type(odd) {
+    color: var(--main-color);
+
+    background-color: var(--bg-color);
+    background-image: url("data:image/svg+xml,%3Csvg width='76' height='18' viewBox='0 0 76 18' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M32 18c-2.43-1.824-4-4.73-4-8 0-4.418-3.582-8-8-8H0V0h20c5.523 0 10 4.477 10 10 0 4.418 3.582 8 8 8h20c4.418 0 8-3.582 8-8 0-5.523 4.477-10 10-10v2c-4.418 0-8 3.582-8 8 0 3.27-1.57 6.176-4 8H32zM64 0c-1.67 1.256-3.748 2-6 2H38c-2.252 0-4.33-.744-6-2h32z' fill='%239C92AC' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+body {
+    color: var(--main-color);
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Neco-Black", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #fff;
 }
 
 p {
-    font-family: monospace;
-    color: #fff;
+    font-family: "Tabular-Regular";
+}
+
+.thing {
+    background-color: #574aaf;
+}
+
+.tag {
+    font-family: "Tabular-Regular", sans-serif;
+    font-weight: bold;
+    color: #574aaf;
+    background-color: #ffdc5d;
+    padding: 8px;
+    border-radius: 16px;
 }
