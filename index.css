@@ -66,7 +66,6 @@ svg path {
 
 .page {
     scroll-snap-align: none;
-    scroll-snap-stop: none;
     min-height: auto;
     padding: 7.5rem 2.5rem;
 }
@@ -120,7 +119,7 @@ p {
 }
 
 .tag {
-    font-family: "Tabular-Regular", sans-serif;
+    font-family: "Tabular-Regular";
     font-weight: bold;
     color: #574aaf;
     background-color: #ffdc5d;
