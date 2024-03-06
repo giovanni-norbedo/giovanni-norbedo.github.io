@@ -60,13 +60,29 @@ svg path {
 }
 
 #root {
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    scroll-snap-type: none;
 }
 
 .page {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+    scroll-snap-align: none;
+    scroll-snap-stop: none;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+@media screen and (min-height: 500px) {
+    #root {
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+    }
+    
+    .page {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        height: auto;
+        padding: 40px;
+    }
 }
 
 .page:nth-of-type(even) {
