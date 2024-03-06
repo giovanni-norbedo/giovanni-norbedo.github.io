@@ -67,8 +67,8 @@ svg path {
 .page {
     scroll-snap-align: none;
     scroll-snap-stop: none;
-    min-height: 100vh;
-    padding: 20px;
+    min-height: auto;
+    padding: 7.5rem 2.5rem;
 }
 
 @media screen and (min-height: 500px) {
@@ -80,8 +80,8 @@ svg path {
     .page {
         scroll-snap-align: start;
         scroll-snap-stop: always;
-        height: auto;
-        padding: 40px;
+        min-height: 100vh;
+        padding: 2.5rem;
     }
 }
 
