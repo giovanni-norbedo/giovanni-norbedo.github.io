@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <div id="links" class="absolute p-4 border-b-2 sm:border-2 sm:rounded-full sm:top-10 sm:left-10 w-full sm:w-auto flex flex-row space-x-4 items-center">
+    <div id="links" class="absolute p-4 border-b-2 sm:border-2 sm:rounded-full sm:top-10 sm:left-10 w-full sm:w-auto flex flex-row space-x-4 items-center justify-center">
         <div class="w-8 h-8">
             <a id="github" href="https://github.com/giovanni-norbedo" target="_blank">
                 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -207,11 +207,9 @@
         gsap.set(".page *", {
             autoAlpha: 0,
             y: "50px",
-            rotation: 6,
+            rotation: 5,
             transform: "scale(0.5)",
         });
-
-        console.log(document.querySelectorAll(".page *"));
 
         const animateVisible = (block, ratio, isIntersecting) => {
             if (isIntersecting && ratio > 0) {
@@ -220,8 +218,8 @@
                     autoAlpha: 1,
                     y: 0,
                     rotation: 0,
-                    stagger: 0.2,
                     transform: "scale(1)",
+                    stagger: 0.2,
                     ease: "power3.out",
                 });
             } else {
@@ -243,6 +241,33 @@
         for (const block of blocks) {
             blockObserver.observe(block);
         }
+
+
+        gsap.set("#links", {
+            autoAlpha: 0,
+            x: "-300px",
+        });
+
+        gsap.to("#links", {
+            duration: 2,
+            autoAlpha: 1,
+            x: 0,
+            ease: "power3.out",
+        });
+
+        gsap.set("#contactme", {
+            autoAlpha: 0,
+            y: "300px",
+            rotation: 300,
+        });
+
+        gsap.to("#contactme", {
+            duration: 2,
+            autoAlpha: 1,
+            y: 0,
+            rotation: 0,
+            ease: "power3.out",
+        });
 
     </script>
 </body>
