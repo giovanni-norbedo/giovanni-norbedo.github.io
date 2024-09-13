@@ -171,7 +171,6 @@
 
         /* tap the right side of the screen to scroll down */
         document.addEventListener('click', function(event) {
-            document.getElementById('welcome').style.display = 'none';
             const scrollContainer = document.getElementById('root');
             const { clientX, clientY } = event;
 
@@ -420,6 +419,7 @@
             duration: 3,
             autoAlpha: 0,
             display: "none",
+            x: "100vw",
             ease: "power3.out",
         });
 
@@ -428,6 +428,7 @@
             duration: 3,
             autoAlpha: 0,
             display: "none",
+            x: "-100vw",
             ease: "power3.out",
         });
     </script>
