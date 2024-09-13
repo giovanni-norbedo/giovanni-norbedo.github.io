@@ -1,7 +1,4 @@
 :root {
-    --o-bg-color: #ecece0;
-    --0-main-color: #2a2930;
-
     --bg-color: #2a2930;
     --main-color: #ecece0;
 }
@@ -29,11 +26,13 @@
 #links {
     background-color: var(--bg-color);
     border-color: var(--main-color);
+    z-index: 5;
 }
 
 #contact {
     background-color: var(--bg-color);
     border-color: var(--main-color);
+    z-index: 5;
 }
 
 svg path {
@@ -53,10 +52,11 @@ svg path {
     fill: #0a66c2;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+#welcome {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    opacity: 0.95;
+    z-index: 10;
 }
 
 #root {
@@ -74,12 +74,13 @@ svg path {
     #root {
         overflow-y: scroll;
         scroll-snap-type: y mandatory;
-    }
+}
     
     .page {
         scroll-snap-align: start;
         scroll-snap-stop: always;
         min-height: 100vh;
+        min-width: 100vw;
         padding: 2.5rem;
     }
 }

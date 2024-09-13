@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Giovanni Norbedo is a full stack web developer and software engineer. Includes technologies, projects and examples. Check out his website and portfolio to see his latest work.">
+    <meta name="description" content="Giovanni Norbedo is a AI student at the University of Trieste and a full-stack developer. Check out his website to see his latest projects and work.">
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="rating" content="General">
@@ -20,8 +20,8 @@
     <link rel="stylesheet" href="index.css">
 
     <meta property="og:site_name" content="Giovanni Norbedo">
-    <meta property="og:title" content="Giovanni Norbedo">
-    <meta property="og:description" content="Giovanni Norbedo is a full stack web developer and software engineer. Includes technologies, projects and examples. Check out his website and portfolio to see his latest work.">
+    <meta property="og:title" content="Giovanni Norbedo - Personal Website">
+    <meta property="og:description" content="Hi! I'm a AI student at the University of Trieste and a full-stack developer. Check out my website to see my latest projects and work.">
     
     <meta property="og:image" itemprop="image" content="https://norbedo.xyz/images/bg.webp">
     <meta property="og:image:type" content="image/webp">
@@ -32,7 +32,6 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="it_IT">
-
 </head>
 
 <body>
@@ -82,16 +81,21 @@
     </div>
 
     <a href="mailto:norbedo@proton.me" target="_blank">
-        <div id="contactme" class="absolute bottom-4 sm:bottom-10 sm:left-10 w-full sm:w-auto flex flex-row justify-center">
+        <div id="contactme" class="absolute bottom-4 sm:bottom-10 sm:left-10 w-full sm:w-auto flex flex-row justify-center items-center">
             <div id="contact" class="p-2 border-2 rounded-xl">
                 <p>Contact me!</p>
             </div>
         </div>
     </a>
 
+    <div id="welcome" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center p-4 w-full">
+        <p class="text-2xl sm:text-4xl mb-2">Welcome to my website!</p>
+        <p class="text-md sm:text-lg">Use the arrow keys or click on the right side of the screen to navigate the website.</p>
+    </div>
+
     <div id="root" class="w-full max-h-screen flex flex-col items-center">
 
-        <div class="page w-full flex flex-col justify-center">
+        <div class="page flex flex-col justify-center">
             <div class="w-full flex flex-row justify-center items-center">
                 <div>
                     <h1 id="title" class="text-6xl sm:text-8xl mb-6">Giovanni Norbedo</h1>
@@ -105,41 +109,87 @@
             </div>
         </div>
 
-        <div class="page md:px-60 w-full flex flex-col justify-center">
+        <div class="page lg:px-60 flex flex-col justify-center">
             <h1 id="about" class="text-6xl mb-6">About</h1>
 
             <div class="max-w-4xl">
-                <p class="text-md sm:text-xl mb-4">First-year student in Artificial Intelligence and Data Analytics at the University of Trieste. Coding enthusiast since age 10, proficient in web (Django, DRF, React) and mobile (Flutter) app development.</p>
-                <p class="text-md sm:text-xl mb-4">I'm interested in Artificial Intelligence, Machine Learning, Data Analytics, Web Development, Mobile Development, and more.</p>
+                <p class="text-md sm:text-xl mb-4">Student in Artificial Intelligence and Data Analytics at the University of Trieste. Open source enthusiast, proficient in web (Django, DRF, React) and mobile (Flutter) app development.</p>
+                <p class="text-md sm:text-xl mb-4">I'm interested in Artificial Intelligence, Machine Learning, Data Analytics, Web Development, Penetration Testing, and more. I'm always looking for new challenges and opportunities to learn and grow.</p>
             </div>
         </div>
 
-        <div class="page md:px-60 w-full flex flex-col justify-center">
+        <div class="page lg:px-60 flex flex-col justify-center">
             <h1 class="text-6xl mb-6">Skills & Tools</h1>
             <div class="max-w-4xl">
                 <p id="skills" class="text-sm sm:text-xl mb-4">I know/use a few things: Mathematical Analysis, Linear Algebra, Affine Geometry, Statistics, Probability Theory, Physics, Computer Architectures, Operative Systems, Software Testing, MATLAB, R, C, Python, NumPy, Pandas, Matplotlib, Scikit-Learn, Jupyter, Kivy, Flask, Django, Django REST Framework, API Management, JSON, SQL, Object-Relational Mapping (ORM), Markdown, LaTeX, HTML, CSS, Bootstrap, Tailwind CSS, PureCSS, JavaScript, Node.js, React.js, Dart, Flutter, Git, GitHub, Docker, Terminal, Shell Scripting, Visual Studio Code, PyCharm, Linux Ricing, Linux, DevOps, Debian, Ubuntu, VirtualBox, AWS, Heroku, Supabase,  Penetration Testing, CTF, Hack The Box.</p>
             </div>
         </div>
+
+        <div class="page lg:px-60 flex flex-col justify-center">
+            <h1 class="text-6xl mb-6">Projects</h1>
+            <a href="https://norbedo.xyz/projects.html" target="_blank">
+                <div class="max-w-4xl">
+                    <p class="text-md sm:text-xl mb-4">Check out my projects on the dedicated page.</p>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Projects</button>
+                </div>
+            </a>
+        </div>
     </div>
 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
     <script>
-        gsap.registerPlugin(TextPlugin)
-        gsap.registerPlugin(ScrollTrigger)
+        document.addEventListener('keydown', function(event) {
+            const scrollContainer = document.getElementById('root');
+
+            switch (event.key) {
+                case 'ArrowLeft':
+                    scrollContainer.scrollBy({
+                        top: -window.innerHeight, // Scroll up by the height of the viewport
+                        behavior: 'smooth'
+                    });
+                    break;
+                case 'ArrowRight':
+                    scrollContainer.scrollBy({
+                        top: window.innerHeight, // Scroll down by the height of the viewport
+                        behavior: 'smooth'
+                    });
+                    break;
+            }
+        });
+
+        /* tap the right side of the screen to scroll down */
+        document.addEventListener('click', function(event) {
+            document.getElementById('welcome').style.display = 'none';
+            const scrollContainer = document.getElementById('root');
+            const { clientX, clientY } = event;
+
+            if (clientX > window.innerWidth / 2) {
+                scrollContainer.scrollBy({
+                    top: window.innerHeight, // Scroll down by the height of the viewport
+                    behavior: 'smooth'
+                });
+            } else {
+                scrollContainer.scrollBy({
+                    top: -window.innerHeight, // Scroll up by the height of the viewport
+                    behavior: 'smooth'
+                });
+            }
+        });
+
 
         const terminal = document.getElementById("terminal");
         
-        messages = ['Hello, World!', 
+        messages = [
+            'Hello, World!', 
             'git commit -m "Initial commit"', 
             'npm install', 
             'pip install -r requirements.txt', 
             'flutter run', 
             'docker ps', 
             'apt-get update -y', 
-            'ssh -i "key.pem" user@norbedo.xyz',
+            'ssh -i "key.pem" user@host',
             'systemctl start postgresql', 
             'python manage.py runserver',
             'git push origin main',
@@ -169,61 +219,93 @@
             'npx create-react-app app',
         ]
 
-        const tl = gsap.timeline({
-            repeat: -1,
-            onRepeat: function() {
-                let number = Math.floor(Math.random() * messages.length);
-                tl
-                .to(terminal, {
-                    duration: 2,
-                    text: "$ " + messages[number],
-                    ease: "none",
-                })
-                .to(terminal, {
-                    duration: 0.5,
-                    text: "$ " + messages[number] + "_",
-                    ease: "none",
-                    repeat: 2,
-                    repeatDelay: 0.5,
-                })
-                .to(terminal, {
-                    duration: 0.5,
-                    text: "$ " + messages[number],
-                    ease: "none",
-                })
-                .to(terminal, {
-                    duration: 1,
-                    text: "$ ",
-                    ease: "none",
-                });
+        let typingInterval;
+        let cursorBlinkingInterval;
+        let typingInProgress = false;
+
+        function typeMessage(message, callback) {
+            let index = 0;
+            typingInProgress = true;
+            terminal.textContent = "$ ";
+
+            function type() {
+                if (!typingInProgress) return;
+                if (index < message.length) {
+                    terminal.textContent += message.charAt(index);
+                    index++;
+                    typingInterval = setTimeout(type, 70); // typing speed
+                } else if (callback) {
+                    callback();
+                }
             }
-        });
+            
+            type();
+        }
 
+        function eraseMessage(callback) {
+            let message = terminal.textContent.slice(2); // Remove "$ " prefix
+            let index = message.length;
 
-        tl
-        .to(terminal, {
-            duration: 0.5,
-            text: "$ " + messages[0],
-            ease: "none",
-        })
-        .to(terminal, {
-            duration: 0.5,
-            text: "$ " + messages[0] + "_",
-            ease: "none",
-            repeat: 2,
-            repeatDelay: 0.5,
-        })
-        .to(terminal, {
-            duration: 0.5,
-            text: "$ " + messages[0],
-            ease: "none",
-        })
-        .to(terminal, {
-            duration: 1,
-            text: "$ ",
-            ease: "none",
-        });
+            function erase() {
+                if (index > 0) {
+                    terminal.textContent = "$ " + message.slice(0, index - 1);
+                    index--;
+                    setTimeout(erase, 30); // erasing speed
+                } else if (callback) {
+                    callback();
+                }
+            }
+            
+            erase();
+        }
 
+        function cancelTyping() {
+            clearTimeout(typingInterval);
+            typingInProgress = false;
+        }
+
+        function blinkCursor() {
+            let blinking = true;
+            cursorBlinkingInterval = setInterval(() => {
+                if (!blinking) {
+                    terminal.textContent = terminal.textContent.replace(/_$/, '');
+                } else {
+                    terminal.textContent += "_";
+                }
+                blinking = !blinking;
+            }, 500);
+        }
+
+        function stopCursorBlinking() {
+            clearInterval(cursorBlinkingInterval);
+            terminal.textContent = terminal.textContent.replace(/_$/, '');
+        }
+
+        function cycleMessages() {
+            cancelTyping();
+            stopCursorBlinking();
+
+            let message = messages[Math.floor(Math.random() * messages.length)];
+
+            typeMessage(message, () => {
+                setTimeout(() => {
+                    blinkCursor();
+
+                    setTimeout(() => {
+                        stopCursorBlinking();
+                        eraseMessage(() => {
+                            terminal.textContent = "$ ";
+                            setTimeout(cycleMessages, 1000); // Wait before restarting
+                        });
+                    }, 3000); // How long to show the message before erasing
+                }, 500); // Delay after typing
+            });
+        }
+
+        cycleMessages();
+
+        
+        /* animate elements when they become visible */
 
         gsap.set(".page *", {
             autoAlpha: 0,
@@ -301,6 +383,26 @@
             scale: 1,
         });
 
+        gsap.set("#welcome", {
+            autoAlpha: 1,
+            x: "-1200px",
+        });
+
+        gsap.to("#welcome", {
+            duration: 4,
+            autoAlpha: 1,
+            x: 0,
+            ease: "power3.out",
+            delay: 3,
+        });
+
+        gsap.to("#welcome", {
+            duration: 4,
+            autoAlpha: 1,
+            x: "1200px",
+            ease: "power3.out",
+            delay: 8,
+        });
     </script>
 </body>
 
