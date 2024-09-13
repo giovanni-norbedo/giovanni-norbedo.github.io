@@ -29,10 +29,27 @@
     z-index: 5;
 }
 
-#contact {
+#contactme {
+    z-index: 5;
+}
+
+#contact {   
     background-color: var(--bg-color);
     border-color: var(--main-color);
-    z-index: 5;
+}
+
+#glow-right {
+    background: var(--main-color);
+    opacity: 0.8;
+    color: var(--bg-color);
+    z-index: 3;
+}
+
+#glow-left {
+    background: var(--main-color);
+    opacity: 0.8;
+    color: var(--bg-color);
+    z-index: 3;
 }
 
 svg path {
@@ -50,13 +67,6 @@ svg path {
 }
 #linkedin svg:hover path {
     fill: #0a66c2;
-}
-
-#welcome {
-    background-color: var(--main-color);
-    color: var(--bg-color);
-    opacity: 0.95;
-    z-index: 10;
 }
 
 #root {

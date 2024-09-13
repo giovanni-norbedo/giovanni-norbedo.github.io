@@ -81,16 +81,26 @@
     </div>
 
     <a href="mailto:norbedo@proton.me" target="_blank">
-        <div id="contactme" class="absolute bottom-4 sm:bottom-10 sm:left-10 w-full sm:w-auto flex flex-row justify-center items-center">
+        <div id="contactme" class="absolute bottom-4 sm:bottom-10 sm:left-10 w-full sm:w-auto flex flex-row justify-center items-center rounded-xl">
             <div id="contact" class="p-2 border-2 rounded-xl">
                 <p>Contact me!</p>
             </div>
         </div>
     </a>
 
-    <div id="welcome" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center p-4 w-full">
-        <p class="text-2xl sm:text-4xl mb-2">Welcome to my website!</p>
-        <p class="text-md sm:text-lg">Use the arrow keys or click on the right side of the screen to navigate the website.</p>
+    <div id="glow-right" class="absolute right-0 top-0 w-1/4 h-full">
+        <div class="absolute right-0 top-0 w-full h-full flex flex-col justify-center items-center">
+            <p class="text-2xl text-center transform -rotate-90">
+                Tap right or use the arrow keys to scroll down
+            </p>
+        </div>
+    </div>
+    <div id="glow-left" class="absolute left-0 top-0 w-1/4 h-full">
+        <div class="absolute left-0 top-0 w-full h-full flex flex-col justify-center items-center">
+            <p class="text-2xl text-center transform rotate-90">   
+                Tap left or use the arrow keys to scroll up
+            </p>
+        </div>
     </div>
 
     <div id="root" class="w-full max-h-screen flex flex-col items-center">
@@ -383,25 +393,42 @@
             scale: 1,
         });
 
-        gsap.set("#welcome", {
-            autoAlpha: 1,
-            x: "-1200px",
+        gsap.set("#glow-right", {
+            autoAlpha: 0,
         });
 
-        gsap.to("#welcome", {
-            duration: 4,
-            autoAlpha: 1,
-            x: 0,
-            ease: "power3.out",
+        gsap.to("#glow-right", {
             delay: 3,
+            duration: 3,
+            autoAlpha: 1,
+            ease: "power3.out",
         });
 
-        gsap.to("#welcome", {
-            duration: 4,
+        gsap.set("#glow-left", {
+            autoAlpha: 0,
+        });
+
+        gsap.to("#glow-left", {
+            delay: 6,
+            duration: 3,
             autoAlpha: 1,
-            x: "1200px",
             ease: "power3.out",
-            delay: 8,
+        });
+
+        gsap.to("#glow-right", {
+            delay: 6,
+            duration: 3,
+            autoAlpha: 0,
+            display: "none",
+            ease: "power3.out",
+        });
+
+        gsap.to("#glow-left", {
+            delay: 9,
+            duration: 3,
+            autoAlpha: 0,
+            display: "none",
+            ease: "power3.out",
         });
     </script>
 </body>
