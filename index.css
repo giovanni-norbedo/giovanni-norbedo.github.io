@@ -38,18 +38,19 @@
     border-color: var(--main-color);
 }
 
-#glow-right {
+#instruction-right, #instruction-left, #instruction-down {
     background: var(--main-color);
-    opacity: 0.8;
+    opacity: 0.9;
     color: var(--bg-color);
     z-index: 3;
 }
 
-#glow-left {
-    background: var(--main-color);
-    opacity: 0.8;
-    color: var(--bg-color);
-    z-index: 3;
+#instruction-right-text, #instruction-left-text {
+    writing-mode: vertical-rl;
+}
+
+#instruction-right-text {
+    transform: rotate(180deg);
 }
 
 svg path {
@@ -70,29 +71,17 @@ svg path {
 }
 
 #root {
-    overflow-y: auto;
-    scroll-snap-type: none;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
 .page {
-    scroll-snap-align: none;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
     min-height: auto;
-    padding: 7.5rem 2.5rem;
-}
-
-@media screen and (min-height: 500px) {
-    #root {
-        overflow-y: scroll;
-        scroll-snap-type: y mandatory;
-}
-    
-    .page {
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-        min-height: 100vh;
-        min-width: 100vw;
-        padding: 2.5rem;
-    }
+    padding: 2.5rem;
+    min-height: 100vh;
+    min-width: 100vw;
 }
 
 .page:nth-of-type(even) {
@@ -125,15 +114,23 @@ p {
     font-family: "Tabular-Regular";
 }
 
-.thing {
-    background-color: #574aaf;
+@media screen and (max-height: 700px) {
+    .text-overflow {
+        overflow-y: auto;
+        max-height: 200px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
 }
 
-.tag {
-    font-family: "Tabular-Regular";
-    font-weight: bold;
-    color: #574aaf;
-    background-color: #ffdc5d;
-    padding: 8px;
-    border-radius: 16px;
+#take {
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+#take:hover {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    border-color: var(--bg-color);
 }
