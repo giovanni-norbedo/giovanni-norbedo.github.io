@@ -235,21 +235,6 @@ take.addEventListener("click", (event) => {
     window.open("https://norbedo.xyz/projects.html", "_blank");
 });
 
-window.addEventListener('scroll', function(event) {
-    event.preventDefault(); // Prevent default scrolling
-    window.scrollTo(0, 0);  // Keep scroll position at the top
-});
-
-window.addEventListener('wheel', function(event) {
-    event.preventDefault();  // Disable mouse wheel scroll
-}, { passive: false });
-
-window.addEventListener('touchmove', function(event) {
-    event.preventDefault();  // Prevent touch scrolling
-}, { passive: false });
-
-
-
 document.addEventListener('keydown', function(event) {
     const scrollContainer = document.getElementById('root');
 
