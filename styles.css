@@ -271,48 +271,22 @@ h1, h2, h3 {
   }
 }
 
-
-#music {
-  display: block;
-  text-align: center;
-  margin-top: 1rem;
-}
-
-#music img {
-  display: block
-  width: min(100%, 720px);
-  height: auto;
-  margin: 0.5rem auto 0;
-}
-
-@media (max-width: 600px) {
-  #music img {
-    width: 100%;
-  }
-}
-
 .project-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 32px;
-  padding: 48px;
-  justify-content: space-between;
 }
 
 .card {
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  padding: 28px;
+  padding: 30px;
   border: 1px solid rgba(0,0,0,0.08);
-  flex-basis: 48%;
   box-sizing: border-box;
-  max-width: 350px;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  width: 100%;
+  max-width: 100%;
+  position: relative;
 }
 
 .card::before {
@@ -320,24 +294,9 @@ h1, h2, h3 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 4px;
+  width: 2px;
   height: 100%;
   background-color: #000000;
-}
-
-.card h3 {
-  margin: 0 0 16px 0;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #000000;
-  letter-spacing: -0.5px;
-}
-
-.card p {
-  font-size: 1rem;
-  color: #333333;
-  line-height: 1.6;
-  margin-bottom: 24px;
 }
 
 .card a {
@@ -351,18 +310,4 @@ h1, h2, h3 {
   transition: all 0.2s;
   padding: 8px 0;
   border-bottom: 1px solid #000000;
-}
-
-.card a:hover {
-  color: #555555;
-  border-bottom-color: #555555;
-}
-
-.card a::after {
-  content: '→';
-  transition: transform 0.2s;
-}
-
-.card a:hover::after {
-  transform: translateX(4px);
 }
