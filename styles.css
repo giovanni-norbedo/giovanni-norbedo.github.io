@@ -290,3 +290,81 @@ h1, h2, h3 {
     width: 100%;
   }
 }
+
+.project-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  padding: 48px;
+  margin: 0;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 28px;
+  width: 340px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #000000;
+}
+
+.card h3 {
+  margin: 0 0 16px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #000000;
+  letter-spacing: -0.5px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  transition: all 0.2s;
+  padding: 8px 0;
+  border-bottom: 1px solid #000000;
+}
+
+.card a:hover {
+  color: #555555;
+  border-bottom-color: #555555;
+}
+
+.card a::after {
+  content: '→';
+  transition: transform 0.2s;
+}
+
+.card a:hover::after {
+  transform: translateX(4px);
+}
