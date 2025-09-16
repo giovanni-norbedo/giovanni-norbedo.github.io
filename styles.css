@@ -294,22 +294,20 @@ h1, h2, h3 {
 .project-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 32px;
   padding: 48px;
-  margin: 0;
+  justify-content: space-between;
 }
 
 .card {
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   padding: 28px;
-  flex: 1 1 calc(50% - 16px);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(0,0,0,0.08);
-  position: relative;
-  overflow: hidden;
+  flex-basis: 48%;
+  box-sizing: border-box;
+  max-width: 350px;
 }
 
 .card:hover {
