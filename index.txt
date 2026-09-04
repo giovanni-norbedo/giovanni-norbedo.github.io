@@ -1,0 +1,51 @@
+# Giovanni Norbedo
+
+M.Sc. Student in Data Science & Artificial Intelligence
+Curriculum: Foundations of Artificial Intelligence and Machine Learning
+Università degli Studi di Trieste (UniTS) · Trieste, Italy
+
+- Email: norbedo@proton.me
+- GitHub: https://github.com/giovanni-norbedo
+- LinkedIn: https://www.linkedin.com/in/norbedo/
+- Web: https://norbedo.xyz
+- CV (PDF): https://norbedo.xyz/cv.pdf
+
+## Abstract
+
+I am a graduate student in the M.Sc. in Data Science and Artificial Intelligence (Curriculum: Foundations of Artificial Intelligence and Machine Learning) at the University of Trieste (UniTS), where I also completed my Bachelor's degree in Artificial Intelligence & Data Analytics. I have a practical background in Full Stack development and Linux, but my real passion lies in the theory. I enjoy using code to explore the math behind artificial intelligence and making complex concepts easier to visualize. Ultimately, my goal is to look inside the "black box" of machine learning and understand the mathematical foundations that make it work.
+
+## 1. Academic Background
+
+- M.Sc. in Data Science & Artificial Intelligence (Foundations of AI & ML)
+  Università degli Studi di Trieste (UniTS) | 2026 - Present
+
+- B.Sc. in Artificial Intelligence & Data Analytics
+  Università degli Studi di Trieste (UniTS) | 2023 - 2026
+
+## 2. Selected Projects
+
+### 2.1. Hastings-Powell Chaos Simulation
+- Code: https://github.com/giovanni-norbedo/progetto_sistemi_complessi
+- Description: Investigation of deterministic chaos, strange attractors, bifurcation cascades under carrying capacity K, Lyapunov exponents, and chaos suppression via linear prey harvesting in tri-trophic food chains.
+
+### 2.2. TensorForth: Parallel C Interpreter
+- Code: https://github.com/giovanni-norbedo/progetto_programmazione_avanzata_e_parallela
+- Description: Stack-based C99 interpreter parallelized with OpenMP multi-threading for native 1D/2D tensor arithmetic and Conway's Game of Life, paired with a companion Python 2D renderer.
+
+### 2.3. Minesweeper3D & Constraint Solver
+- Code: https://github.com/giovanni-norbedo/Minesweeper3D
+- Description: Three-dimensional Minesweeper puzzle engine in Python/Ursina (with Marco Carmignano) with an automated exact solver based on linear integer constraint satisfaction.
+
+## 3. Coursework & Academic Foundations (UniTS)
+
+- Math & Stats: Mathematical Analysis I & II, Linear Algebra and Geometry, Probability Theory, Statistical Inference, Optimization Algorithms, Numerical Analysis, Abstract Algebra 2, General Topology.
+- AI & ML: Mathematical Methods and Models for AI, Introduction to Machine Learning, Introduction to Artificial Intelligence, Information Theory and Complex Systems, Data Analytics.
+- CS & Systems: Algorithms and Data Structures, Computability, Complexity and Logic, Advanced and Parallel Programming (OpenMP/C), Computer Architecture and Operating Systems, Database Systems.
+
+## 4. Technical Skills
+
+- Scientific Computing: PyTorch, Scikit-Learn, NumPy, SciPy, Gurobi, Z3 SMT Solver, SageMath, Statsmodels
+- Languages: Python, C/C++, MATLAB, R, JavaScript, TypeScript, Dart, SQL, Bash
+- Systems: Linux (Debian, Ubuntu, Arch), Docker, Git/GitHub
+- Software Development: React, Next.js, Node.js, FastAPI, Flask, Django, PostgreSQL, SQLite, Flutter
+- Typesetting: LaTeX, Markdown, Typst, Jupyter Notebooks, Obsidian
