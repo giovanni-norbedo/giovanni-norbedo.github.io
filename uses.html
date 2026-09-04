@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uses | Giovanni Norbedo</title>
+  
+  <meta name="description" content="Linux environment, developer toolchains, code editors, and software tools used by Giovanni Norbedo." />
+  <meta name="author" content="Giovanni Norbedo" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Giovanni Norbedo /uses</h1>
+    
+    <div class="author-block">
+      <div class="academic-title">M.Sc. Student in Data Science &amp; Artificial Intelligence</div>
+      <div class="affiliation">
+        Curriculum: <em>Foundations of Artificial Intelligence and Machine Learning</em><br>
+        Università degli Studi di Trieste (UniTS), Trieste, Italy
+      </div>
+      <div class="contacts">
+        <div class="contacts-links">
+          <span>Email: <a href="mailto:norbedo@proton.me">norbedo@proton.me</a></span>
+          <span>GitHub: <a href="https://github.com/giovanni-norbedo" target="_blank" rel="noopener noreferrer">@giovanni-norbedo</a></span>
+          <span>LinkedIn: <a href="https://www.linkedin.com/in/norbedo/" target="_blank" rel="noopener noreferrer">in/norbedo</a></span>
+          <span>Web: <a href="https://norbedo.xyz">norbedo.xyz</a></span>
+        </div>
+        <div class="contacts-actions">
+          <span>[ <a href="index.html">home</a> ]</span>
+          <span>[ <a href="index.txt" title="Plain text Markdown version">plain text</a> ]</span>
+          <span>[ <button id="theme-toggle" class="btn-link" aria-label="Toggle dark theme">dark theme</button> ]</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="abstract-box">
+    <div class="abstract-title">Toolchains &amp; Development Environment</div>
+    <p>
+      A summary of the operating system, terminal workflow, code editors, languages, and software tools I use on a daily basis.
+    </p>
+  </div>
+
+  <nav class="toc" aria-label="Table of Contents">
+    <h3>Contents</h3>
+    <ol>
+      <li><a href="#system">Operating System &amp; Desktop</a></li>
+      <li><a href="#terminal">Terminal &amp; Shell</a></li>
+      <li><a href="#editors">Code Editors &amp; Documents</a></li>
+      <li><a href="#cli">Languages &amp; Frameworks</a></li>
+      <li><a href="#research">Notes &amp; Mobile Setup</a></li>
+      <li><a href="#audio">Music &amp; Listening</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <section id="system">
+      <h2>1. Operating System &amp; Desktop</h2>
+      <p>
+        My primary workstation runs <strong>Arch Linux</strong> with the <strong>Linux Zen Kernel</strong>.
+      </p>
+      <p>
+        For window management, I use <strong>Qtile WM</strong> configured in Python, keeping the same keybindings and workspace navigation I used on <em>bspwm</em> for years. Application launching is handled by <strong>Rofi</strong>, window compositing by <strong>Picom</strong>, and notifications by <strong>Dunst</strong>.
+      </p>
+    </section>
+
+    <section id="terminal">
+      <h2>2. Terminal &amp; Shell</h2>
+      <p>
+        The terminal is my primary workspace. I use <strong>Kitty</strong> with GPU accelerated rendering, an OLED true black palette, and <em>JetBrains Mono Nerd Font</em>.
+      </p>
+      <p>
+        My interactive shell is <strong>Zsh</strong> inside <strong><code>tmux</code></strong> for session persistence. The prompt is powered by <strong>Starship</strong> for Git status and runtime information. Directory navigation is handled by <code>zoxide</code>, fuzzy completions by <code>fzf-tab</code>, and shell history recall by <code>atuin</code>.
+      </p>
+    </section>
+
+    <section id="editors">
+      <h2>3. Code Editors &amp; Documents</h2>
+      <p>
+        I divide editing between <strong>Neovim</strong> and <strong>VS Code</strong>. The first one is my go-to for terminal workflows, scripting, and remote servers. The second one is for large projects and debugging.
+      </p>
+      <p>
+        I am currently learning formal proofs in <strong>Lean 4</strong>, working in Neovim via <code>lean.nvim</code>. For document preparation, I use <strong>Typst</strong> for fast compilation alongside <strong>TeXpresso</strong> for live interactive LaTeX rendering.
+      </p>
+    </section>
+
+    <section id="cli">
+      <h2>4. Languages &amp; Frameworks</h2>
+      <ul>
+        <li><strong>Python (3.14 / uv):</strong> PyTorch, NumPy, and scientific computing, managed with <code>uv</code>.</li>
+        <li><strong>C/C++ &amp; OpenMP:</strong> Parallel computing and performance critical algorithms.</li>
+        <li><strong>Web Development:</strong> Django, FastAPI, Node.js, React, TypeScript, and HTML/CSS.</li>
+        <li><strong>R:</strong> Statistical inference and data analysis.</li>
+        <li><strong>Currently Learning:</strong> <strong>Rust</strong> for systems programming and <strong>Lean 4</strong> for interactive theorem proving.</li>
+      </ul>
+    </section>
+
+    <section id="research">
+      <h2>5. Notes &amp; Mobile Setup</h2>
+      <p>
+        For notes, I use <strong>Obsidian</strong> (Markdown with KaTeX) organized via Zettelkasten. Research papers are managed in <strong>Zotero</strong> with BibTeX export, and PDFs are read in <strong>Zathura</strong> with Synctex support.
+      </p>
+      <p>
+        On mobile, I use an Android phone debloated with <code>adb</code> to keep only essential apps. Offline, I regularly play chess.
+      </p>
+    </section>
+
+    <section id="audio">
+      <h2>6. Music &amp; Listening</h2>
+      <p>
+        For focus during work, I listen to 1990s trip hop, Bristol sound, downtempo, and abstract electronic music. Key artists include Handsome Boy Modeling School, Massive Attack, Portishead, DJ Shadow, Bonobo, UNKLE, and Tricky. I also occasionally sketch beats in <strong>LMMS</strong>.
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

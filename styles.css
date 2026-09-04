@@ -38,13 +38,13 @@
 
 body {
   font-family: 'Latin Modern Roman', 'Computer Modern Roman', 'Latin Modern', 'Times New Roman', Times, serif;
-  font-size: 1.125rem;
-  line-height: 1.72;
+  font-size: 1.22rem;
+  line-height: 1.74;
   color: var(--body-color);
   background-color: var(--body-bg-color);
   margin: 0 auto;
   padding: 3.5rem 2rem 7rem;
-  max-width: 840px;
+  max-width: 860px;
   text-rendering: optimizeLegibility;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
@@ -56,7 +56,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 2.35rem;
+  font-size: 2.5rem;
   text-align: center;
   margin-top: 0.75rem;
   margin-bottom: 0.6rem;
@@ -64,20 +64,20 @@ h1 {
 }
 
 h2 {
-  font-size: 1.45rem;
+  font-size: 1.55rem;
   border-bottom: none;
   margin-top: 3.75rem;
   margin-bottom: 1.35rem;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.28rem;
   margin-top: 2.25rem;
   margin-bottom: 0.75rem;
 }
 
 h4 {
-  font-size: 1.05rem;
+  font-size: 1.12rem;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
@@ -85,6 +85,15 @@ h4 {
 p {
   margin-bottom: 1.35rem;
   text-align: justify;
+}
+
+ul, ol {
+  margin-bottom: 1.35rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.45rem;
 }
 
 a {
@@ -118,11 +127,11 @@ a:hover {
 .author-block {
   text-align: center;
   margin-bottom: 3.25rem;
-  font-size: 1.05rem;
+  font-size: 1.12rem;
 }
 
 .author-block .academic-title {
-  font-size: 1.2rem;
+  font-size: 1.28rem;
   font-weight: bold;
   margin-bottom: 0.35rem;
 }
@@ -133,7 +142,7 @@ a:hover {
 }
 
 .author-block .contacts {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,21 +157,33 @@ a:hover {
   gap: 0.5rem 1.4rem;
 }
 
+code, kbd, pre {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.92em;
+}
+
+code {
+  background-color: var(--pre-bg-color);
+  padding: 0.1em 0.32em;
+  border-radius: 3px;
+  border: 1px solid var(--box-border-color);
+}
+
 .abstract-box {
   margin: 3.25rem auto 3.75rem;
-  max-width: 88%;
+  max-width: 90%;
   padding: 0 1rem;
   background-color: transparent;
   border: none;
   border-radius: 0;
-  font-size: 1.025rem;
-  line-height: 1.72;
+  font-size: 1.12rem;
+  line-height: 1.74;
 }
 
 .abstract-title {
   text-align: center;
   font-weight: bold;
-  font-size: 1.05rem;
+  font-size: 1.18rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   margin-bottom: 0.85rem;
@@ -180,7 +201,7 @@ a:hover {
 .toc h3 {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   text-align: left;
@@ -193,7 +214,7 @@ a:hover {
 
 .toc li {
   margin-bottom: 0.45rem;
-  font-size: 1rem;
+  font-size: 1.12rem;
 }
 
 .toc ol ol {
@@ -218,7 +239,7 @@ a:hover {
 }
 
 .equation-caption {
-  font-size: 0.9rem;
+  font-size: 0.96rem;
   font-style: italic;
   text-align: center;
   margin-top: 0.6rem;
@@ -230,7 +251,7 @@ a:hover {
   position: relative;
   margin-bottom: 3.5rem;
   padding-bottom: 2.25rem;
-  border-bottom: 1px dashed var(--box-border-color);
+  border-bottom: 1px solid var(--box-border-color);
 }
 
 .project-card:last-child {
@@ -248,7 +269,7 @@ a:hover {
 }
 
 .project-heading {
-  font-size: 1.2rem;
+  font-size: 1.28rem;
   font-weight: bold;
   margin: 0;
 }
@@ -260,25 +281,25 @@ a:hover {
 table.booktabs {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.975rem;
+  font-size: 1.08rem;
   margin: 0.5rem 0;
 }
 
 table.booktabs th {
   font-weight: bold;
   text-align: left;
-  padding: 0.45rem 0.85rem;
+  padding: 0.5rem 0.95rem;
   border-bottom: var(--border-width-thin) solid var(--table-border-color);
 }
 
 table.booktabs td {
-  padding: 0.4rem 0.85rem;
+  padding: 0.45rem 0.95rem;
   vertical-align: top;
   border-bottom: none;
 }
 
 .table-caption {
-  font-size: 0.9rem;
+  font-size: 0.96rem;
   font-style: italic;
   text-align: center;
   margin-top: 0.75rem;
@@ -302,15 +323,15 @@ table.booktabs td {
 @media (max-width: 680px) {
   body {
     padding: 2.25rem 1.25rem 5rem;
-    font-size: 1.05rem;
+    font-size: 1.12rem;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.15rem;
   }
 
   h2 {
-    font-size: 1.35rem;
+    font-size: 1.42rem;
     margin-top: 2.75rem;
     margin-bottom: 1.1rem;
   }
@@ -359,17 +380,17 @@ table.booktabs td {
   table.booktabs td {
     padding: 0.3rem 0;
     text-align: left;
-    font-size: 0.95rem;
+    font-size: 1.02rem;
   }
 
   table.booktabs td strong {
     display: block;
-    font-size: 1rem;
+    font-size: 1.08rem;
     margin-bottom: 0.15rem;
   }
 
   .table-education td:nth-child(1) {
-    font-size: 1rem;
+    font-size: 1.08rem;
     color: var(--body-color);
     padding-bottom: 0.25rem;
   }
@@ -381,15 +402,15 @@ table.booktabs td {
 
   .table-education td:nth-child(3) {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.85rem;
+    font-size: 0.92rem;
     margin-top: 0.25rem;
     opacity: 0.85;
   }
 
   .table-stacked td:nth-child(1) strong {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     margin-bottom: 0.3rem;
-    border-bottom: 1px dotted var(--box-border-color);
+    border-bottom: 1px solid var(--box-border-color);
     padding-bottom: 0.2rem;
   }
 }
