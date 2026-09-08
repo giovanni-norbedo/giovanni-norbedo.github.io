@@ -122,10 +122,9 @@ h2 {
   font-size: 1.6rem;
   font-weight: 500;
   letter-spacing: -0.01em;
-  margin-top: 3.25rem;
-  margin-bottom: 1.25rem;
+  margin-top: 4.5rem;
+  margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px dashed var(--border);
 }
 
 h3 {
@@ -292,23 +291,25 @@ header {
 .skills-sidenote {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
-  margin: 1.5rem 0;
+  gap: 2rem;
+  margin: 1.75rem 0;
 }
 
 .timeline-row,
-.skill-row {
+.skill-row,
+.project-entry,
+.uses-item {
   position: relative;
 }
 
 @media (min-width: 880px) {
   .margin-date,
-  .skill-label {
+  .skill-label,
+  .margin-num {
     position: absolute;
     left: -240px;
     width: 215px;
     text-align: right;
-    top: 0.15rem;
     font-family: var(--font-mono);
     font-size: 0.88rem;
     font-weight: 600;
@@ -316,6 +317,15 @@ header {
     letter-spacing: -0.01em;
     white-space: nowrap;
     overflow: visible;
+  }
+
+  .margin-date,
+  .skill-label {
+    top: 0.15rem;
+  }
+
+  .margin-num {
+    top: 0.18rem;
   }
 }
 
@@ -330,6 +340,10 @@ header {
     margin-bottom: 0.25rem;
     display: block;
     white-space: normal;
+  }
+
+  .margin-num {
+    display: none;
   }
 }
 
@@ -352,13 +366,23 @@ header {
 }
 
 .project-entry {
-  margin-bottom: 2.75rem;
+  margin-bottom: 2rem;
 }
 
-.project-header {
+.project-entry:not(:last-child) {
+  padding-bottom: 2rem;
+  border-bottom: 1px dotted var(--border);
+}
+
+.project-header,
+.uses-header {
+  position: relative;
   display: flex;
   align-items: baseline;
   gap: 0.5rem;
+}
+
+.project-header {
   margin-bottom: 0.6rem;
 }
 
@@ -374,8 +398,8 @@ header {
 }
 
 .equation-block {
-  margin: 1.5rem 0;
-  padding: 1rem 0;
+  margin: 1.15rem 0;
+  padding: 0.5rem 0;
   text-align: center;
   overflow-x: auto;
   overflow-y: hidden;
@@ -395,13 +419,17 @@ header {
 }
 
 .uses-item {
-  margin-bottom: 2.25rem;
+  margin-bottom: 3.25rem;
 }
 
-.uses-item h2 {
-  margin-top: 2.5rem;
-  margin-bottom: 0.85rem;
-  font-size: 1.4rem;
+.uses-header {
+  margin-bottom: 0.75rem;
+}
+
+.uses-header h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  padding-bottom: 0;
 }
 
 .uses-item p {
