@@ -1,22 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
   const toggleBtn = document.getElementById('theme-toggle');
-  if (!toggleBtn) return;
+  const storedTheme = localStorage.getItem('theme');
+  const initialTheme = storedTheme || 'dark';
 
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  applyTheme(savedTheme);
+  applyTheme(initialTheme);
 
-  toggleBtn.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-    const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    applyTheme(nextTheme);
-    localStorage.setItem('theme', nextTheme);
-  });
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(nextTheme);
+      localStorage.setItem('theme', nextTheme);
+    });
+  }
 });
 
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   const toggleBtn = document.getElementById('theme-toggle');
-  if (toggleBtn) {
-    toggleBtn.textContent = theme === 'dark' ? 'light theme' : 'dark theme';
+  if (!toggleBtn) return;
+
+  const isDark = theme === 'dark';
+  const textSpan = toggleBtn.querySelector('.theme-text');
+
+  if (textSpan) {
+    textSpan.textContent = isDark ? 'light theme' : 'dark theme';
+  } else {
+    toggleBtn.textContent = isDark ? 'light theme' : 'dark theme';
   }
 }

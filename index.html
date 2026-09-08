@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,7 +7,7 @@
   <title>Giovanni Norbedo</title>
 
   <meta name="description"
-    content="Giovanni Norbedo - M.Sc. Student in Data Science & Artificial Intelligence (Foundations of AI & ML) at University of Trieste (UniTS)." />
+    content="Giovanni Norbedo - M.Sc. Student in Data Science &amp; Artificial Intelligence at University of Trieste (UniTS)." />
   <meta name="author" content="Giovanni Norbedo" />
 
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -24,243 +24,182 @@
 </head>
 
 <body>
-  <header>
-    <h1>Giovanni Norbedo</h1>
+  <canvas id="hastings-attractor" class="attractor-bg" aria-hidden="true"></canvas>
+  <div class="site-container">
+    <div class="main-layout">
+      <div class="top-nav">
+        <nav class="site-menu">
+          <a href="index.html" class="active">home</a>
+          <a href="uses.html">uses</a>
+        </nav>
 
-    <div class="author-block">
-      <div class="academic-title">M.Sc. Student in Data Science &amp; Artificial Intelligence</div>
-      <div class="affiliation">
-        Curriculum: <em>Foundations of Artificial Intelligence and Machine Learning</em><br>
-        Università degli Studi di Trieste (UniTS) · Trieste, Italy
+        <button id="theme-toggle" class="btn-theme-toggle" aria-label="Toggle theme">
+          <span class="theme-text">light theme</span>
+        </button>
       </div>
-      <div class="contacts">
-        <div class="contacts-links">
-          <span>Email: <a href="mailto:norbedo@proton.me">norbedo@proton.me</a></span>
-          <span>GitHub: <a href="https://github.com/giovanni-norbedo" target="_blank"
-              rel="noopener noreferrer">@giovanni-norbedo</a></span>
-          <span>LinkedIn: <a href="https://www.linkedin.com/in/norbedo/" target="_blank"
-              rel="noopener noreferrer">in/norbedo</a></span>
-          <span>Web: <a href="https://norbedo.xyz">norbedo.xyz</a></span>
+
+      <header>
+        <h1 class="header-title">Giovanni Norbedo</h1>
+        <div class="academic-title">M.Sc. Student in Data Science &amp; Artificial Intelligence</div>
+        <div class="affiliation">
+          Università degli Studi di Trieste (UniTS) · Trieste, Italy
         </div>
-        <div class="contacts-actions">
-          <!-- <span>[ <a href="cv.pdf" target="_blank" title="Curriculum Vitae (PDF compiled with Typst)">cv (pdf)</a> ]</span> -->
-          <span>[ <a href="uses.html" title="Hardware, software tools, and development environment">uses</a> ]</span>
-          <span>[ <button id="theme-toggle" class="btn-link" aria-label="Toggle dark theme">dark theme</button> ]</span>
+        <div class="meta-links">
+          <a href="mailto:norbedo@proton.me">Contact me</a>
+          <span class="sep">/</span>
+          <a href="https://github.com/giovanni-norbedo" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <span class="sep">/</span>
+          <a href="https://www.linkedin.com/in/norbedo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
-      </div>
+      </header>
+
+      <section class="bio-section">
+        <p>
+          I am a graduate student in the <strong>M.Sc. in Data Science and Artificial Intelligence</strong> at the <strong>University of Trieste (UniTS)</strong>, where I also completed my Bachelor's degree in <em>Artificial Intelligence &amp; Data Analytics</em>. I have a practical background in Full Stack development and Linux, but my real passion lies in the theory. I enjoy using code to explore the math behind artificial intelligence and making complex concepts easier to visualize. Ultimately, my goal is to look inside the "black box" of machine learning and understand the mathematical foundations that make it work.
+        </p>
+      </section>
+
+      <main>
+        <section id="education">
+          <h2>Academic Background</h2>
+
+          <div class="timeline-sidenote">
+            <div class="timeline-row">
+              <div class="margin-date">2026 – Present</div>
+              <div class="timeline-body">
+                <div class="education-degree">M.Sc. in Data Science &amp; Artificial Intelligence</div>
+                <div class="education-sub">Università degli Studi di Trieste (UniTS)</div>
+              </div>
+            </div>
+
+            <div class="timeline-row">
+              <div class="margin-date">2023 – 2026</div>
+              <div class="timeline-body">
+                <div class="education-degree">B.Sc. in Artificial Intelligence &amp; Data Analytics</div>
+                <div class="education-sub">Università degli Studi di Trieste (UniTS)</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects">
+          <h2>Selected Projects</h2>
+
+          <article class="project-entry" id="hastings-powell">
+            <div class="project-header">
+              <h3 class="project-heading">Chaos Simulation</h3>
+              <span class="link-tag">[<a href="https://github.com/giovanni-norbedo/progetto_sistemi_complessi" target="_blank" rel="noopener noreferrer">code</a>]</span>
+            </div>
+            <p>
+              Investigation of deterministic chaos and bifurcation phenomena in a continuous tri-trophic food chain ($X, Y,
+              Z$) governed by the Hastings-Powell ODE system with Holling type II functional responses:
+            </p>
+
+            <div class="equation-block">
+              $$\begin{cases}
+              \dot{X} = X\left(1 - \dfrac{X}{K}\right) - \dfrac{a_1 X Y}{1 + b_1 X} - h_X X \\[8pt]
+              \dot{Y} = \dfrac{a_1 X Y}{1 + b_1 X} - \dfrac{a_2 Y Z}{1 + b_2 Y} - d_1 Y \\[8pt]
+              \dot{Z} = \dfrac{a_2 Y Z}{1 + b_2 Y} - d_2 Z
+              \end{cases}$$
+              <div class="equation-caption">
+                Hastings-Powell dynamical system with parameter-dependent predation and linear prey harvesting ($h_X$).
+              </div>
+            </div>
+
+            <p>
+              Analyzes strange attractors, Lyapunov exponents, bifurcation cascades under carrying capacity $K$, and chaos
+              suppression via linear prey harvesting ($h_X$).
+            </p>
+          </article>
+
+          <article class="project-entry" id="minesweeper3d">
+            <div class="project-header">
+              <h3 class="project-heading">Minesweeper3D</h3>
+              <span class="link-tag">[<a href="https://github.com/giovanni-norbedo/Minesweeper3D" target="_blank" rel="noopener noreferrer">code</a>]</span>
+            </div>
+            <p>
+              A three-dimensional Minesweeper puzzle engine built in Python/Ursina (with Marco Carmignano), featuring an
+              automated exact solver based on linear integer constraint satisfaction:
+            </p>
+
+            <div class="equation-block">
+              $$\bigwedge_{v \in V_{\text{revealed}}} \left( \sum_{u \in \mathcal{N}_{3D}(v)} x_u = k_v \right), \quad x_u
+              \in \{0, 1\}$$
+              <div class="equation-caption">
+                Linear integer constraint satisfaction problem over 3D neighborhood $\mathcal{N}_{3D}(v)$.
+              </div>
+            </div>
+          </article>
+
+          <article class="project-entry" id="tensorforth">
+            <div class="project-header">
+              <h3 class="project-heading">Parallel C Interpreter</h3>
+              <span class="link-tag">[<a href="https://github.com/giovanni-norbedo/progetto_programmazione_avanzata_e_parallela" target="_blank" rel="noopener noreferrer">code</a>]</span>
+            </div>
+            <p>
+              A stack-based C99 interpreter parallelized with OpenMP multi-threading for native 1D/2D tensor operations.
+            </p>
+          </article>
+        </section>
+
+        <section id="skills">
+          <h2>Technical Skills</h2>
+
+          <div class="skills-sidenote">
+            <div class="skill-row">
+              <div class="skill-label">Theory &amp; Modeling</div>
+              <div class="skill-content">
+                Dynamical Systems, Deterministic Chaos &amp; Bifurcations, Probability Theory, Statistical Inference, Optimization, Linear Integer Constraint Satisfaction (CSP), Numerical Analysis
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-label">Scientific Computing</div>
+              <div class="skill-content">
+                PyTorch, Scikit-Learn, NumPy, SciPy, Gurobi, Z3 SMT Solver, SageMath, Statsmodels
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-label">Languages</div>
+              <div class="skill-content">
+                Python, C/C++, MATLAB, R, JavaScript, TypeScript, Dart, SQL, Bash <em>(Interests: Lean4, Rust, Haskell)</em>
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-label">Systems &amp; Parallel</div>
+              <div class="skill-content">
+                Linux (Debian, Ubuntu, Arch), OpenMP Parallel Computing, Docker, Git/GitHub
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-label">Software Dev</div>
+              <div class="skill-content">
+                React, Next.js, Node.js, FastAPI, Flask, Django, PostgreSQL, SQLite, Flutter
+              </div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-label">Typesetting &amp; Notes</div>
+              <div class="skill-content">
+                $\mathrm{\LaTeX}$, Markdown, Typst, Jupyter Notebooks, Obsidian
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div>Giovanni Norbedo · Università degli Studi di Trieste (UniTS)</div>
+        <div>Trieste, Italy</div>
+      </footer>
     </div>
-  </header>
-
-  <div class="abstract-box">
-    <div class="abstract-title">Abstract</div>
-    <p>
-      I am a graduate student in the <strong>M.Sc. in Data Science and Artificial Intelligence</strong> (Curriculum:
-      <em>Foundations of Artificial Intelligence and Machine Learning</em>) at the <strong>University of Trieste
-        (UniTS)</strong>, where I also completed my Bachelor's degree in <em>Artificial Intelligence &amp; Data
-        Analytics</em>. I have a practical background in Full Stack development and Linux, but my real passion lies in
-      the theory. I enjoy using code to explore the math behind artificial intelligence and making complex concepts
-      easier to visualize. Ultimately, my goal is to look inside the "black box" of machine learning and understand the
-      mathematical foundations that make it work.
-    </p>
   </div>
 
-  <nav class="toc" aria-label="Table of Contents">
-    <h3>Contents</h3>
-    <ol>
-      <li><a href="#education">Academic Background</a></li>
-      <li>
-        <a href="#projects">Selected Projects</a>
-        <ol>
-          <li><a href="#hastings-powell">Hastings-Powell Chaos Simulation</a></li>
-          <li><a href="#tensorforth">TensorForth: Parallel C Interpreter</a></li>
-          <li><a href="#minesweeper3d">Minesweeper3D &amp; Constraint Solver</a></li>
-        </ol>
-      </li>
-      <li><a href="#coursework">Coursework &amp; Academic Foundations</a></li>
-      <li><a href="#skills">Technical Skills</a></li>
-    </ol>
-  </nav>
-
-  <main>
-    <section id="education">
-      <h2>1. Academic Background</h2>
-
-      <div class="table-responsive">
-        <table class="booktabs table-education">
-          <thead>
-            <tr>
-              <th>Degree &amp; Program</th>
-              <th>Institution</th>
-              <th>Period</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>M.Sc. in Data Science &amp; Artificial Intelligence</strong><br>(Foundations of AI &amp; ML)
-              </td>
-              <td>Università degli Studi di Trieste (UniTS)</td>
-              <td>2026 - Present</td>
-            </tr>
-            <tr>
-              <td><strong>B.Sc. in Artificial Intelligence &amp; Data Analytics</strong></td>
-              <td>Università degli Studi di Trieste (UniTS)</td>
-              <td>2023 - 2026</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="table-caption">Table 1: Academic background and degrees.</div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2>2. Selected Projects</h2>
-
-      <article class="project-card" id="hastings-powell">
-        <div class="project-header">
-          <h3 class="project-heading">2.1. Hastings-Powell Chaos Simulation</h3>
-          <span><a href="https://github.com/giovanni-norbedo/progetto_sistemi_complessi" target="_blank"
-              rel="noopener noreferrer">[GitHub Code]</a></span>
-        </div>
-        <p>
-          Investigation of deterministic chaos and bifurcation phenomena in a continuous tri-trophic food chain ($X, Y,
-          Z$) governed by the Hastings-Powell ODE system with Holling type II functional responses:
-        </p>
-
-        <div class="equation-container">
-          <div class="equation-display">
-            $$\begin{cases}
-            \dot{X} = X\left(1 - \dfrac{X}{K}\right) - \dfrac{a_1 X Y}{1 + b_1 X} - h_X X \\[8pt]
-            \dot{Y} = \dfrac{a_1 X Y}{1 + b_1 X} - \dfrac{a_2 Y Z}{1 + b_2 Y} - d_1 Y \\[8pt]
-            \dot{Z} = \dfrac{a_2 Y Z}{1 + b_2 Y} - d_2 Z
-            \end{cases}$$
-          </div>
-          <div class="equation-caption">
-            Hastings-Powell dynamical system with parameter-dependent predation and linear prey harvesting ($h_X$).
-          </div>
-        </div>
-
-        <p>
-          Analyzes strange attractors, Lyapunov exponents, bifurcation cascades under carrying capacity $K$, and chaos
-          suppression via linear prey harvesting ($h_X$).
-        </p>
-      </article>
-
-      <article class="project-card" id="tensorforth">
-        <div class="project-header">
-          <h3 class="project-heading">2.2. TensorForth: Parallel C Interpreter</h3>
-          <span><a href="https://github.com/giovanni-norbedo/progetto_programmazione_avanzata_e_parallela"
-              target="_blank" rel="noopener noreferrer">[GitHub Code]</a></span>
-        </div>
-        <p>
-          A stack-based C99 interpreter parallelized with OpenMP multi-threading for native 1D/2D tensor operations and
-          cellular automata (Conway's <em>Game of Life</em>), paired with a companion Python 2D renderer for visual
-          output.
-        </p>
-      </article>
-
-      <article class="project-card" id="minesweeper3d">
-        <div class="project-header">
-          <h3 class="project-heading">2.3. Minesweeper3D &amp; Constraint Solver</h3>
-          <span><a href="https://github.com/giovanni-norbedo/Minesweeper3D" target="_blank"
-              rel="noopener noreferrer">[GitHub Code]</a></span>
-        </div>
-        <p>
-          A three-dimensional Minesweeper puzzle engine built in Python/Ursina (with Marco Carmignano), featuring an
-          automated exact solver based on linear integer constraint satisfaction:
-        </p>
-
-        <div class="equation-container">
-          <div class="equation-display">
-            $$\bigwedge_{v \in V_{\text{revealed}}} \left( \sum_{u \in \mathcal{N}_{3D}(v)} x_u = k_v \right), \quad x_u
-            \in \{0, 1\}$$
-          </div>
-          <div class="equation-caption">
-            Linear integer constraint satisfaction problem over 3D neighborhood $\mathcal{N}_{3D}(v)$.
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <section id="coursework">
-      <h2>3. Coursework &amp; Academic Foundations</h2>
-      <p>
-        Curricular coursework completed at the University of Trieste across theoretical and practical disciplines:
-      </p>
-
-      <div class="table-responsive">
-        <table class="booktabs table-coursework table-stacked">
-          <thead>
-            <tr>
-              <th>Area</th>
-              <th>Representative Subjects</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Math &amp; Stats</strong></td>
-              <td>Mathematical Analysis I &amp; II, Linear Algebra and Geometry, Probability Theory, Statistical
-                Inference, Optimization Algorithms, Numerical Analysis, Abstract Algebra 2, General Topology.</td>
-            </tr>
-            <tr>
-              <td><strong>AI &amp; ML</strong></td>
-              <td>Mathematical Methods and Models for AI, Introduction to Machine Learning, Introduction to Artificial
-                Intelligence, Information Theory and Complex Systems, Data Analytics.</td>
-            </tr>
-            <tr>
-              <td><strong>CS &amp; Systems</strong></td>
-              <td>Algorithms and Data Structures, Computability, Complexity and Logic, Advanced and Parallel Programming
-                (OpenMP/C), Computer Architecture and Operating Systems, Database Systems.</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="table-caption">Table 2: Curricular foundation courses (UniTS).</div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <h2>4. Technical Skills</h2>
-
-      <div class="table-responsive">
-        <table class="booktabs table-skills table-stacked">
-          <thead>
-            <tr>
-              <th>Domain</th>
-              <th>Technologies &amp; Libraries</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Scientific Computing</strong></td>
-              <td>PyTorch, Scikit-Learn, NumPy, SciPy, Gurobi, Z3 SMT Solver, SageMath, Statsmodels</td>
-            </tr>
-            <tr>
-              <td><strong>Languages</strong></td>
-              <td>Python, C/C++, MATLAB, R, JavaScript, TypeScript, Dart, SQL, Bash</td>
-            </tr>
-            <tr>
-              <td><strong>Systems</strong></td>
-              <td>Linux (Debian, Ubuntu, Arch), Docker, Git/GitHub</td>
-            </tr>
-            <tr>
-              <td><strong>Software Development</strong></td>
-              <td>React, Next.js, Node.js, FastAPI, Flask, Django, PostgreSQL, SQLite, Flutter</td>
-            </tr>
-            <tr>
-              <td><strong>Typesetting</strong></td>
-              <td>$\mathrm{\LaTeX}$, Markdown, Typst, Jupyter Notebooks, Obsidian</td>
-            </tr>
-            <tr>
-              <td><strong>Interests &amp; Learning</strong></td>
-              <td>Lean4, Rust, Haskell</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="table-caption">Table 3: Technical skills and computing environments.</div>
-      </div>
-    </section>
-  </main>
-
   <script src="script.js"></script>
+  <script src="attractor.js"></script>
 </body>
 
 </html>
