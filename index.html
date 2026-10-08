@@ -1,212 +1,334 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giovanni Norbedo</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Giovanni Norbedo</title>
+    <meta
+      name="description"
+      content="Giovanni Norbedo - M.Sc. Student in Data Science &amp; Artificial Intelligence at University of Trieste (UniTS)."
+    />
+    <meta name="author" content="Giovanni Norbedo" />
 
-  <meta name="description"
-    content="Giovanni Norbedo - M.Sc. Student in Data Science &amp; Artificial Intelligence at University of Trieste (UniTS)." />
-  <meta name="author" content="Giovanni Norbedo" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="shortcut icon" href="images/favicon.ico" />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles.css" />
 
-  <link rel="stylesheet" href="styles.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"
+      crossorigin="anonymous"
+      onload="
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '$', right: '$', display: false },
+          ],
+        })
+      "
+    ></script>
+  </head>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" crossorigin="anonymous">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" crossorigin="anonymous"
-    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
-</head>
+  <body>
+    <canvas
+      id="hastings-attractor"
+      class="attractor-bg"
+      aria-hidden="true"
+    ></canvas>
+    <div class="site-container">
+      <div class="main-layout">
+        <div class="top-nav">
+          <nav class="site-menu">
+            <a href="index.html" class="active">home</a>
+            <a href="uses.html">uses</a>
+          </nav>
 
-<body>
-  <canvas id="hastings-attractor" class="attractor-bg" aria-hidden="true"></canvas>
-  <div class="site-container">
-    <div class="main-layout">
-      <div class="top-nav">
-        <nav class="site-menu">
-          <a href="index.html" class="active">home</a>
-          <a href="uses.html">uses</a>
-        </nav>
+          <button
+            id="theme-toggle"
+            class="btn-theme-toggle"
+            aria-label="Toggle theme"
+          >
+            <span class="theme-text">light theme</span>
+          </button>
+        </div>
 
-        <button id="theme-toggle" class="btn-theme-toggle" aria-label="Toggle theme">
-          <span class="theme-text">light theme</span>
-        </button>
+        <header>
+          <h1 class="header-title">Giovanni Norbedo</h1>
+          <div class="academic-title">
+            M.Sc. Student in Data Science &amp; Artificial Intelligence
+          </div>
+          <div class="affiliation">
+            Università degli Studi di Trieste (UniTS) · Trieste, Italy
+          </div>
+          <div class="meta-links">
+            <a href="mailto:norbedo@proton.me">Contact me</a>
+            <span class="sep">/</span>
+            <a
+              href="https://github.com/giovanni-norbedo"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+            <span class="sep">/</span>
+            <a
+              href="https://www.linkedin.com/in/norbedo/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </div>
+        </header>
+
+        <section class="bio-section">
+          <p>
+            I am an M.Sc. student in
+            <strong>Data Science and Artificial Intelligence</strong> at the
+            <strong>University of Trieste (UniTS)</strong>. While my practical
+            background is in Full Stack development and Linux, my true passion
+            lies at the intersection of math, logic, and technology. I enjoy
+            using code to give structure to abstract ideas and make complex
+            mathematical concepts easy to visualize. My current focus is on
+            formally verified AI, exploring how formal methods and mathematical
+            proofs can be applied to machine learning to guarantee model
+            reliability and safety.
+          </p>
+        </section>
+
+        <main>
+          <section id="education">
+            <h2>Academic Background</h2>
+
+            <div class="timeline-sidenote">
+              <div class="timeline-row">
+                <div class="margin-date">2026 – Present</div>
+                <div class="timeline-body">
+                  <div class="education-degree">
+                    M.Sc. in Data Science &amp; Artificial Intelligence
+                  </div>
+                  <div class="education-sub">
+                    Università degli Studi di Trieste (UniTS)
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-row">
+                <div class="margin-date">2023 – 2026</div>
+                <div class="timeline-body">
+                  <div class="education-degree">
+                    B.Sc. in Artificial Intelligence &amp; Data Analytics
+                  </div>
+                  <div class="education-sub">
+                    Università degli Studi di Trieste (UniTS)
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="projects">
+            <h2>Selected Projects</h2>
+
+            <article class="project-entry" id="hastings-powell">
+              <div class="project-header">
+                <h3 class="project-heading">Chaos Simulation</h3>
+                <span class="link-tag"
+                  >[<a
+                    href="https://github.com/giovanni-norbedo/progetto_sistemi_complessi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >code</a
+                  >]</span
+                >
+              </div>
+              <p>
+                Investigation of deterministic chaos and bifurcation phenomena
+                in a continuous tri-trophic food chain ($X, Y, Z$) governed by
+                the Hastings-Powell ODE system with Holling type II functional
+                responses:
+              </p>
+
+              <div class="equation-block">
+                $$\begin{cases} \dot{X} = X\left(1 - \dfrac{X}{K}\right) -
+                \dfrac{a_1 X Y}{1 + b_1 X} - h_X X \\[8pt] \dot{Y} = \dfrac{a_1
+                X Y}{1 + b_1 X} - \dfrac{a_2 Y Z}{1 + b_2 Y} - d_1 Y \\[8pt]
+                \dot{Z} = \dfrac{a_2 Y Z}{1 + b_2 Y} - d_2 Z \end{cases}$$
+                <div class="equation-caption">
+                  Hastings-Powell differential equations.
+                </div>
+              </div>
+
+              <p>
+                Analyzes strange attractors, Lyapunov exponents, bifurcation
+                cascades under carrying capacity $K$, and chaos suppression via
+                linear prey harvesting ($h_X$).
+              </p>
+            </article>
+
+            <article class="project-entry" id="minesweeper3d">
+              <div class="project-header">
+                <h3 class="project-heading">Minesweeper3D</h3>
+                <span class="link-tag"
+                  >[<a
+                    href="https://github.com/giovanni-norbedo/Minesweeper3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >code</a
+                  >]</span
+                >
+              </div>
+              <p>
+                A three-dimensional Minesweeper puzzle engine built in
+                Python/Ursina (with Marco Carmignano), featuring an automated
+                exact solver based on linear integer constraint satisfaction:
+              </p>
+
+              <div class="equation-block">
+                $$\bigwedge_{v \in V_{\text{revealed}}} \left( \sum_{u \in
+                \mathcal{N}_{3D}(v)} x_u = k_v \right), \quad x_u \in \{0, 1\}$$
+                <div class="equation-caption">
+                  Constraint satisfaction problem for Minesweeper3D.
+                </div>
+              </div>
+            </article>
+
+            <article class="project-entry" id="exone">
+              <div class="project-header">
+                <h3 class="project-heading">
+                  Vinyl-inspired music player in Rust
+                </h3>
+                <span class="link-tag"
+                  >[<a
+                    href="https://github.com/giovanni-norbedo/ezone"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >code</a
+                  >]</span
+                >
+              </div>
+              <p>
+                Ezone is a minimalist desktop music player that transforms your
+                local digital audio collection into an interactive,
+                vinyl-inspired record experience.
+              </p>
+            </article>
+
+            <article class="project-entry" id="tensorforth">
+              <div class="project-header">
+                <h3 class="project-heading">Parallel C Interpreter</h3>
+                <span class="link-tag"
+                  >[<a
+                    href="https://github.com/giovanni-norbedo/progetto_programmazione_avanzata_e_parallela"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >code</a
+                  >]</span
+                >
+              </div>
+              <p>
+                A stack-based C99 interpreter parallelized with OpenMP
+                multi-threading for native 1D/2D tensor operations.
+              </p>
+            </article>
+          </section>
+
+          <section id="skills">
+            <h2>Technical Skills</h2>
+
+            <div class="skills-sidenote">
+              <div class="skill-row">
+                <div class="skill-label">Mathematics</div>
+                <div class="skill-content">
+                  Mathematical Analysis, Linear Algebra, Fourier Analysis,
+                  Topology, Abstract Algebra, Probability &amp; Statistics
+                </div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-label">Theory &amp; Modeling</div>
+                <div class="skill-content">
+                  Dynamical Systems &amp; Chaos, Information Theory,
+                  Optimization Algorithms, Computability &amp; Complexity,
+                  Numerical Analysis
+                </div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-label">Scientific Computing</div>
+                <div class="skill-content">
+                  PyTorch, Scikit-Learn, NumPy, SciPy, Gurobi, Z3 SMT Solver,
+                  SageMath, Statsmodels
+                </div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-label">Languages</div>
+                <div class="skill-content">
+                  Python, C/C++, MATLAB, R, JavaScript, TypeScript, Dart, SQL,
+                  Bash
+                </div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-label">Systems &amp; Parallel</div>
+                <div class="skill-content">
+                  Linux, OpenMP Parallel Computing, Docker, Git/GitHub
+                </div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-label">Software Dev</div>
+                <div class="skill-content">
+                  React, Node.js, FastAPI, Flask, Django, PostgreSQL, SQLite,
+                  Flutter
+                </div>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-label">Interests</div>
+                <div class="skill-content">Lean 4, Rust, Haskell</div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer>
+          <div>
+            Giovanni Norbedo · Università degli Studi di Trieste (UniTS)
+          </div>
+          <div>Trieste, Italy</div>
+        </footer>
       </div>
-
-      <header>
-        <h1 class="header-title">Giovanni Norbedo</h1>
-        <div class="academic-title">M.Sc. Student in Data Science &amp; Artificial Intelligence</div>
-        <div class="affiliation">
-          Università degli Studi di Trieste (UniTS) · Trieste, Italy
-        </div>
-        <div class="meta-links">
-          <a href="mailto:norbedo@proton.me">Contact me</a>
-          <span class="sep">/</span>
-          <a href="https://github.com/giovanni-norbedo" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <span class="sep">/</span>
-          <a href="https://www.linkedin.com/in/norbedo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
-      </header>
-
-      <section class="bio-section">
-        <p>
-          I am an M.Sc. student in <strong>Data Science and Artificial Intelligence</strong> at the <strong>University of Trieste (UniTS)</strong>. While my practical background is in Full Stack development and Linux, my true passion lies at the intersection of math, logic, and technology. I enjoy using code to give structure to abstract ideas and make complex mathematical concepts easy to visualize. My current focus is on formally verified AI, exploring how formal methods and mathematical proofs can be applied to machine learning to guarantee model reliability and safety.
-        </p>
-      </section>
-
-      <main>
-        <section id="education">
-          <h2>Academic Background</h2>
-
-          <div class="timeline-sidenote">
-            <div class="timeline-row">
-              <div class="margin-date">2026 – Present</div>
-              <div class="timeline-body">
-                <div class="education-degree">M.Sc. in Data Science &amp; Artificial Intelligence</div>
-                <div class="education-sub">Università degli Studi di Trieste (UniTS)</div>
-              </div>
-            </div>
-
-            <div class="timeline-row">
-              <div class="margin-date">2023 – 2026</div>
-              <div class="timeline-body">
-                <div class="education-degree">B.Sc. in Artificial Intelligence &amp; Data Analytics</div>
-                <div class="education-sub">Università degli Studi di Trieste (UniTS)</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="projects">
-          <h2>Selected Projects</h2>
-
-          <article class="project-entry" id="hastings-powell">
-            <div class="project-header">
-              <h3 class="project-heading">Chaos Simulation</h3>
-              <span class="link-tag">[<a href="https://github.com/giovanni-norbedo/progetto_sistemi_complessi" target="_blank" rel="noopener noreferrer">code</a>]</span>
-            </div>
-            <p>
-              Investigation of deterministic chaos and bifurcation phenomena in a continuous tri-trophic food chain ($X, Y,
-              Z$) governed by the Hastings-Powell ODE system with Holling type II functional responses:
-            </p>
-
-            <div class="equation-block">
-              $$\begin{cases}
-              \dot{X} = X\left(1 - \dfrac{X}{K}\right) - \dfrac{a_1 X Y}{1 + b_1 X} - h_X X \\[8pt]
-              \dot{Y} = \dfrac{a_1 X Y}{1 + b_1 X} - \dfrac{a_2 Y Z}{1 + b_2 Y} - d_1 Y \\[8pt]
-              \dot{Z} = \dfrac{a_2 Y Z}{1 + b_2 Y} - d_2 Z
-              \end{cases}$$
-              <div class="equation-caption">
-                Hastings-Powell differential equations.
-              </div>
-            </div>
-
-            <p>
-              Analyzes strange attractors, Lyapunov exponents, bifurcation cascades under carrying capacity $K$, and chaos
-              suppression via linear prey harvesting ($h_X$).
-            </p>
-          </article>
-
-          <article class="project-entry" id="minesweeper3d">
-            <div class="project-header">
-              <h3 class="project-heading">Minesweeper3D</h3>
-              <span class="link-tag">[<a href="https://github.com/giovanni-norbedo/Minesweeper3D" target="_blank" rel="noopener noreferrer">code</a>]</span>
-            </div>
-            <p>
-              A three-dimensional Minesweeper puzzle engine built in Python/Ursina (with Marco Carmignano), featuring an
-              automated exact solver based on linear integer constraint satisfaction:
-            </p>
-
-            <div class="equation-block">
-              $$\bigwedge_{v \in V_{\text{revealed}}} \left( \sum_{u \in \mathcal{N}_{3D}(v)} x_u = k_v \right), \quad x_u
-              \in \{0, 1\}$$
-              <div class="equation-caption">
-                Constraint satisfaction problem for Minesweeper3D.
-              </div>
-            </div>
-          </article>
-
-          <article class="project-entry" id="tensorforth">
-            <div class="project-header">
-              <h3 class="project-heading">Parallel C Interpreter</h3>
-              <span class="link-tag">[<a href="https://github.com/giovanni-norbedo/progetto_programmazione_avanzata_e_parallela" target="_blank" rel="noopener noreferrer">code</a>]</span>
-            </div>
-            <p>
-              A stack-based C99 interpreter parallelized with OpenMP multi-threading for native 1D/2D tensor operations.
-            </p>
-          </article>
-        </section>
-
-        <section id="skills">
-          <h2>Technical Skills</h2>
-
-          <div class="skills-sidenote">
-            <div class="skill-row">
-              <div class="skill-label">Mathematics</div>
-              <div class="skill-content">
-                Mathematical Analysis, Linear Algebra, Fourier Analysis, Topology, Abstract Algebra, Probability &amp; Statistics
-              </div>
-            </div>
-
-            <div class="skill-row">
-              <div class="skill-label">Theory &amp; Modeling</div>
-              <div class="skill-content">
-                Dynamical Systems &amp; Chaos, Information Theory, Optimization Algorithms, Computability &amp; Complexity, Numerical Analysis
-              </div>
-            </div>
-
-            <div class="skill-row">
-              <div class="skill-label">Scientific Computing</div>
-              <div class="skill-content">
-                PyTorch, Scikit-Learn, NumPy, SciPy, Gurobi, Z3 SMT Solver, SageMath, Statsmodels
-              </div>
-            </div>
-
-            <div class="skill-row">
-              <div class="skill-label">Languages</div>
-              <div class="skill-content">
-                Python, C/C++, MATLAB, R, JavaScript, TypeScript, Dart, SQL, Bash
-              </div>
-            </div>
-
-            <div class="skill-row">
-              <div class="skill-label">Systems &amp; Parallel</div>
-              <div class="skill-content">
-                Linux, OpenMP Parallel Computing, Docker, Git/GitHub
-              </div>
-            </div>
-
-            <div class="skill-row">
-              <div class="skill-label">Software Dev</div>
-              <div class="skill-content">
-                React, Node.js, FastAPI, Flask, Django, PostgreSQL, SQLite, Flutter
-              </div>
-            </div>
-
-            <div class="skill-row">
-              <div class="skill-label">Interests</div>
-              <div class="skill-content">
-                Lean 4, Rust, Haskell
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer>
-        <div>Giovanni Norbedo · Università degli Studi di Trieste (UniTS)</div>
-        <div>Trieste, Italy</div>
-      </footer>
     </div>
-  </div>
 
-  <script src="script.js"></script>
-  <script src="attractor.js"></script>
-</body>
-
+    <script src="script.js"></script>
+    <script src="attractor.js"></script>
+  </body>
 </html>
