@@ -128,7 +128,7 @@
 
             <div class="timeline-sidenote">
               <div class="timeline-row">
-                <div class="margin-date">2026 – Present</div>
+                <div class="margin-date">2026 - Present</div>
                 <div class="timeline-body">
                   <div class="education-degree">
                     M.Sc. in Data Science &amp; Artificial Intelligence
@@ -140,7 +140,7 @@
               </div>
 
               <div class="timeline-row">
-                <div class="margin-date">2023 – 2026</div>
+                <div class="margin-date">2023 - 2026</div>
                 <div class="timeline-body">
                   <div class="education-degree">
                     B.Sc. in Artificial Intelligence &amp; Data Analytics
@@ -155,6 +155,46 @@
 
           <section id="projects">
             <h2>Selected Projects</h2>
+
+            <article class="project-entry" id="neural-verification">
+              <div class="project-header">
+                <h3 class="project-heading">
+                  Formal Verification of Neural Networks
+                </h3>
+                <span class="link-tag"
+                  >[<a
+                    href="https://github.com/giovanni-norbedo/gtsrb-formal-verification"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >code</a
+                  >]</span
+                >
+              </div>
+              <p>
+                Exact safety certification and adversarial robustness evaluation
+                of piecewise-linear neural networks on the German Traffic Sign
+                Recognition Benchmark (GTSRB). Compares standard empirical risk
+                minimization (ERM) against mixed adversarial training, verifying
+                exact output invariance within a continuous $L_\infty$
+                perturbation hypercube:
+              </p>
+
+              <div class="equation-block">
+                $$\forall x \in \mathbb{R}^d \text{ with } \|x - x_0\|_\infty
+                \le \epsilon, \quad \arg\max_{i} f(x)_i = y_0$$
+                <div class="equation-caption">
+                  Formal robustness specification under $L_\infty$ perturbation.
+                </div>
+              </div>
+
+              <p>
+                Uses the Marabou SMT solver to compute sound lower bounds on
+                certified accuracy against PGD empirical upper bounds,
+                demonstrating a leap from 40.8% to 73.2% certified robustness at
+                $\epsilon = 0.03$ alongside exact proofs of inviolability
+                against localized physical adversarial patches on STOP signs.
+              </p>
+            </article>
 
             <article class="project-entry" id="hastings-powell">
               <div class="project-header">
@@ -237,24 +277,6 @@
                 Ezone is a minimalist desktop music player that transforms your
                 local digital audio collection into an interactive,
                 vinyl-inspired record experience.
-              </p>
-            </article>
-
-            <article class="project-entry" id="tensorforth">
-              <div class="project-header">
-                <h3 class="project-heading">Parallel C Interpreter</h3>
-                <span class="link-tag"
-                  >[<a
-                    href="https://github.com/giovanni-norbedo/progetto_programmazione_avanzata_e_parallela"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >code</a
-                  >]</span
-                >
-              </div>
-              <p>
-                A stack-based C99 interpreter parallelized with OpenMP
-                multi-threading for native 1D/2D tensor operations.
               </p>
             </article>
           </section>
