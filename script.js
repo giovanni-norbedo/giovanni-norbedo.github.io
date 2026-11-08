@@ -24,8 +24,8 @@ function applyTheme(theme) {
   const textSpan = toggleBtn.querySelector('.theme-text');
 
   if (textSpan) {
-    textSpan.textContent = isDark ? 'light theme' : 'dark theme';
+    textSpan.textContent = isDark ? 'light mode' : 'dark mode';
   } else {
-    toggleBtn.textContent = isDark ? 'light theme' : 'dark theme';
+    toggleBtn.textContent = isDark ? 'light mode' : 'dark mode';
   }
 }

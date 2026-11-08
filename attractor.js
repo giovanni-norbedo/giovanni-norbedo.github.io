@@ -148,20 +148,20 @@
     const isDark = (document.documentElement.getAttribute('data-theme') || 'dark') === 'dark';
     if (isDark) {
       return {
-        skeletonLine: 'rgba(251, 191, 36, 0.14)',
-        trailGlow: 'rgba(253, 230, 138, 0.45)',
-        trailMid: 'rgba(251, 191, 36, 0.26)',
+        skeletonLine: 'rgba(77, 122, 242, 0.14)',
+        trailGlow: 'rgba(115, 152, 248, 0.45)',
+        trailMid: 'rgba(77, 122, 242, 0.26)',
         headDot: '#ffffff',
-        shadowColor: '#fbbf24',
+        shadowColor: '#4d7af2',
         glowSize: 10,
       };
     } else {
       return {
-        skeletonLine: 'rgba(180, 83, 9, 0.12)',
-        trailGlow: 'rgba(180, 83, 9, 0.35)',
-        trailMid: 'rgba(180, 83, 9, 0.22)',
+        skeletonLine: 'rgba(53, 99, 224, 0.12)',
+        trailGlow: 'rgba(53, 99, 224, 0.35)',
+        trailMid: 'rgba(53, 99, 224, 0.22)',
         headDot: '#ffffff',
-        shadowColor: '#b45309',
+        shadowColor: '#3563e0',
         glowSize: 8,
       };
     }
@@ -194,7 +194,7 @@
     const cosZ = Math.cos(thetaZ);
     const sinZ = Math.sin(thetaZ);
 
-    const scale = Math.min(width * 0.35, height * 0.52, 450);
+    const scale = Math.min(width * 0.40, height * 0.50, 550);
     const originX = Math.max(width * 0.11, 110);
     const originY = height * 0.48;
 
