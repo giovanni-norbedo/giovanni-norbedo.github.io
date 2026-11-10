@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Uses | Giovanni Norbedo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+html {
+  background: #204e3a url("img/mat.gif") repeat;
+}
+body {
+  max-width: 822px;
+  margin: 0 auto;
+  padding: 16px 32px 40px 98px;
+  background: url("img/notebook.gif") repeat-y top left;
+  font-family: "Liberation Serif", Georgia, Times, serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+table { font-size: 18px; line-height: 1.6; }
+img { max-width: 100%; height: auto; }
+@media (max-width: 960px) {
+  html { background: #fff7e7; }
+  body {
+    background: #fff7e7;
+    padding: 14px 22px 28px;
+    font-size: 16px;
+  }
+  h1 { font-size: 25px; }
+  table { font-size: 15px; }
+  dd { margin-left: 10px; }
+}
+</style>
+</head>
+
+<body text="#000000" link="#0000cc" vlink="#551a8b" alink="#ff0000">
+
+<img src="img/atom_ani.gif" width="56" height="56" align="right" alt="">
+<img src="img/tuxlinux.gif" width="50" height="58" align="right" hspace="10" alt="tux">
+
+<h1>Giovanni Norbedo <font size="4"><i>/uses</i></font></h1>
+<p>
+<i>M.Sc. student in data science &amp; artificial intelligence</i><br>
+<img src="img/earth.gif" width="20" height="20" align="absmiddle" alt="">
+Universit&agrave; degli Studi di Trieste (UniTS), Trieste, Italy<br>
+<img src="img/n_star.gif" width="18" height="18" align="absmiddle" alt="">
+<a href="index.html">home</a> |
+<img src="img/a_mail.gif" width="22" height="22" align="absmiddle" alt="">
+<a href="mailto:norbedo@proton.me">contact</a> |
+<a href="https://github.com/giovanni-norbedo" target="_blank">github</a> |
+<a href="https://www.linkedin.com/in/norbedo/" target="_blank">linkedin</a>
+</p>
+
+<p>
+A summary of the operating system, terminal workflow, code editors,
+languages, and software tools I use on a daily basis.
+After trying everything there is...
+</p>
+<p>
+Here are my [<a href="https://github.com/giovanni-norbedo/dotfiles" target="_blank">dotfiles</a>].
+</p>
+
+<h3>Setup overview</h3>
+<table border="2" cellpadding="7" cellspacing="1" bgcolor="#fffff0">
+<tr>
+  <td bgcolor="#eef2f7" valign="top" width="28%"><b>OS &amp; kernel</b></td>
+  <td>arch linux, linux zen kernel</td>
+</tr>
+<tr>
+  <td bgcolor="#eef2f7" valign="top"><b>Window manager</b></td>
+  <td>qtile wm (Python config), picom, rofi, dunst</td>
+</tr>
+<tr>
+  <td bgcolor="#eef2f7" valign="top"><b>Terminal &amp; shell</b></td>
+  <td>kitty (OLED true black / E-ink mode), zsh, <code>tmux</code>, starship</td>
+</tr>
+<tr>
+  <td bgcolor="#eef2f7" valign="top"><b>Editors</b></td>
+  <td>neovim, VS Code, Positron</td>
+</tr>
+<tr>
+  <td bgcolor="#eef2f7" valign="top"><b>Documents &amp; math</b></td>
+  <td>Typst, TeXpresso, LaTeX, markdown</td>
+</tr>
+<tr>
+  <td bgcolor="#eef2f7" valign="top"><b>Notes &amp; research</b></td>
+  <td>Obsidian (zettelkasten), Zotero, zathura</td>
+</tr>
+</table>
+
+<h3>Operating system &amp; desktop</h3>
+<p>
+Having finally said goodbye to my trusty debian after years of unwavering loyalty,
+my primary workstation runs <b>arch linux</b> with the <b>linux zen kernel</b>.
+</p>
+<p>
+For window management, I use <b>qtile wm</b> configured in Python (while the entire
+linux community moved on to flashy animations on hyprland), keeping the same
+keybindings and workspace navigation I used on <i>bspwm</i> for years. Application
+launching is handled by <b>rofi</b>, window compositing by <b>picom</b>, and
+notifications by <b>dunst</b>.
+</p>
+
+<h3>Terminal &amp; shell</h3>
+<img src="img/computer.gif" width="32" height="32" align="right" hspace="10" alt="terminal">
+<p>
+The terminal is my primary workspace. I use <b>kitty</b>, an OLED true black palette,
+and <i>JetBrains Mono Nerd Font</i>.
+</p>
+<p>
+I also built a togglable <b>E-ink mode</b>, because I like the &ldquo;book&rdquo; feel
+and because it's easier on the eyes (and also because it's fun to show off to friends).
+</p>
+<p>
+My interactive shell is <b>zsh</b> inside <b><code>tmux</code></b> for session
+persistence. The prompt is powered by <b>starship</b> for Git status and runtime
+information. I use various, sparkling Rust programs to replace traditional command-line
+utilities, because if a 50 year old rock-solid unix utility hasn't been rewritten in
+Rust this year, is it even safe to touch?
+</p>
+
+<h3>Code editors &amp; documents</h3>
+<p>
+I use both <b>neovim</b> and <b>VS Code</b> for editing. I utilize the first one for
+various purposes, including scripting and terminal workflows. The second one is for
+big projects and debugging. Positron is my preferred tool for creating R markdown or
+Python notebooks.
+</p>
+<p>
+For document preparation, I use <b>Typst</b> for fast compilation alongside
+<b>TeXpresso</b> for live interactive LaTeX rendering. But plain markdown is still
+my best friend.
+</p>
+
+<h3>Languages &amp; frameworks</h3>
+<dl>
+<dt><img src="img/blueball.gif" alt="*"> <b>Python:</b> PyTorch, NumPy, and scientific computing, managed with <code>uv</code>.
+<dt><img src="img/greenbal.gif" alt="*"> <b>C/C++ &amp; OpenMP:</b> Parallel computing and performance critical algorithms.
+<dt><img src="img/redball.gif" alt="*"> <b>Web development:</b> Django, FastAPI, Node.js, React, and HTML/CSS.
+<dt><img src="img/blueball.gif" alt="*"> <b>R:</b> Statistical inference and data analysis.
+<dt><img src="img/greenbal.gif" alt="*"> <b>Currently learning:</b> Rust for systems programming and Lean 4 for interactive theorem proving.
+</dl>
+
+<h3>Notes &amp; mobile setup</h3>
+<img src="img/chess.gif" width="72" height="72" align="right" hspace="10" alt="chess">
+<p>
+For notes, I use <b>Obsidian</b> (markdown with KaTeX) organized via zettelkasten.
+Research papers are managed in <b>Zotero</b> with BibTeX export, and pdfs are read
+in <b>zathura</b>.
+</p>
+<p>
+On mobile, I use an android phone debloated with <code>adb</code> to keep only
+essential apps. Offline, I regularly play chess.
+</p>
+
+<h3>Music &amp; listening</h3>
+<img src="img/vinyl.gif" width="64" height="64" align="right" hspace="10" alt="vinyl">
+<p>
+For focus during work, I listen to 1990s trip hop, Bristol sound, downtempo, and
+abstract electronic music. Key artists include Handsome Boy Modeling School,
+Massive Attack, Portishead, DJ Shadow, Bonobo, UNKLE, and Tricky. I also
+occasionally sketch beats in <b>LMMS</b>.
+</p>
+
+<br>
+<p>
+<img src="img/archlinux.gif" width="88" height="31" align="middle" vspace="2" alt="Arch Linux">
+<img src="img/vim.gif" width="88" height="31" align="middle" vspace="2" alt="Vim">
+<img src="img/latex.gif" width="88" height="31" align="middle" vspace="2" alt="LaTeX">
+<img src="img/firefox.gif" width="88" height="31" align="middle" vspace="2" alt="Firefox">
+<img src="img/gnu_linux.gif" width="88" height="31" align="middle" vspace="2" alt="GNU/Linux">
+<img src="img/github_check.gif" width="88" height="31" align="middle" vspace="2" alt="GitHub">
+<img src="img/mp3.gif" width="88" height="31" align="middle" vspace="2" alt="MP3">
+<img src="img/got_html.gif" width="88" height="31" align="middle" vspace="2" alt="got html?">
+<img src="img/neovim.gif" width="88" height="31" align="middle" vspace="2" alt="Neovim">
+<img src="img/valid_html401.gif" width="88" height="31" align="middle" vspace="2" alt="Valid HTML 4.01">
+</p>
+
+</body>
+</html>
+
