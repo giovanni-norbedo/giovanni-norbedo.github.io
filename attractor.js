@@ -144,24 +144,43 @@
     targetRotY = mouseY * 0.1;
   });
 
+  function parseColor(val) {
+    if (!val) return [53, 99, 224];
+    val = val.trim();
+    if (val.startsWith('#')) {
+      let c = val.slice(1);
+      if (c.length === 3) c = c.split('').map((x) => x + x).join('');
+      const num = parseInt(c, 16);
+      return [(num >> 16) & 255, (num >> 8) & 255, num & 255];
+    }
+    const match = val.match(/\d+/g);
+    if (match && match.length >= 3) {
+      return [parseInt(match[0], 10), parseInt(match[1], 10), parseInt(match[2], 10)];
+    }
+    return [53, 99, 224];
+  }
+
   function getThemeColors() {
     const isDark = (document.documentElement.getAttribute('data-theme') || 'dark') === 'dark';
+    const computedAccent = getComputedStyle(document.documentElement).getPropertyValue('--accent');
+    const [r, g, b] = parseColor(computedAccent);
+
     if (isDark) {
       return {
-        skeletonLine: 'rgba(77, 122, 242, 0.14)',
-        trailGlow: 'rgba(115, 152, 248, 0.45)',
-        trailMid: 'rgba(77, 122, 242, 0.26)',
+        skeletonLine: `rgba(${r}, ${g}, ${b}, 0.16)`,
+        trailGlow: `rgba(${Math.min(r + 35, 255)}, ${Math.min(g + 35, 255)}, ${Math.min(b + 35, 255)}, 0.45)`,
+        trailMid: `rgba(${r}, ${g}, ${b}, 0.28)`,
         headDot: '#ffffff',
-        shadowColor: '#4d7af2',
+        shadowColor: `rgb(${r}, ${g}, ${b})`,
         glowSize: 10,
       };
     } else {
       return {
-        skeletonLine: 'rgba(53, 99, 224, 0.12)',
-        trailGlow: 'rgba(53, 99, 224, 0.35)',
-        trailMid: 'rgba(53, 99, 224, 0.22)',
+        skeletonLine: `rgba(${r}, ${g}, ${b}, 0.13)`,
+        trailGlow: `rgba(${r}, ${g}, ${b}, 0.38)`,
+        trailMid: `rgba(${r}, ${g}, ${b}, 0.22)`,
         headDot: '#ffffff',
-        shadowColor: '#3563e0',
+        shadowColor: `rgb(${r}, ${g}, ${b})`,
         glowSize: 8,
       };
     }
