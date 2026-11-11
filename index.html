@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style type="text/css">
 html {
+  position: relative;
   background: #204e3a url("img/mat.gif") repeat;
 }
 body {
@@ -17,6 +18,19 @@ body {
   font-size: 18px;
   line-height: 1.6;
 }
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background:
+    url("img/pen.png") no-repeat 898px 15px,
+    url("img/blackberry.png") no-repeat 918px 370px,
+    url("img/sony.png") no-repeat 916px 710px;
+}
 table {
   font-size: 18px; 
   line-height: 1.6; 
@@ -24,6 +38,9 @@ table {
 img { 
   max-width: 100%; 
   height: auto;
+}
+@media (max-width: 1150px) {
+  body::after { display: none; }
 }
 @media (max-width: 960px) {
   html { background: #fff7e7; }
