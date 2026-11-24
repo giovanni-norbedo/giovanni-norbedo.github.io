@@ -11,14 +11,29 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://norbedo.xyz/">
     <meta property="og:title" content="Giovanni Norbedo">
-    <meta property="og:description" content="M.Sc. student in Data Science and AI at the University of Trieste.">
+    <meta property="og:description" content="M.Sc. student in Data Science &amp; AI at the University of Trieste.">
+    <meta property="og:image" content="https://norbedo.xyz/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt"
+        content="Giovanni Norbedo — M.Sc. student in Data Science &amp; AI at the University of Trieste">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Giovanni Norbedo">
+    <meta name="twitter:description" content="M.Sc. student in Data Science &amp; AI at the University of Trieste.">
+    <meta name="twitter:image" content="https://norbedo.xyz/og-image.png">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap">
+    <link rel="preload" href="fonts/libre-baskerville-latin.woff2" as="font" type="font/woff2" crossorigin>
     <script
-        type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Giovanni Norbedo","url":"https://norbedo.xyz","email":"mailto:norbedo@proton.me","jobTitle":"M.Sc. Student in Data Science & AI","affiliation":{"@type":"CollegeOrUniversity","name":"Università degli Studi di Trieste"},"sameAs":["https://github.com/giovanni-norbedo","https://www.linkedin.com/in/norbedo/"]}</script>
+        type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Giovanni Norbedo","url":"https://norbedo.xyz","jobTitle":"M.Sc. Student in Data Science & AI","affiliation":{"@type":"CollegeOrUniversity","name":"University of Trieste"},"sameAs":["https://github.com/giovanni-norbedo","https://www.linkedin.com/in/norbedo/"]}</script>
     <style>
+        @font-face {
+            font-family: "Libre Baskerville";
+            font-style: normal;
+            font-weight: 400 700;
+            font-display: swap;
+            src: url("fonts/libre-baskerville-latin.woff2") format("woff2");
+        }
+
         ::selection {
             background: #dbeafe;
             color: #0f172a;
@@ -93,8 +108,16 @@
             through math and logic, whether that means formal methods or computational neuroscience.</p>
         <p>Find my code on <a href="https://github.com/giovanni-norbedo" target="_blank" rel="noopener">GitHub</a>,
             connect on <a href="https://www.linkedin.com/in/norbedo/" target="_blank" rel="noopener">LinkedIn</a>, or
-            write to <a href="mailto:norbedo@proton.me">norbedo@proton.me</a>.</p>
+            write to <a id="email" data-u="norbedo" data-d="proton.me">norbedo [at] proton.me</a>.</p>
     </main>
+    <script>
+        (() => {
+            const el = document.getElementById("email");
+            const addr = `${el.dataset.u}@${el.dataset.d}`;
+            el.href = `mailto:${addr}`;
+            el.textContent = addr;
+        })();
+    </script>
 </body>
 
 </html>
